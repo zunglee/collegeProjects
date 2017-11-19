@@ -1,0 +1,8 @@
+event_progress
+	team 	varchar
+	no 	int
+	uptime 	datetime
+event_questions
+	ques 	varchar(150)
+	ans 	varchar(100)
+	no 	int(4)

@@ -1,0 +1,78 @@
+package com.ankur.voice_boston;
+import java.util.ArrayList;
+//import com.math.solver.ExpressionFormatter;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
+import android.speech.RecognizerIntent;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
+public class Voice extends Activity implements OnClickListener{
+
+	ListView lv;
+	TextView tv;
+	static final int check = 1111;
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.voice);
+        lv = (ListView)findViewById(R.id.lvVoiceReturn);
+        tv = (TextView)findViewById(R.id.tvDisplay);
+        Button b = (Button)findViewById(R.id.bVoice);
+        b.setOnClickListener(this);
+    }
+    
+  
+	@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.voice, menu);
+        return true;
+    }
+
+	public void onClick(View arg0) {
+		// TODO Auto-generated method stub
+		Intent i =new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+		i.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+	    i.putExtra(RecognizerIntent.EXTRA_PROMPT, "Please Speak");
+	    startActivityForResult(i,check);
+	}
+	  @Override
+		protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+			// TODO Auto-generated method stub
+		 if(requestCode == check && resultCode==RESULT_OK){
+			ArrayList results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS) ;
+		  //lv.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,results)); 
+		  String str =((String)results.get(0));
+		  tv.setText(str);// added by ankur
+		//String str = new ExpressionFormatter((String)localArrayList.get(0)).format();
+		  int len=str.length(),i;
+		  String[] a = new String[20];
+		  int ct=0,p=0,c=0;
+		  for(i=0;i<len;i++)
+		  {
+			  
+			  if(i==len-1)
+			  {
+				  a[ct++]=str.substring(p,len-1);
+			  }
+			  else
+			  {			  
+			  char pos = str.charAt(i);  
+		  if(pos==' ')
+		  {c=i;
+		  a[ct++]=str.substring(p,c-1);   
+		  p=c+1;             
+		  }
+			  }
+			  }
+		  }
+		  super.onActivityResult(requestCode, resultCode, data);
+		}
+
+}

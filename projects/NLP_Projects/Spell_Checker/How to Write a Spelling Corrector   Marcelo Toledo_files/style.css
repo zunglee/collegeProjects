@@ -1,0 +1,227 @@
+/*
+Theme Name: Marcelo Toledo
+Description: Custom theme for Marcelo Toledo
+Author: Marcelo Toledo
+Version: 1.0
+*/
+
+* { margin: 0; padding: 0; }
+
+html { min-height: 100%; margin: 0 0 1px; font-size: 100.01%; }
+body { background: #fff; font-size: 62.5%; }
+
+body, textarea, input, select, option, button { color: #515151; font-family: ProximaNova, Helvetica Neue,Helvetica,Arial,sans-serif; line-height: 1.5; }
+li, dt, dd, p, figure, th, td, caption, pre { font-size: 1.5em; } /*---*/ li *, li p, li li, dt *, dd *, p *, figure *, th *, td * { font-size: 1em; }
+div, form, blockquote, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, ul, ol, dl, p, table, pre, h1, h2, h3, h4, h5, h6 { margin: 0 0 20px; } :last-child { margin-bottom: 0 !important; } .last-child { margin-bottom: 0 !important; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+/*! fonts --------- */
+
+@font-face { font-family: 'ProximaNova'; src: url('fonts/proxima_nova_bold-webfont.eot'); src: local('☺'), url('fonts/proxima_nova_bold-webfont.woff') format('woff'), url('fonts/proxima_nova_bold-webfont.ttf') format('truetype'), url('fonts/proxima_nova_bold-webfont.svg#ProximaNovaBold') format('svg'); font-weight: bold; font-style: normal; }
+@font-face { font-family: 'ProximaNova'; src: url('fonts/proxima_nova_reg-webfont.eot'); src: local('☺'), url('fonts/proxima_nova_reg-webfont.woff') format('woff'), url('fonts/proxima_nova_reg-webfont.ttf') format('truetype'), url('fonts/proxima_nova_reg-webfont.svg#ProximaNovaRegular') format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'TisaPro'; src: url('fonts/tisapro-bold-webfont.eot'); src: local('☺'), url('fonts/tisapro-bold-webfont.woff') format('woff'), url('fonts/tisapro-bold-webfont.ttf') format('truetype'), url('fonts/tisapro-bold-webfont.svg#TisaProBold') format('svg'); font-weight: bold; font-style: normal; }
+@font-face { font-family: 'TisaPro'; src: url('fonts/tisapro-ita-webfont.eot'); src: local('☺'), url('fonts/tisapro-ita-webfont.woff') format('woff'), url('fonts/tisapro-ita-webfont.ttf') format('truetype'), url('fonts/tisapro-ita-webfont.svg#TisaProItalic') format('svg'); font-weight: normal; font-style: italic; }
+@font-face { font-family: 'TisaPro'; src: url('fonts/tisapro-regular-webfont.eot'); src: local('☺'), url('fonts/tisapro-regular-webfont.woff') format('woff'), url('fonts/tisapro-regular-webfont.ttf') format('truetype'), url('fonts/tisapro-regular-webfont.svg#TisaProRegular') format('svg'); font-weight: normal; font-style: normal; }
+
+
+/*! layout -------- */
+
+#root { width: 940px; margin: 0 auto; }
+ #top { position: relative; min-height: 120px; }
+  #logo { position: absolute; top: 26px; left: 0; }
+   #logo a img { display: block; margin: 0; }
+  #tagline { position: absolute; top: 60px; left: 180px; font-size: 11px; }
+  #skips, #skips ul { position: absolute; top: 0; left: 0; z-index: 9999; list-style: none; width: 100%; margin: 0; padding: 0; text-align: center; }
+   #skips li { position: absolute; left: 0; top: 0; width: 100%; font: bold 5em/1 Calibri,Myriad Pro,Arial,Helvetica Neue,Helvetica,sans-serif; }
+    #skips li a { display: -moz-inline-stack; display: inline-block; position: absolute; left: -10001px; top: 30px; margin: 0 auto; padding: 20px 30px; border: 1px dotted #fff; border-color: rgba(255,255,255,0.7); border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; background: #333; background: rgba(0,0,0,0.6); color: #fff; text-align: center; text-decoration: none; outline: none; }
+    #skips li a:focus, #skips li a:active { position: relative; left: 0; }
+  #nav { margin-left: 580px; }
+   #nav ul { list-style: none; overflow: hidden; width: 100%; margin: 0; padding: 0; }
+/*    #nav ul li { float: left; margin-left: 7px; } */
+    #nav ul li { float: left; margin-left: 3px; }
+    #nav ul li:first-child { margin-left: 0; }
+    #nav ul li a:hover, 
+		#nav ul li a:focus, 
+		#nav ul li a:active, 
+		#nav ul li.current-menu-item a { background: #3892d2; }
+/*     #nav ul li a { display: block; padding: 50px 5px 3px; background: #ccc; color: #fff; font-size: 0.94em; font-weight: bold; text-decoration: none; text-transform: uppercase; } */
+     #nav ul li a { display: block; padding: 50px 5px 3px; background: #ccc; color: #fff; font-size: 0.88em; font-weight: bold; text-decoration: none; text-transform: uppercase; }
+
+ #content { overflow: hidden; width: 100%; }
+  #main { float: left; width: 520px; }
+  #aside { float: right; width: 360px; font-size: 0.87em; }
+ #footer { padding: 30px 0 15px; text-align: center; }
+  #footer p { color: #ccc; font-family: TisaPro, Georgia, Times, Times New Roman, serif; font-size: 1.3em; font-style: italic; }
+
+/*! headers ------- */
+
+h1, h2, h3, h4, h5, h6 { }
+h1 { font-size: 2.1em; text-transform: uppercase; }
+h2 { font-size: 1.8em; text-transform: uppercase; }
+h3 { font-size: 1.6em; text-transform: uppercase; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1.0em; }
+
+#aside h3 { font-size: 1.85em; }
+
+
+/*! containers ---- */
+
+.story-a { font-family: TisaPro, Georgia, Times, Times New Roman, serif; text-align: justify; }
+
+.post { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dotted #dbdbdb; }
+ .post header h2 { margin-bottom: 0;  font-size: 1.8em; text-transform: uppercase; }
+  .post header h2 a { color: #414141; }
+ .post header p { color: #7b7b7b; font-size: 1.3em; }
+ .post .content { font-family: TisaPro, Georgia, Times, Times New Roman, serif; }
+  .post .content p { text-align: justify; }
+   .post .content a { font-family: ProximaNova, Helvetica Neue,Helvetica,Arial,sans-serif; }
+ .post footer { width: 100%; margin-top: 35px; }
+ .post footer:after { content: " "; display: block; overflow: hidden; clear: both; height: 0; }
+ html* .post footer { float: left; }
+  .post footer p.socials-a { float: left; padding-top: 5px; }
+   .post footer p.socials-a > span { position: relative; vertical-align: top; }
+   .post footer p.socials-a > span.fb { top: -5px; }
+  .post footer p.socials-b { float: left; margin-left: 1px; }
+   .post footer p.socials-b > span.fb { position: relative; vertical-align: top; top: -5px; }
+  .post footer p.comments { float: left; margin-left: 20px; padding-left: 24px; background: url(images/comments-a.png) 0 50% no-repeat; color: #7b7b7b; line-height: 30px; }
+   .post footer p.comments a { color: #7b7b7b; }
+  .post footer p.share { float: left; font-size: 1.3em; font-weight: bold; }
+  .post footer p.button-a { float: right; }
+ .post ul { padding-left: 20px; list-style-image: url(images/leaf-a.png); list-style-type: square; }
+  .post ul.list-a li { margin-bottom: 20px; }
+ .post ul.list-b { margin-left: 35px; }
+section.widget { overflow: hidden; width: 100%; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px dotted #dbdbdb; }
+
+div.search-results { margin-bottom: 50px; padding-bottom: 40px; border-bottom: 1px dotted #dbdbdb; }
+ div.search-results h2 { margin: 0; font-size: 1.6em; }
+  div.search-results h2 a { color: #414141; }
+ div.search-results p { color: #7b7b7b; font-size: 1.3em; }
+
+
+/*! forms --------- */
+
+form { }
+ textarea { overflow: auto; }
+ button { overflow: visible; padding: 0 10px; cursor: pointer; } button::-moz-focus-inner { padding: 0; border: none; }
+
+#aside .form-a { margin-bottom: 30px; }
+ #aside .form-a p { position: relative; overflow: hidden; width: 100%; }
+  #aside .form-a p label { font-style: italic; line-height: 30px; }
+  .js #aside .form-a p label { position: absolute; top: 0; left: 10px; }
+  #aside .form-a p input { float: left; width: 280px; height: 30px; padding: 0 10px; border: 0; background: #e1e1e1; line-height: 30px; }
+  #aside .form-a p input:focus { outline: 2px solid #ff6444; }
+  #aside .form-a p button { float: left; min-height: 30px; padding: 0 20px 0 10px; border: 0; background: #ff6444 url(images/arrow-a.png) 100% 50% no-repeat; color: #fff; font-weight: bold; line-height: 30px; text-decoration: none; }
+  html* #aside .form-a p button { height: 30px; }
+ #aside .form-a p button:hover, #aside .form-a p button:focus, #aside .form-a p button:active { background-color: #ff4923; }
+
+div.subscribe { overflow: hidden; padding: 10px 6px; background: #ccc; zoom: 1; }
+ div.subscribe p { font-size: 1.22em; }
+ div.subscribe p.button-a { margin-top: 45px; }
+ .js div.subscribe p.button-a { margin-top: 0; }
+  div.subscribe p.button-a a { float: right; background: #ff6444 url(images/arrow-b.png) 100% 50% no-repeat; }
+  div.subscribe p.button-a a:hover, div.subscribe p.button-a a:focus, div.subscribe p.button-a a:active { background-color: #ff4923; }
+ div.subscribe .form-b { float: left; margin-bottom: 5px; }
+  div.subscribe .form-b p { position: relative; overflow: hidden; zoom: 1; }
+   div.subscribe .form-b p label { display: block; font-size: 1.1em; line-height: 30px; }
+  .js div.subscribe .form-b p label { position: absolute; top: 0; left: 10px;  }
+  div.subscribe .form-b p input { float: left; width: 220px; height: 30px; padding: 0 10px; border: 0; background: #fff; font-size: 1.1em; line-height: 30px; }
+  div.subscribe .form-b p input:focus { outline: 2px solid #ff6444; }
+  div.subscribe .form-b p button { float: left; min-height: 30px; padding: 0 22px 0 12px; border: 0; background: #ff6444 url(images/arrow-b.png) 100% 50% no-repeat; color: #fff; font-size: 1.15em; font-weight: bold; line-height: 30px; text-decoration: none; }
+  html* div.subscribe .form-b p button { height: 30px; }
+  div.subscribe .form-b p button:hover,div.subscribe .form-b p button:focus, div.subscribe .form-b p button:active { background-color: #ff4923; }
+ 
+div.contact { overflow: hidden; width: 100%; }
+ div.contact p { font-size: 1.4em; }
+ .form-c { float: left; width: 335px; margin: 5px 10px 10px 0; }
+  .form-c p { overflow: hidden; width: 100%; }
+   .form-c label { float: left; width: 65px; font-size: 0.93em; line-height: 26px; text-align: right; }
+   .form-c input { float: right; width: 240px; height: 26px; padding: 0 10px; border: 0; background: #e1e1e1; line-height: 26px; }
+   .form-c input:focus { outline: 2px solid #ff6444; }
+   .form-c textarea { float: right; width: 240px; padding: 4px 10px; border: 0; background: #e1e1e1; resize: none; }
+   .form-c textarea:focus { outline: 2px solid #ff6444; }
+   .form-c strong.err { display: block; margin-left: 75px; } 
+   .form-c button { float: left; min-height: 30px; margin-left: 75px; padding: 0 30px 0 20px; border: 0; background: #ff6444 url(images/arrow-a.png) 100% 50% no-repeat; color: #fff; font-weight: bold; line-height: 30px; text-decoration: none; }
+   html* .form-c button { height: 30px; }
+   .form-c button:hover, .form-c button:focus, .form-c button:active { background-color: #ff4923; }
+/*! tables -------- */
+
+table { display: table; border-collapse: collapse; border-spacing: 0; }
+ table th, table td { padding: 5px 10px; border: 1px solid #eee; }
+
+/*! navs ---------- */
+
+ul.conecte-se { overflow: hidden; list-style: none; zoom: 1; }
+ ul.conecte-se li { float: left; margin-left: 5px; line-height: 60px; }
+ ul.conecte-se ul { padding-left: 5px; }
+  /* ul.conecte-se li a:hover { color: #3892d2 } */
+  /* ul.conecte-se li a:focus, ul.conecte-se li a:active { color: #007bd2; } */
+  /* ul.conecte-se li.fb a { background-position: 0 0; } */
+  /* ul.conecte-se li.fb a:hover { background-position: 0 -50px; color: #3892d2 } */
+  /* ul.conecte-se li.fb a:focus, ul.conecte-se li.fb a:active { background-position: 0 -100px; } */
+  /* ul.conecte-se li.tt a { background-position: 0 -150px; } */
+  /* ul.conecte-se li.tt a:hover { background-position: 0 -200px; } */
+  /* ul.conecte-se li.tt a:focus, ul.conecte-se li.tt a:active { background-position: 0 -250px; } */
+
+.pagination-a { }
+ .pagination-a ol { overflow: hidden; list-style: none; width: 100%; padding: 0; }
+  .pagination-a ol li { float: left; margin-left: 4px; font-size: 12px; font-weight: bold; line-height: 30px; text-transform: uppercase; }
+  .pagination-a ol li:first-child { margin-left: 0; }
+   .pagination-a ol li a { float: left; padding: 0 15px; background: #ccc; color: #fff; text-decoration: none; }
+   .pagination-a ol li a.prev { padding: 0 15px 0 25px; background: #ccc url(images/arrow-aa.png) 0 50% no-repeat; }
+   .pagination-a ol li a.next { padding: 0 25px 0 15px; background: #ccc url(images/arrow-a.png) 100% 50% no-repeat; }
+   .pagination-a ol li a:hover, .pagination-a ul li a:focus, .pagination-a ul li a:active { background-color: #3892d2 !important; }
+   .pagination-a ol li span { float: left; padding: 0 15px; }
+   .pagination-a ol li span.page-info { padding: 0 15px 0 0; }
+   .pagination-a ol li span.current { background: #3892d2; color: #fff; }
+
+
+/*! lists --------- */
+
+ul, ol, dd, blockquote { padding-left: 40px; }
+ ul ul, ol ol, ul ol, ol ul { margin-bottom: 0; }
+
+#main blockquote { padding: 0 40px; font-style: italic; }
+
+/*! paragraphs ---- */
+
+#main .alignleft { float: left; margin: 5px 20px 10px 0; }
+#aside .alignleft { float: left; margin: 5px 13px 10px 0; }
+#main .alignright { float: right; margin: 5px 0 10px 20px; }
+#aside .alignright { float: right; margin: 5px 0 10px 13px; }
+
+.aligncenter { text-align: center; }
+
+.widget p.visitors { font-weight: bold; }
+ .widget p.visitors span { color: #ff6444; font-size: 1.35em; }
+
+
+/*! links --------- */
+
+a { color: #ff6444; text-decoration: none; }
+a:hover, a:focus, a:active { color: #ff4923; text-decoration: underline; }
+
+p.button-a { overflow: hidden; zoom: 1; }
+ p.button-a a { float: left; padding: 0 20px 0 10px; border: 0; background: #ff6444 url(images/arrow-a.png) 100% 50% no-repeat; color: #fff; font-size: 13px; font-weight: bold; line-height: 30px; text-decoration: none; }
+ p.button-a a:hover, p.button-a a:focus, p.button-a a:active { background-color: #ff4923; }
+
+/*! images -------- */
+
+img { border-width: 0; image-rendering: optimizeQuality; -ms-interpolation-mode: bicubic; }
+
+/*! other --------- */
+
+pre { font-family: Consolas,Monaco,Courier New,monospace; white-space: pre-wrap; }
+
+/*! helpers ------- */
+
+.offset { position: absolute !important; left: -10001px !important; overflow: hidden !important; }
+
+/*! mobile -------- */
+
+@media only screen and (max-device-width: 480px) { html { -webkit-text-size-adjust: none; } }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) { html { -webkit-text-size-adjust: none; } }
+
+/*! specific ------ */

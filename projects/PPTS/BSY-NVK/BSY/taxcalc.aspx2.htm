@@ -1,0 +1,243 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>Tax Computation</title>
+    <meta content="Microsoft Visual Studio.NET 7.0" name="GENERATOR">
+    <meta content="Visual Basic 7.0" name="CODE_LANGUAGE">
+    <meta content="JavaScript" name="vs_defaultClientScript">
+    <meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+    <style>
+            body{margin:0px; padding:0px;}
+            .mar0a{margin:0px auto;}
+            .w100{width:100%;}
+            .fl-l{float:left;}
+            .tl{text-align:left;}
+            .tr{text-align:right;}
+            .tc{text-align:center;}
+            .header{background:url(../images/logo_cont.gif) repeat-x; height:83px;}
+            .menu{background:url(../images/menu_bg.gif) repeat-x; height:35px; line-height:35px; font-size:15px; font-family:Arial, Helvetica, sans-serif; color:#b2c9e0;}
+            .menu td {align:center:}
+            .menu td a{font-size:11px; font-size:15px; color:#b2c9e0; text-decoration:none; font-family:Arial, Helvetica, sans-serif width:auto; display:inline; padding:0px 10px;}
+            .menu td a:hover{font-size:11px; font-size:15px; color:#fff; text-decoration:none; font-family:Arial, Helvetica, sans-serif width:auto; display:inline;}
+            .banner{background:url(../images/ad_bg.gif) repeat-x; height:130px;}
+            .indiabg{background:url(../images/indiabg.jpg) right top no-repeat;}
+            </style>
+</head>
+<body vlink="#2f4f4f" alink="darkslategray" link="#2f4f4f" bgcolor="#f5f5f5" bottommargin="0"
+    topmargin="0" rightmargin="0" leftmargin="0">
+    <form name="TaxCalc" method="post" action="taxcalc.aspx" id="TaxCalc">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNjE3Nzg3NjA1D2QWAgIBD2QWFgIBDxBkZBYBZmQCAw8QZBAVBwtJTkRJVklEVUFMUwNIVUYJQU9Qcy9CT0lzBUZJUk1TEkRPTUVTVElDIENPTVBBTklFUxFGT1JFSUdOIENPTVBBTklFUxZDTy1PUEVSQVRJVkUgU09DSUVUSUVTFQcLSU5ESVZJRFVBTFMDSFVGCUFPUHMvQk9JcwVGSVJNUxJET01FU1RJQyBDT01QQU5JRVMRRk9SRUlHTiBDT01QQU5JRVMWQ08tT1BFUkFUSVZFIFNPQ0lFVElFUxQrAwdnZ2dnZ2dnFgFmZAIFDxYCHgdWaXNpYmxlZxYGAgMPEA8WAh4HRW5hYmxlZGdkZGRkAgUPEA8WAh8BZ2RkZGQCCQ8QDxYCHwFnZGRkZAIHDxYCHwBoFgQCAw8QDxYCHwFoZGRkZAIFDxAPFgIfAWhkZGRkAgkPFgIfAGgWCAIDDxAPFgIfAWhkZGRkAgUPEA8WAh8BaGRkZGQCBw8QDxYCHwFoZGRkZAIJDxAPFgIfAWhkZGRkAgsPFgIfAGgWBgIDDxAPFgIfAWhkZGRkAgUPEA8WAh8BaGRkZGQCBw8QDxYCHwFoZGRkZAIRDxYCHgVzdHlsZQVccGFkZGluZzoxMHB4O2ZvbnQtc2l6ZToxNHB4O3dpZHRoOjQwMHB4O2NvbG9yOmJsYWNrO2ZvbnQtZmFtaWx5OidBcmlhbCBCbGFjayc7ZGlzcGxheTpibG9jaztkAhMPFgIeCWlubmVyaHRtbAVBSW5jb21lLXRheChJbmNsdWRpbmcgc3VyY2hhcmdlLEVDICZhbXA7IFNIRUMpIGlzIFJzLiAxLDA4OCwyNjMuODBkAhUPFgIfAwUUIFN1cmNoYXJnZSAgUnMuIDAuMDBkAhcPFgIfAwUeIEVkdWNhdGlvbiBDZXNzICBScy4gMjEsMTMxLjM0ZAIZDxYEHwMFNVNlY29uZGFyeSBhbmQgSGlnaGVyIEVkdWNhdGlvbiBDZXNzIFJzLiAgICAgMTAsNTY1LjY3HwBnZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WBwUJY2hrRmVtYWxlBQljaGtGZW1hbGUFEGNoa1NlbmlvckNpdGl6ZW4FEGNoa1NlbmlvckNpdGl6ZW4FFGNoa1ZlcnlTZW5pb3JDaXRpemVuBRRjaGtWZXJ5U2VuaW9yQ2l0aXplbgUGY2hrTlJJ8K3caBXQoiItM7ZeVKM9lnJU0cI=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['TaxCalc'];
+if (!theForm) {
+    theForm = document.TaxCalc;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWHALcybTDCgLpmJWYDgKqj7qTDgKqj9b+BgKqj8LZDwKqj/6EBALBtsydAwLBtvj4CwLBttSRDQLBtsD8BQLBtvynCgLBtuiCAwLBtoTuCwLBtrBJAuG8nYUEAriayu8FAtX5x5wPAv2RxJoEAqy4kL4HApWP0aANAo2h8KgBAqz36qIEAoWOmuEKAovAzuQIAuLWp7wFApn+2cYKAuK1i38CjOeKxgarS73sUR+Q6OmPt5TvjsRDNfqPlw==" />
+</div>
+        <div class="w100 fl-l header">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" height="83px;">
+                <tr>
+                    <td width="50%" class="tl">
+                        <img src="../images/logo.gif" alt="" style="margin-left: 10px;" /></td>
+                    <td width="50%" class="tr indiabg">
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" height="23px;">
+                <tr>
+                    <td style="padding-right: 10px; border-top: darkgray 1px solid; padding-bottom: 1px;
+                        color: darkslategray; padding-top: 1px; border-bottom: darkgray 1px solid; font-family: 'Arial Black';
+                        height: 10px;" align="center" bgcolor="#eeeeee" colspan="2">
+                        Compute your Tax Liability&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <table id="Table1" cellspacing="0" cellpadding="0" width="912px" align="center" border="0">
+            
+            <tr>
+                <td style="padding-right: 10px; padding-bottom: 1px; padding-top: 1px" align="right"
+                    colspan="2">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 10px; padding-bottom: 1px; padding-top: 1px" align="center"
+                    colspan="2">
+                    &nbsp;<table align="center" border="0" cellpadding="0" cellspacing="0" width="90%">
+                        <tr>
+                            <td align="center" colspan="3" style="height: 10px">
+                                <span style="font-size: 11pt; color: midnightblue; font-family: Arial"><strong><span
+                                    style="font-size: 11pt; color: midnightblue; font-family: Arial"><strong>This calculator
+                                        helps you to calculate your tax liability based on your taxable income</strong></span>.</strong></span></td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="3" style="height: 10px">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" bgcolor="midnightblue" style="padding-left: 10px; font-size: 10pt;
+                                width: 263px; color: black; font-family: 'Arial Black'; height: 18px; background-color: #eeeeee;">
+                                Step 1 &nbsp; &nbsp; <font face="Arial"><strong>Select assessment year</strong></font>
+                            </td>
+                            <td align="left" style="padding-left: 10px; height: 18px; background-color: #eeeeee">
+                                <select name="MaskEdAssYear" onchange="javascript:setTimeout('__doPostBack(\'MaskEdAssYear\',\'\')', 0)" id="MaskEdAssYear" style="width:83px;">
+	<option selected="selected" value="2013">2013-14</option>
+	<option value="2012">2012-13</option>
+	<option value="2011">2011-12</option>
+	<option value="2010">2010-11</option>
+	<option value="2009">2009-10</option>
+	<option value="2008">2008-09</option>
+	<option value="2007">2007-08</option>
+	<option value="2006">2006-07</option>
+	<option value="2005">2005-06</option>
+	<option value="2004">2004-05</option>
+	<option value="2003">2003-04</option>
+	<option value="2002">2002-03</option>
+
+</select></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" height="10">
+                                <strong><span style="font-family: Arial">&nbsp; </span></strong>
+                            </td>
+                        </tr>
+                        <tr style="font-weight: bold; font-family: Arial">
+                            <td align="left" bgcolor="midnightblue" style="padding-left: 10px; font-size: 10pt;
+                                width: 263px; color: black; font-family: 'Arial Black'; height: 22px; background-color: #eeeeee;">
+                                Step 2 &nbsp; &nbsp; <font face="Arial">Select type of Assessee</font>
+                            </td>
+                            <td align="left" style="padding-left: 10px; height: 22px; background-color: #eeeeee">
+                                <select name="cboAssessee" onchange="javascript:setTimeout('__doPostBack(\'cboAssessee\',\'\')', 0)" id="cboAssessee" style="width:190px;">
+	<option selected="selected" value="INDIVIDUALS">INDIVIDUALS</option>
+	<option value="HUF">HUF</option>
+	<option value="AOPs/BOIs">AOPs/BOIs</option>
+	<option value="FIRMS">FIRMS</option>
+	<option value="DOMESTIC COMPANIES">DOMESTIC COMPANIES</option>
+	<option value="FOREIGN COMPANIES">FOREIGN COMPANIES</option>
+	<option value="CO-OPERATIVE SOCIETIES">CO-OPERATIVE SOCIETIES</option>
+
+</select></td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="2" style="padding-left: 100px; padding-bottom: 5px">
+                                &nbsp;
+                                <div id="DivIndv" ms_positioning="GridLayout" style="width: 440px;
+                                    position: relative; height: 93px">
+                                    <span id="Label1" style="color:Black;font-family:Verdana;font-size:10pt;text-decoration:underline;width: 100%; float: left;">Income of Individuals as</span>
+                                    <div class="width:100%; float:left;">
+                                        <span style="color:DarkSlateGray;font-family:Arial;font-size:10pt;display: block;"><input id="chkFemale" type="radio" name="IndivComp" value="chkFemale" onclick="javascript:setTimeout('__doPostBack(\'chkFemale\',\'\')', 0)" /><label for="chkFemale">Resident - Female</label></span>
+                                    </div>
+                                    <div class="width:100%; float:left;">
+                                        <span style="color:DarkSlateGray;font-family:Arial;font-size:10pt;display: block;"><input id="chkSeniorCitizen" type="radio" name="IndivComp" value="chkSeniorCitizen" onclick="javascript:setTimeout('__doPostBack(\'chkSeniorCitizen\',\'\')', 0)" /><label for="chkSeniorCitizen">Resident - Senior Citizen (60 years or more but less than 80 years)</label></span>
+                                    </div>
+                                    <div id="chkVerySeniorCitizendiv" class="width:100%; float:left;">
+                                        <span style="color:DarkSlateGray;font-family:Arial;font-size:10pt;display: block;"><input id="chkVerySeniorCitizen" type="radio" name="IndivComp" value="chkVerySeniorCitizen" onclick="javascript:setTimeout('__doPostBack(\'chkVerySeniorCitizen\',\'\')', 0)" /><label for="chkVerySeniorCitizen">Resident - Very Senior Citizen (80 years or more)</label></span>
+                                    </div>
+                                    <div class="width:100%; float:left;">
+                                        <span style="color:DarkSlateGray;font-family:Arial;font-size:10pt;display: block;"><input id="chkNRI" type="radio" name="IndivComp" value="chkNRI" checked="checked" /><label for="chkNRI">Any Other</label></span>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" bgcolor="midnightblue" height="24" style="padding-left: 10px; font-size: 10pt;
+                                width: 263px; color: black; font-family: 'Arial Black'; background-color: #eeeeee;">
+                                Step 3 &nbsp; &nbsp; <font face="Arial"><strong>Enter Net Income</strong></font>
+                            </td>
+                            <td align="left" height="24" style="padding-left: 10px; background-color: #eeeeee">
+                                <input name="MaskEdIncome" type="text" value="4088556" id="MaskEdIncome" style="width:142px;" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="cornflowerblue" colspan="3" height="26" valign="middle"
+                                style="background-color: #336600">
+                                <input type="submit" name="Button1" value="Compute tax liability" id="Button1" style="color:MidnightBlue;font-family:Arial;font-weight:bold;height:23px;width:295px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                &nbsp;<div id="dvlabel" style="padding:10px;font-size:14px;width:400px;color:black;font-family:'Arial Black';display:block;">
+                                    Tax Calculator as per Union Budget 2013-2014</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="taxcomp" colspan="3" style="padding-left: 40px; font-weight: bold;
+                                font-size: 12pt; padding-bottom: 3px; color: #ff0033; font-family: Verdana; text-align: center;">Income-tax(Including surcharge,EC &amp; SHEC) is Rs. 1,088,263.80</td>
+
+                        </tr>
+                        <tr>
+                            <td id="taxcomp1" colspan="3" style="padding-left: 40px; font-weight: bold;
+                                font-size: 12pt; padding-bottom: 3px; font-family: Verdana; text-align: center;"> Surcharge  Rs. 0.00</td>
+
+                        </tr>
+                        <tr>
+                            <td id="taxcomp2" colspan="3" style="padding-left: 40px; font-weight: bold;
+                                font-size: 12pt; padding-bottom: 3px; font-family: Verdana; text-align: center;"> Education Cess  Rs. 21,131.34</td>
+
+                        </tr>
+                        <tr>
+                            <td id="taxshec" colspan="3" style="padding-left: 40px; font-weight: bold;
+                                font-size: 12pt; padding-bottom: 3px; font-family: Verdana; height: 21px; text-align: center;">Secondary and Higher Education Cess Rs.     10,565.67</td>
+
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 10px; padding-bottom: 1px; padding-top: 1px" align="right"
+                    colspan="2">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 10px; padding-left: 20px; padding-bottom: 1px; padding-top: 1px"
+                    align="center" colspan="2">
+                    <a id="HyperLinkChallan" href="../Form.aspx?smd=2" style="font-family:Trebuchet MS;font-size:11pt;font-weight:bold;">need challans to deposit tax?</a></td>
+            </tr>
+            <tr>
+                <td style="padding-right: 10px; padding-left: 20px; padding-bottom: 1px; padding-top: 1px"
+                    align="left" colspan="2">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td style="padding-right: 10px; border-top: darkgray 1px solid; margin-top: 0px;
+                    padding-left: 15px; font-size: 9pt; margin-bottom: 0px; padding-bottom: 1px;
+                    color: crimson; padding-top: 1px; border-bottom: darkgray 1px solid; font-family: Arial;
+                    height: 18px; font-weight: bold;" align="right" bgcolor="#eeeeee" colspan="2">
+                    Supported by www.taxmann.com</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

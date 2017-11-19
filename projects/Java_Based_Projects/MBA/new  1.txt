@@ -1,0 +1,4 @@
+things still left in the project 
+
+what will be the output , When the user press RESULT BUTTON //singhal
+generate association rules //singhal

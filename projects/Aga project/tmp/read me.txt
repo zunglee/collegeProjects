@@ -1,0 +1,24 @@
+************************************read me***************************************
+***************************************************************************
+software requirement 
+ 
+1.) Windows 7 
+2.) Blender 2.56
+3.) Avi format supported media player
+4.) Two images for morphing
+
+Hardware Requirement
+
+1.) 32 bits, Dual Core CPU with at least 2 GHZ, and SSE2 support.
+2.) 2 GB RAM
+3.) 24 bits 1280x768 display
+4.) Mouse or trackpad
+5.) OpenGL Graphics Card with 512 MB RAM
+
+How to use
+
+Install the blender in the system having minimun requirement mentioned as above. Import the 
+image to be morphed into the blender . Select the portion to be morphed . Then select the add shapes option and
+import the second image. Adjust the features of the first image with the second image into to which it has to be morph.
+Adjust the time and frame with the speed of morphing . Render the file into the video. 
+Default path of rendered and saved video will be "C:\tmp".   

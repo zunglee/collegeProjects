@@ -1,0 +1,21 @@
+/***************************************************************\
+| |\  /|                                                We Put  |
+| | >< Hypercosm           window_styles.js             3d      |
+| |/  \|                                                To Work |
+|***************************************************************|
+|                                                               |
+|        This file defines the styles used by the user          |
+|        interface for the main window and dialog boxes.        |
+|                                                               |
+|***************************************************************|
+|                Copyright (c) 2008 Hypercosm, LLC.             |
+\***************************************************************/
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	overflow: hidden;
+	background-color: #D4D0C8;
+}

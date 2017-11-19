@@ -1,0 +1,29 @@
+body { font-family: Verdana, Helvetica, Arial, sans-serif; font-size:.75em; line-height:1.4em }
+pre { font-family: "Courier New"; font-size:1em; font-weight:bold }
+pre.icode { font-family: "Courier New"; font-size:1.2em; font-weight:bold; margin-left:2em }
+pre.code { font-family: "Courier New"; font-size:1.2em }
+code { font-family: "Courier New"; font-size:1.2em; font-weight:bold }
+h1 { font-family: Helvetica, Arial, sans-serif; font-size: 2.2em; line-height: 1em; font-weight: bold; text-align: left; margin-bottom: .5em; margin-top: 1.5em }
+h2 { font-family: Helvetica, Arial, sans-serif; font-size: 1.7em; line-height:1em; font-weight: bold; text-align: left; margin-bottom:-.25em; }
+h3 { font-family: Helvetica, Arial, sans-serif; font-size: 1.4em; line-height:1em; font-weight: bold; text-align: left; margin-bottom:-.5em; }
+span.pi { font-family: "Times New Roman, Times, serif" }
+span.bigoh { font-style: italic; font-weight: bold }
+ul { list-style: square }
+img { border: 0 }
+.left { text-align:left }
+.right { text-align:right }
+.center { text-align:center }
+.justify { text-align:justify }
+.bottom { vertical-align:bottom }
+.top { vertical-align:top }
+.middle { vertical-align: middle }
+table { border-collapse:collapse; }
+table.padding td { padding: 3px; }
+table.padding th { padding: 3px; }
+table.centerTable { margin-left: auto; margin-right: auto; }
+table.outline td { border:1px solid black; padding: 4px; }
+table.outline th { border:1px solid black; padding: 4px; }
+table.outlineWhite td { border:1px solid white; padding: 5px; }
+table.outlineWhite th { border:1px solid white; padding: 5px; }
+caption { caption-side: bottom; }
+img.border { border:1px solid black; }

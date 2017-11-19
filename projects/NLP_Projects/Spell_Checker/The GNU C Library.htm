@@ -1,0 +1,258 @@
+
+<!-- saved from url=(0051)http://www.delorie.com/gnu/docs/glibc/libc_145.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>The GNU C Library</title>
+<!--<base href="http://www.delorie.com/gnu/docs/glibc/libc_145.html">--><base href=".">
+</head><body><center><iframe src="./The GNU C Library_files/cm.htm" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+<table width="100%" border="0" cellspacing="0" cellpadding="3"><tbody><tr><td align="left" valign="top" bgcolor="#ffcc99"><small><font face="itc avant garde gothic,helvetica,arial"><b> &nbsp;
+<a href="http://www.delorie.com/" target="_top">www.delorie.com</a>/<a href="http://www.delorie.com/gnu/" target="_top">gnu</a>/<a href="http://www.delorie.com/gnu/docs/" target="_top">docs</a>/<a href="http://www.delorie.com/gnu/docs/glibc/" target="_top">glibc</a>/libc_145.html</b></font></small></td>
+<td align="right" valign="top" bgcolor="#ffcc99"><small><font face="itc avant garde gothic,helvetica,arial"><b> &nbsp;
+<a href="http://www.delorie.com/search/">search</a> &nbsp;
+</b></font></small></td>
+</tr></tbody></table><a href="http://www.delorie.com/gnu/docs/glibc/bulktrap.html"></a><table align="right" border="0" cellspacing="0" cellpadding="5">
+<tbody><tr><td>&nbsp;</td><td bgcolor="#ffcc99" align="center"><small>
+<a href="http://www.delorie.com/store/books/?glibc"><img src="./The GNU C Library_files/book.gif" width="50" height="52" border="0"><br>Buy the book!</a><br></small></td></tr>
+<tr><td><br></td></tr></tbody></table>
+
+<big><big><b>The GNU C Library</b></big></big><p></p></center>
+
+<a name="libc_145.html"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tbody><tr><td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc_144.html"> &lt; </a>]</td>
+<td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc_146.html"> &gt; </a>]</td>
+<td valign="MIDDLE" align="LEFT"> &nbsp; </td><td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc_146.html"> &lt;&lt; </a>]</td>
+<td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc_140.html"> Up </a>]</td>
+<td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc_147.html"> &gt;&gt; </a>]</td>
+<td valign="MIDDLE" align="LEFT"> &nbsp; </td><td valign="MIDDLE" align="LEFT"> &nbsp; </td><td valign="MIDDLE" align="LEFT"> &nbsp; </td><td valign="MIDDLE" align="LEFT"> &nbsp; </td><td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc.html#SEC_Top">Top</a>]</td>
+<td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc_toc.html#SEC_Contents">Contents</a>]</td>
+<td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc_708.html">Index</a>]</td>
+<td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc_abt.html#SEC_About"> ? </a>]</td>
+</tr></tbody></table>
+<hr size="1">
+<h2> 9.5 The <code>hsearch</code> function. </h2>
+<!--docid::SEC146::-->
+<p>
+
+The functions mentioned so far in this chapter are searching in a sorted
+or unsorted array.  There are other methods to organize information
+which later should be searched.  The costs of insert, delete and search
+differ.  One possible implementation is using hashing tables.
+</p><p>
+
+<a name="IDX834"></a>
+</p><dl>
+<dt><u>Function:</u> int <b>hcreate</b> <i>(size_t <var>nel</var>)</i>
+</dt><dd>The <code>hcreate</code> function creates a hashing table which can contain at
+least <var>nel</var> elements.  There is no possibility to grow this table so
+it is necessary to choose the value for <var>nel</var> wisely.  The used
+methods to implement this function might make it necessary to make the
+number of elements in the hashing table larger than the expected maximal
+number of elements.  Hashing tables usually work inefficient if they are
+filled 80% or more.  The constant access time guaranteed by hashing can
+only be achieved if few collisions exist.  See Knuth's "The Art of
+Computer Programming, Part 3: Searching and Sorting" for more
+information.
+<p></p><p>
+
+The weakest aspect of this function is that there can be at most one
+hashing table used through the whole program.  The table is allocated
+in local memory out of control of the programmer.  As an extension the
+GNU C library provides an additional set of functions with an reentrant
+interface which provide a similar interface but which allow to keep
+arbitrarily many hashing tables.
+</p><p>
+
+It is possible to use more than one hashing table in the program run if
+the former table is first destroyed by a call to <code>hdestroy</code>.
+</p><p>
+
+The function returns a non-zero value if successful.  If it return zero
+something went wrong.  This could either mean there is already a hashing
+table in use or the program runs out of memory.
+</p></dd></dl>
+<p></p><p>
+
+<a name="IDX835"></a>
+</p><dl>
+<dt><u>Function:</u> void <b>hdestroy</b> <i>(void)</i>
+</dt><dd>The <code>hdestroy</code> function can be used to free all the resources
+allocated in a previous call of <code>hcreate</code>.  After a call to this
+function it is again possible to call <code>hcreate</code> and allocate a new
+table with possibly different size.
+<p></p><p>
+
+It is important to remember that the elements contained in the hashing
+table at the time <code>hdestroy</code> is called are <em>not</em> freed by this
+function.  It is the responsibility of the program code to free those
+strings (if necessary at all).  Freeing all the element memory is not
+possible without extra, separately kept information since there is no
+function to iterate through all available elements in the hashing table.
+If it is really necessary to free a table and all elements the
+programmer has to keep a list of all table elements and before calling
+<code>hdestroy</code> s/he has to free all element's data using this list.
+This is a very unpleasant mechanism and it also shows that this kind of
+hashing tables is mainly meant for tables which are created once and
+used until the end of the program run.
+</p></dd></dl>
+<p></p><p>
+
+Entries of the hashing table and keys for the search are defined using
+this type:
+</p><p>
+
+<a name="IDX836"></a>
+</p><dl>
+<dt><u>Data type:</u> <b>struct ENTRY</b>
+</dt><dd>Both elements of this structure are pointers to zero-terminated strings.
+This is a limiting restriction of the functionality of the
+<code>hsearch</code> functions.  They can only be used for data sets which use
+the NUL character always and solely to terminate the records.  It is not
+possible to handle general binary data.
+<p></p><p>
+
+</p><dl compact="">
+<dt><code>char *key</code>
+</dt><dd>Pointer to a zero-terminated string of characters describing the key for
+the search or the element in the hashing table.
+</dd><dt><code>char *data</code>
+</dt><dd>Pointer to a zero-terminated string of characters describing the data.
+If the functions will be called only for searching an existing entry
+this element might stay undefined since it is not used.
+</dd></dl>
+</dd></dl>
+<p>
+
+<a name="IDX837"></a>
+</p><dl>
+<dt><u>Function:</u> ENTRY * <b>hsearch</b> <i>(ENTRY <var>item</var>, ACTION <var>action</var>)</i>
+</dt><dd>To search in a hashing table created using <code>hcreate</code> the
+<code>hsearch</code> function must be used.  This function can perform simple
+search for an element (if <var>action</var> has the <code>FIND</code>) or it can
+alternatively insert the key element into the hashing table.  Entries
+are never replaced.
+<p></p><p>
+
+The key is denoted by a pointer to an object of type <code>ENTRY</code>.  For
+locating the corresponding position in the hashing table only the
+<code>key</code> element of the structure is used.
+</p><p>
+
+If an entry with matching key is found the <var>action</var> parameter is
+irrelevant.  The found entry is returned.  If no matching entry is found
+and the <var>action</var> parameter has the value <code>FIND</code> the function
+returns a <code>NULL</code> pointer.  If no entry is found and the
+<var>action</var> parameter has the value <code>ENTER</code> a new entry is added
+to the hashing table which is initialized with the parameter <var>item</var>.
+A pointer to the newly added entry is returned.
+</p></dd></dl>
+<p></p><p>
+
+As mentioned before the hashing table used by the functions described so
+far is global and there can be at any time at most one hashing table in
+the program.  A solution is to use the following functions which are a
+GNU extension.  All have in common that they operate on a hashing table
+which is described by the content of an object of the type <code>struct
+hsearch_data</code>.  This type should be treated as opaque, none of its
+members should be changed directly.
+</p><p>
+
+<a name="IDX838"></a>
+</p><dl>
+<dt><u>Function:</u> int <b>hcreate_r</b> <i>(size_t <var>nel</var>, struct hsearch_data *<var>htab</var>)</i>
+</dt><dd>The <code>hcreate_r</code> function initializes the object pointed to by
+<var>htab</var> to contain a hashing table with at least <var>nel</var> elements.
+So this function is equivalent to the <code>hcreate</code> function except
+that the initialized data structure is controlled by the user.
+<p></p><p>
+
+This allows having more than one hashing table at one time.  The memory
+necessary for the <code>struct hsearch_data</code> object can be allocated
+dynamically.  It must be initialized with zero before calling this
+function.
+</p><p>
+
+The return value is non-zero if the operation were successful.  if the
+return value is zero something went wrong which probably means the
+programs runs out of memory.
+</p></dd></dl>
+<p></p><p>
+
+<a name="IDX839"></a>
+</p><dl>
+<dt><u>Function:</u> void <b>hdestroy_r</b> <i>(struct hsearch_data *<var>htab</var>)</i>
+</dt><dd>The <code>hdestroy_r</code> function frees all resources allocated by the
+<code>hcreate_r</code> function for this very same object <var>htab</var>.  As for
+<code>hdestroy</code> it is the programs responsibility to free the strings
+for the elements of the table.
+</dd></dl>
+<p></p><p>
+
+<a name="IDX840"></a>
+</p><dl>
+<dt><u>Function:</u> int <b>hsearch_r</b> <i>(ENTRY <var>item</var>, ACTION <var>action</var>, ENTRY **<var>retval</var>, struct hsearch_data *<var>htab</var>)</i>
+</dt><dd>The <code>hsearch_r</code> function is equivalent to <code>hsearch</code>.  The
+meaning of the first two arguments is identical.  But instead of
+operating on a single global hashing table the function works on the
+table described by the object pointed to by <var>htab</var> (which is
+initialized by a call to <code>hcreate_r</code>).
+<p></p><p>
+
+Another difference to <code>hcreate</code> is that the pointer to the found
+entry in the table is not the return value of the functions.  It is
+returned by storing it in a pointer variables pointed to by the
+<var>retval</var> parameter.  The return value of the function is an integer
+value indicating success if it is non-zero and failure if it is zero.
+In the latter case the global variable <var>errno</var> signals the reason for
+the failure.
+</p><p>
+
+</p><dl compact="">
+<dt><code>ENOMEM</code>
+</dt><dd>The table is filled and <code>hsearch_r</code> was called with an so far
+unknown key and <var>action</var> set to <code>ENTER</code>.
+</dd><dt><code>ESRCH</code>
+</dt><dd>The <var>action</var> parameter is <code>FIND</code> and no corresponding element
+is found in the table.
+</dd></dl>
+</dd></dl>
+<p>
+
+<a name="Tree Search Function"></a>
+</p><hr size="1">
+<table cellpadding="1" cellspacing="1" border="0">
+<tbody><tr><td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc_144.html"> &lt; </a>]</td>
+<td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc_146.html"> &gt; </a>]</td>
+<td valign="MIDDLE" align="LEFT"> &nbsp; </td><td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc_146.html"> &lt;&lt; </a>]</td>
+<td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc_140.html"> Up </a>]</td>
+<td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc_147.html"> &gt;&gt; </a>]</td>
+<td valign="MIDDLE" align="LEFT"> &nbsp; </td><td valign="MIDDLE" align="LEFT"> &nbsp; </td><td valign="MIDDLE" align="LEFT"> &nbsp; </td><td valign="MIDDLE" align="LEFT"> &nbsp; </td><td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc.html#SEC_Top">Top</a>]</td>
+<td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc_toc.html#SEC_Contents">Contents</a>]</td>
+<td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc_708.html">Index</a>]</td>
+<td valign="MIDDLE" align="LEFT">[<a href="http://www.delorie.com/gnu/docs/glibc/libc_abt.html#SEC_About"> ? </a>]</td>
+</tr></tbody></table>
+
+
+
+<br clear="all"><p></p>
+<a href="http://www.delorie.com/gnu/docs/glibc/bulktrap.html"></a><table width="100%" border="0" cellspacing="0" cellpadding="3"><tbody><tr>
+<td align="left" valign="top" bgcolor="#ffcc99"><small><font face="itc avant garde gothic,helvetica,arial"><b> &nbsp;
+<a href="http://www.delorie.com/users/dj/" target="_top">webmaster</a> &nbsp;
+<a href="http://www.delorie.com/donations.html" target="_top">donations</a> &nbsp;
+<a href="http://www.delorie.com/store/books/" target="_top">bookstore</a> &nbsp;
+</b></font></small></td>
+<td align="right" valign="top" bgcolor="#ffcc99"><small><font face="itc avant garde gothic,helvetica,arial"><b> &nbsp;
+<a href="http://www.delorie.com/" target="_top">delorie software</a> &nbsp;
+<a href="http://www.delorie.com/privacy.html" target="_top">privacy</a> &nbsp;
+</b></font></small></td>
+</tr><tr><td align="left" valign="top" bgcolor="#ffcc99"><small><font face="itc avant garde gothic,helvetica,arial"><b> &nbsp;
+<a href="http://www.delorie.com/copyright.html" target="_top">Copyright © 2003</a> &nbsp;
+<a href="http://www.delorie.com/users/fsf/" target="_top">by The Free Software Foundation</a> &nbsp;
+</b></font></small></td>
+<td align="right" valign="top" bgcolor="#ffcc99"><small><font face="itc avant garde gothic,helvetica,arial"><b> &nbsp;
+Updated Jun 2003 &nbsp;
+</b></font></small></td>
+</tr></tbody></table>
+<center><iframe src="./The GNU C Library_files/saved_resource.htm" width="468" height="60" scrolling="no" marginwidth="0" marginheight="0" border="0" frameborder="0" style="border:none;"></iframe>
+</center>
+
+
+</body></html>

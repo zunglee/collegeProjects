@@ -1,0 +1,3 @@
+1. Copy the content into the Matlab Folder
+   (C:/.../Documents/Matlab)
+2. Run the code using MATLAB R2012a (Not compatible wid Matlab 2010)

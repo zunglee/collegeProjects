@@ -1,0 +1,4 @@
+goal drink defence performance field
+Given test of C Programming and score 12/20 4NA.
+9,10 number Video lecture of DBMS Stanford.
+OS video Lecture on Deadlock (10,11,12,13).

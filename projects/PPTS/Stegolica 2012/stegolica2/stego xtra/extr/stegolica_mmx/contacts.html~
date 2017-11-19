@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Contacts</title>
+<meta name="keywords" content="" />
+<meta name="Premium Series" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<!-- start header -->
+<div id="header" >
+<image src="top.jpg" width="1000" height="100%">
+</div>
+<h1 style="text-align:center"> 
+<p style="font-size:25px" ><b> Hi this is our contacts </b></p>
+<p><a href="http://iiita.ac.in/inner.php?conf=person&id=IIT2007109">1. Harmeet singh </br> iit2007077@iiita.ac.in </p>
+<p><a href="http://iiita.ac.in/inner.php?conf=person&id=IIT2007107">2. Arpita Agrawal </br> iit2007104@iiita.ac.in</p>
+<p><a href="http://iiita.ac.in/inner.php?conf=person&id=IIT2007122">3. Akankasha Khare </br> iit2007092@iiita.ac.in</p>
+</h1>
+<ul >
+<li><a href="index.html">Back</a></li>
+</ul>
+<!-- end header -->
+</body>
+</html>

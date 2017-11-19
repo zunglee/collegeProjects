@@ -1,0 +1,172 @@
+* {
+	border: 0;
+}
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #000000;
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px; 
+	line-height: 21px;
+	background-image: url("images/background.jpg");
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+a:link, a:visited {
+	color: #ffffff;
+}
+a:hover, a:active {
+	color: #859f3d;
+}
+img {
+	display: block;
+}
+#container {
+	position: absolute;
+	padding: 0;
+	border: 1px;
+	border-style: solid;
+	border-color: #8cd41a;
+	margin-left: 200px;
+	margin-top: 70px;
+	margin-bottom: 70px;
+	margin-right: auto;
+	width: 900px;
+	height: 540px;
+	background-image: url("images/base.png");
+	-moz-box-shadow:0px -1px 16px #8cd41a;
+	-webkit-box-shadow:0px -1px 16px #8cd41a;
+}
+#holder {
+	position: absolute;
+	padding: 0;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: auto;
+	width: 860px;
+	height: 500px;
+	background-color: #000000;
+}
+#wrapper {
+	position: absolute;
+	padding: 0;
+	margin-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	width: 570px;
+	height: 500px;
+	background-color: #161616;
+}
+#content_wrapper {
+	position: absolute;
+	top: 182px;
+	width: 568px;
+	height: 316px;
+	border: 1px;
+	border-style: solid;
+	border-color: #ffffff;
+	overflow: hidden;
+}
+.content {
+	position: relative;
+	width: 2272px;
+	height: 316px;
+	left: 5px;
+}
+#menu {
+	position: absolute;
+	font-size: 18px;
+	top: 345px;
+}
+#icon {
+	position: absolute;
+	width: 570px;
+	height: 180px;
+	top: 0px;
+	left: 0px;
+}
+#icon_2 {
+	position: absolute;
+	top: 530px;
+	left: 810px;
+	width: 24px;
+	height: 24px;
+}
+#icon_3 {
+	position: absolute;
+	top: 530px;
+	left: 840px;
+	width: 24px;
+	height: 24px;
+}
+.content_area {
+	position: absolute;
+	color: #859f3d;
+	font-size: 15px;
+	width: 566px;
+	height: 314px;
+	overflow: hidden;
+}
+#home {
+	top: 0;
+	left: 0;
+}
+#rules {
+	top: 0;
+	left: 566px;
+}
+#arena {
+	top: 0;
+	left: 1132px;
+}
+#arena td {
+	color: #859f3d;
+}
+#button {
+	color: #000000;
+	width: 70px;
+	height: 25px;
+	border:2px solid #859f3d;
+	border-radius:10px 10px 10px 10px;
+	-moz-border-radius:10px 10px 10px 10px;
+	cursor: pointer;
+}
+#contact {
+	top: 0;
+	left: 1698px;
+}
+#sidebar {
+	background-image: url("images/sidebar.jpg");
+	position: absolute;
+	width: 290px;
+	height: 500px;
+	top: 0;
+	left: 570px;
+}
+#pic {
+	width: 185px;
+	height: 156px;
+}
+#ques_text {
+	height: 27px;
+	width: 150px;
+	font-size: 23px;
+	border: 1px;
+	border-style: solid;
+	border-color: #8CD41A;
+	border-radius:7px 7px 7px 7px;
+	-moz-border-radius:7px 7px 7px 7px;
+	background-color: #40610b;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#ques img {
+	height: 300px;
+	width: 500px;
+}

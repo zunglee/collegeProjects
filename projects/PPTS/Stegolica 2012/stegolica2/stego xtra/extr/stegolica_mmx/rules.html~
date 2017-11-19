@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Rules</title>
+<meta name="keywords" content="" />
+<meta name="Premium Series" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<!-- start header -->
+<div id="header" >
+<image src="top.jpg" width="1000" height="100%" align="center"> 
+</div>
+<ul >
+		<img src="images/rules.jpg" align="center" />
+			<li><a href="index.html">Back</a></li>
+		</ul>
+<!-- end header -->
+</body>
+</html>

@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)http://marcelotoledo.com/2007/08/10/how-to-write-a-spelling-corrector/ -->
+<html lang="en-US" class=" js webkit chrome win js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+        <meta property="fb:admins" content="566807892">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+	<title>How to Write a Spelling Corrector | Marcelo Toledo</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	
+	<link rel="Shortcut Icon" href="http://marcelotoledo.com/wp-content/themes/marcelotoledo/images/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="http://marcelotoledo.com/wp-content/themes/marcelotoledo/images/apple-touch-icon.png">
+	
+	<link rel="stylesheet" href="./How to Write a Spelling Corrector   Marcelo Toledo_files/style.css" type="text/css" media="screen">
+	<link rel="stylesheet" type="text/css" href="./How to Write a Spelling Corrector   Marcelo Toledo_files/print.css" media="print">	
+		
+	<script src="./How to Write a Spelling Corrector   Marcelo Toledo_files/cb=gapi.loaded_1" async=""></script><script id="twitter-wjs" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/widgets.js"></script><script type="text/javascript" async="" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/ga.js"></script><script src="./How to Write a Spelling Corrector   Marcelo Toledo_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript">document.documentElement.className += " js";</script>
+        <script type="text/javascript" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/plusone.js" gapi_processed="true"></script>
+
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->	
+
+
+	    <link rel="stylesheet" id="popup_domination-css" href="./How to Write a Spelling Corrector   Marcelo Toledo_files/lightbox.css" type="text/css" media="all">
+    <script type="text/javascript">
+      var popup_domination_admin_ajax = 'http://marcelotoledo.com/wp-admin/admin-ajax.php',popup_domination = {"defaults":[],"delay":30,"cookie_time":15,"center":"Y","cookie_path":"\/","show_opt":"open","show_anim":"open","show_mobiles":"","linkclick":"popup-domination-link","unload_msg":"","impression_count":0,"redirect":"","splitcookie":false,"conversionpage":"","campaign":"","popupid":"1","mailingid":"2","close_option":"true","output":"<div class=\"popup-dom-lightbox-wrapper\" id=\"popup_domination_lightbox_wrapper\" style=\"display:none\">\n<div class=\"lightbox-overlay\"><\/div>\n\t<div class=\"lightbox-main lightbox-color-bright-orange\">\n\t<a href=\"#\" class=\"lightbox-close\" id=\"popup_domination_lightbox_close\"><span>Close<\/span><\/a>\n\t\t<div class=\"lightbox-grey-panel\">\n\t\t\t<div class=\"lightbox-product-image\">\n                <img src=\"http:\/\/marcelotoledo.com\/wp-content\/uploads\/2013\/06\/PNS-cover1.png\" alt=\"\" \/>\t\t\t<\/div>\n\t\t\t<div class=\"lightbox-contentxx\">\n\t\t\t\t<p class=\"heading\">Tenha acesso aos meus melhores artigos<\/p>\n\t\t\t\t\n\t\t\t\t<div class=\"bullet-listx\">\n                    <ul class=\"bullet-list\">                        <li>Gr\u00e1tis e-book Plano de Neg\u00f3cios para Startups<\/li>                        <li>Artigos semanais sobre startups, vendas e marketing<\/li>                    <\/ul>\n\t\t\t\t\t<div class=\"lightbox-clear\"><\/div>\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t\t<div class=\"lightbox-clear\"><\/div>\n\t\t<\/div>\n\t\t\t\t<div class=\"lightbox-signup-panel\">\n\t\t\t<p class=\"heading2\">Gratuito<\/p>\n\t\t\t<p>Junte-se a mais de 3000 leitores<\/p>\n            <form method=\"post\" action=\"http:\/\/marcelotoledo.us1.list-manage1.com\/subscribe\/post?u=a4f4f9e0bb4ba7697f31fedf7&id=da57c17bdb\"target=\"_self\">\n                <div>\n                    <input class=\"provider\" type=\"hidden\" name=\"provider\" value=\"form\" \/><input class=\"listid\" type=\"hidden\" name=\"listid\" value=\"\" \/><input class=\"listname\" type=\"hidden\" name=\"listname\" value=\"\" \/><input class=\"mailingid\" type=\"hidden\" name=\"mailingid\" value=\"2\" \/><input class=\"mailnotify\" type=\"hidden\" name=\"mailnotify\" value=\"\" \/><input class=\"campaignid\" type=\"hidden\" name=\"campaignid\" value=\"1\" \/><input class=\"campname\" type=\"hidden\" name=\"campname\" value=\"marcelotoledo.com\" \/><input type=\"text\" class=\"email\" placeholder=\"Email\" name=\"EMAIL\" \/>                    <input type=\"submit\" value=\"Ok\" src=\"http:\/\/marcelotoledo.com\/wp-content\/plugins\/popup-domination\/themes\/lightbox6\/images\/trans.png\" class=\"blue-button\" \/>\n                    <p class=\"secure\">Eu tamb\u00e9m ODEIO SPAM. Voc\u00ea poder\u00e1 sair quando bem entender.<\/p>\n                    \n                <\/div>\n            <\/form>\n\t\t<\/div>\n\t\t\t\t<div class=\"lightbox-clear\"><\/div>\t\n\t\t<p class=\"powered\"><a href=\"http:\/\/www.popupdomination.com\/\" target=\"_blank\">Powered By PopUp Domination<\/a><\/p>\t<\/div>\n<\/div>\n"}, popup_non = 'false', popup_domination_new_window = "no";
+    </script>
+        <link rel="alternate" type="application/rss+xml" title="Marcelo Toledo » Feed" href="http://marcelotoledo.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Marcelo Toledo » Comments Feed" href="http://marcelotoledo.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Marcelo Toledo » How to Write a Spelling Corrector Comments Feed" href="http://marcelotoledo.com/2007/08/10/how-to-write-a-spelling-corrector/feed/">
+<link rel="stylesheet" id="wp-syntax-css-css" href="./How to Write a Spelling Corrector   Marcelo Toledo_files/wp-syntax.css" type="text/css" media="all">
+<script type="text/javascript" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/jquery.min.js"></script>
+<script type="text/javascript" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/scripts.js"></script>
+<script type="text/javascript" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/lightbox.js"></script>
+<script type="text/javascript" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/flowplayer-3.2.6.min.js"></script>
+<script type="text/javascript" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/flowplayer.ipad-3.2.2.min.js"></script>
+<script type="text/javascript" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/external-tracking.min.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://marcelotoledo.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://marcelotoledo.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="How an attack technique can save your life" href="http://marcelotoledo.com/2007/08/03/how-an-attack-technique-can-save-your-life/">
+<link rel="next" title="Network Manager with WISPr support" href="http://marcelotoledo.com/2007/09/01/network-manager-with-wispr-support/">
+<link rel="shortlink" href="http://marcelotoledo.com/?p=9">
+
+<!-- All in One SEO Pack 2.0.2 by Michael Torbert of Semper Fi Web Design[212,269] -->
+<link rel="canonical" href="./How to Write a Spelling Corrector   Marcelo Toledo_files/How to Write a Spelling Corrector   Marcelo Toledo.htm">
+<!-- /all in one seo pack -->
+<!-- Google Analytics Tracking by Google Analyticator 6.4.4.3: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-2530933-1']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+	_gaq.push(['_trackPageLoadTime']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<script type="text/javascript" async="" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/embed.js"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_reset > div{overflow:hidden}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+.fbpluginrecommendationsbarleft{left:10px}
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+
+<body class="single single-post postid-9 single-format-standard" data-twttr-rendered="true"><div class="popup-dom-lightbox-wrapper" id="popup_domination_lightbox_wrapper" style="display:none">
+<div class="lightbox-overlay"></div>
+	<div class="lightbox-main lightbox-color-bright-orange" style="position: fixed; left: 154.5px; top: 55px;">
+	<a href="http://marcelotoledo.com/2007/08/10/how-to-write-a-spelling-corrector/#" class="lightbox-close" id="popup_domination_lightbox_close"><span>Close</span></a>
+		<div class="lightbox-grey-panel">
+			<div class="lightbox-product-image">
+                <img src="./How to Write a Spelling Corrector   Marcelo Toledo_files/PNS-cover1.png" alt="">			</div>
+			<div class="lightbox-contentxx">
+				<p class="heading">Tenha acesso aos meus melhores artigos</p>
+				
+				<div class="bullet-listx">
+                    <ul class="bullet-list">                        <li>Grátis e-book Plano de Negócios para Startups</li>                        <li>Artigos semanais sobre startups, vendas e marketing</li>                    </ul>
+					<div class="lightbox-clear"></div>
+				</div>
+			</div>
+			<div class="lightbox-clear"></div>
+		</div>
+				<div class="lightbox-signup-panel">
+			<p class="heading2">Gratuito</p>
+			<p>Junte-se a mais de 3000 leitores</p>
+            <form method="post" action="http://marcelotoledo.us1.list-manage1.com/subscribe/post?u=a4f4f9e0bb4ba7697f31fedf7&id=da57c17bdb" target="_self">
+                <div>
+                    <input class="provider" type="hidden" name="provider" value="form"><input class="listid" type="hidden" name="listid" value=""><input class="listname" type="hidden" name="listname" value=""><input class="mailingid" type="hidden" name="mailingid" value="2"><input class="mailnotify" type="hidden" name="mailnotify" value=""><input class="campaignid" type="hidden" name="campaignid" value="1"><input class="campname" type="hidden" name="campname" value="marcelotoledo.com"><input type="text" class="email" placeholder="Email" name="EMAIL">                    <input type="submit" value="Ok" src="http://marcelotoledo.com/wp-content/plugins/popup-domination/themes/lightbox6/images/trans.png" class="blue-button"><div class="wait" style="display:none;"><img src="./How to Write a Spelling Corrector   Marcelo Toledo_files/wait.gif"></div>
+                    <p class="secure">Eu também ODEIO SPAM. Você poderá sair quando bem entender.</p>
+                    
+                </div>
+            </form>
+		</div>
+				<div class="lightbox-clear"></div>	
+		<p class="powered"><a href="http://www.popupdomination.com/" target="_blank">Powered By PopUp Domination</a></p>	</div>
+</div>
+
+	
+	<div id="root">
+		<header id="top">
+			<h1 id="logo"><a href="http://marcelotoledo.com/" accesskey="h"><img src="./How to Write a Spelling Corrector   Marcelo Toledo_files/logo-a.png" width="280" height="24" alt="Marcelo Toledo"></a></h1>
+			<p id="tagline">startups, empreendedorismo e tecnologia</p>
+
+			<nav id="skips">
+				<ul>
+					<li><a href="http://marcelotoledo.com/2007/08/10/how-to-write-a-spelling-corrector/#nav" accesskey="n">Skip to navigation [n]</a></li>
+					<li><a href="http://marcelotoledo.com/2007/08/10/how-to-write-a-spelling-corrector/#content" accesskey="c">Skip to content [c]</a></li>
+					<li><a href="http://marcelotoledo.com/2007/08/10/how-to-write-a-spelling-corrector/#footer" accesskey="f"></a></li>
+				</ul>
+			</nav>
+
+			<nav id="nav">				
+				<h2 class="offset">Navigation</h2>				
+				<ul id="menu-primary" class="menu"><li id="menu-item-1320" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1320"><a href="http://marcelotoledo.com/">Home</a></li>
+<li id="menu-item-1483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1483"><a href="http://marcelotoledo.com/social/">Social</a></li>
+<li id="menu-item-1321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1321"><a href="http://marcelotoledo.com/sobre/">Sobre</a></li>
+<li id="menu-item-1323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1323"><a href="http://marcelotoledo.com/startup/">Startups</a></li>
+<li id="menu-item-1322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1322"><a href="http://marcelotoledo.com/contato/">Contato</a></li>
+</ul>								
+			</nav>
+
+		</header>                    
+		<div id="content">
+			<section id="main">
+
+
+	<article class="post-9 post type-post status-publish format-standard hentry category-software">
+		<header>
+			<h2>How to Write a Spelling Corrector</h2>
+			<p><time pubdate="pubdate" datetime="2007-08-10T14:31:35+00:00">10/08/2007</time></p>
+		</header>		
+					
+		<div class="content">
+						
+			
+			<p><a href="http://norvig.com/">Peter Norvig</a>, Google’s Director of Research, wrote an article explaining <a href="http://norvig.com/spell-correct.html">how to write a spelling corrector</a>. He wrote using python in 21 lines. After this, many people implemented in other languages, I wrote in C to compare the amount of lines and speed.</p>
+<p>I quote some of Norvig’s paragraphs below:</p>
+<p>“In the past week, two friends (Dean and Bill) independently told me they were amazed at how Google does spelling correction so well and quickly. Type in a search like [speling] and Google comes back in 0.1 seconds or so with Did you mean: spelling. (Yahoo and Microsoft are similar.) What surprised me is that I thought Dean and Bill, being highly accomplished engineers and mathematicians, would have good intuitions about statistical language processing problems such as spelling correction. But they didn’t, and come to think of it, there’s no reason they should: it was my expectations that were faulty, not their knowledge.</p>
+<p>I figured they and many others could benefit from an explanation. The full details of an industrial-strength spell corrector like Google’s would be more confusing than enlightening, but I figured that on the plane flight home, in less than a page of code, I could write a toy spelling corrector that achieves 80 or 90% accuracy at a processing speed of at least 10 words per second.</p>
+<p>So here, in 21 lines of Python 2.5 code, is the complete spelling corrector:”</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="python" style="font-family:monospace;"><span style="color: #ff7700;font-weight:bold;">import</span> <span style="color: #dc143c;">re</span><span style="color: #66cc66;">,</span> <span style="color: #dc143c;">collections</span>
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">def</span> words<span style="color: black;">(</span>text<span style="color: black;">)</span>: <span style="color: #ff7700;font-weight:bold;">return</span> <span style="color: #dc143c;">re</span>.<span style="color: black;">findall</span><span style="color: black;">(</span><span style="color: #483d8b;">'[a-z]+'</span><span style="color: #66cc66;">,</span> text.<span style="color: black;">lower</span><span style="color: black;">(</span><span style="color: black;">)</span><span style="color: black;">)</span> 
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">def</span> train<span style="color: black;">(</span>features<span style="color: black;">)</span>:
+    model <span style="color: #66cc66;">=</span> <span style="color: #dc143c;">collections</span>.<span style="color: black;">defaultdict</span><span style="color: black;">(</span><span style="color: #ff7700;font-weight:bold;">lambda</span>: <span style="color: #ff4500;">1</span><span style="color: black;">)</span>
+    <span style="color: #ff7700;font-weight:bold;">for</span> f <span style="color: #ff7700;font-weight:bold;">in</span> features:
+        model<span style="color: black;">[</span>f<span style="color: black;">]</span> +<span style="color: #66cc66;">=</span> <span style="color: #ff4500;">1</span>
+    <span style="color: #ff7700;font-weight:bold;">return</span> model
+&nbsp;
+NWORDS <span style="color: #66cc66;">=</span> train<span style="color: black;">(</span>words<span style="color: black;">(</span><span style="color: #008000;">file</span><span style="color: black;">(</span><span style="color: #483d8b;">'big.txt'</span><span style="color: black;">)</span>.<span style="color: black;">read</span><span style="color: black;">(</span><span style="color: black;">)</span><span style="color: black;">)</span><span style="color: black;">)</span>
+&nbsp;
+alphabet <span style="color: #66cc66;">=</span> <span style="color: #483d8b;">'abcdefghijklmnopqrstuvwxyz'</span>
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">def</span> edits1<span style="color: black;">(</span>word<span style="color: black;">)</span>:
+    n <span style="color: #66cc66;">=</span> <span style="color: #008000;">len</span><span style="color: black;">(</span>word<span style="color: black;">)</span>
+    <span style="color: #ff7700;font-weight:bold;">return</span> <span style="color: #008000;">set</span><span style="color: black;">(</span><span style="color: black;">[</span>word<span style="color: black;">[</span><span style="color: #ff4500;">0</span>:i<span style="color: black;">]</span>+word<span style="color: black;">[</span>i+<span style="color: #ff4500;">1</span>:<span style="color: black;">]</span> <span style="color: #ff7700;font-weight:bold;">for</span> i <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">(</span>n<span style="color: black;">)</span><span style="color: black;">]</span> +                     <span style="color: #808080; font-style: italic;"># deletion</span>
+               <span style="color: black;">[</span>word<span style="color: black;">[</span><span style="color: #ff4500;">0</span>:i<span style="color: black;">]</span>+word<span style="color: black;">[</span>i+<span style="color: #ff4500;">1</span><span style="color: black;">]</span>+word<span style="color: black;">[</span>i<span style="color: black;">]</span>+word<span style="color: black;">[</span>i+<span style="color: #ff4500;">2</span>:<span style="color: black;">]</span> <span style="color: #ff7700;font-weight:bold;">for</span> i <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">(</span>n-<span style="color: #ff4500;">1</span><span style="color: black;">)</span><span style="color: black;">]</span> + <span style="color: #808080; font-style: italic;"># transposition</span>
+               <span style="color: black;">[</span>word<span style="color: black;">[</span><span style="color: #ff4500;">0</span>:i<span style="color: black;">]</span>+c+word<span style="color: black;">[</span>i+<span style="color: #ff4500;">1</span>:<span style="color: black;">]</span> <span style="color: #ff7700;font-weight:bold;">for</span> i <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">(</span>n<span style="color: black;">)</span> <span style="color: #ff7700;font-weight:bold;">for</span> c <span style="color: #ff7700;font-weight:bold;">in</span> alphabet<span style="color: black;">]</span> + <span style="color: #808080; font-style: italic;"># alteration</span>
+               <span style="color: black;">[</span>word<span style="color: black;">[</span><span style="color: #ff4500;">0</span>:i<span style="color: black;">]</span>+c+word<span style="color: black;">[</span>i:<span style="color: black;">]</span> <span style="color: #ff7700;font-weight:bold;">for</span> i <span style="color: #ff7700;font-weight:bold;">in</span> <span style="color: #008000;">range</span><span style="color: black;">(</span>n+<span style="color: #ff4500;">1</span><span style="color: black;">)</span> <span style="color: #ff7700;font-weight:bold;">for</span> c <span style="color: #ff7700;font-weight:bold;">in</span> alphabet<span style="color: black;">]</span><span style="color: black;">)</span>  <span style="color: #808080; font-style: italic;"># insertion</span>
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">def</span> known_edits2<span style="color: black;">(</span>word<span style="color: black;">)</span>:
+    <span style="color: #ff7700;font-weight:bold;">return</span> <span style="color: #008000;">set</span><span style="color: black;">(</span>e2 <span style="color: #ff7700;font-weight:bold;">for</span> e1 <span style="color: #ff7700;font-weight:bold;">in</span> edits1<span style="color: black;">(</span>word<span style="color: black;">)</span> <span style="color: #ff7700;font-weight:bold;">for</span> e2 <span style="color: #ff7700;font-weight:bold;">in</span> edits1<span style="color: black;">(</span>e1<span style="color: black;">)</span> <span style="color: #ff7700;font-weight:bold;">if</span> e2 <span style="color: #ff7700;font-weight:bold;">in</span> NWORDS<span style="color: black;">)</span>
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">def</span> known<span style="color: black;">(</span>words<span style="color: black;">)</span>: <span style="color: #ff7700;font-weight:bold;">return</span> <span style="color: #008000;">set</span><span style="color: black;">(</span>w <span style="color: #ff7700;font-weight:bold;">for</span> w <span style="color: #ff7700;font-weight:bold;">in</span> words <span style="color: #ff7700;font-weight:bold;">if</span> w <span style="color: #ff7700;font-weight:bold;">in</span> NWORDS<span style="color: black;">)</span>
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">def</span> correct<span style="color: black;">(</span>word<span style="color: black;">)</span>:
+    candidates <span style="color: #66cc66;">=</span> known<span style="color: black;">(</span><span style="color: black;">[</span>word<span style="color: black;">]</span><span style="color: black;">)</span> <span style="color: #ff7700;font-weight:bold;">or</span> known<span style="color: black;">(</span>edits1<span style="color: black;">(</span>word<span style="color: black;">)</span><span style="color: black;">)</span> <span style="color: #ff7700;font-weight:bold;">or</span> known_edits2<span style="color: black;">(</span>word<span style="color: black;">)</span> <span style="color: #ff7700;font-weight:bold;">or</span> <span style="color: black;">[</span>word<span style="color: black;">]</span>
+    <span style="color: #ff7700;font-weight:bold;">return</span> <span style="color: #008000;">max</span><span style="color: black;">(</span>candidates<span style="color: #66cc66;">,</span> key<span style="color: #66cc66;">=</span><span style="color: #ff7700;font-weight:bold;">lambda</span> w: NWORDS<span style="color: black;">[</span>w<span style="color: black;">]</span><span style="color: black;">)</span></pre></td></tr></tbody></table></div>
+
+<p>And here is my version in C:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="c" style="font-family:monospace;"><span style="color: #808080; font-style: italic;">/* 
+ * spell.c --- spell corrector
+ * 
+ * Copyright  (C)  2007  Marcelo Toledo &lt;marcelo@marcelotoledo.org&gt;
+ * 
+ * Version: 1.0
+ * Keywords: spell corrector
+ * Author: Marcelo Toledo &lt;marcelo@marcelotoledo.org&gt;
+ * Maintainer: Marcelo Toledo &lt;marcelo@marcelotoledo.org&gt;
+ * URL: http://www.marcelotoledo.org
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ * 
+ * Commentary: 
+ * 
+ * See http://www.marcelotoledo.org.
+ * 
+ * Code:
+ */</span>
+&nbsp;
+<span style="color: #339933;">#include &lt;stdio.h&gt;</span>
+<span style="color: #339933;">#include &lt;stdlib.h&gt;</span>
+<span style="color: #339933;">#include &lt;string.h&gt;</span>
+<span style="color: #339933;">#include &lt;ctype.h&gt;</span>
+<span style="color: #339933;">#include &lt;search.h&gt;</span>
+<span style="color: #339933;">#include &lt;sys/types.h&gt;</span>
+<span style="color: #339933;">#include &lt;sys/stat.h&gt;</span>
+<span style="color: #339933;">#include &lt;unistd.h&gt;</span>
+&nbsp;
+<span style="color: #339933;">#define DICTIONARY "./big.txt"</span>
+<span style="color: #339933;">#define DICT_SZ    3000000</span>
+&nbsp;
+<span style="color: #993333;">const</span> <span style="color: #993333;">char</span> delim<span style="color: #009900;">[</span><span style="color: #009900;">]</span>    <span style="color: #339933;">=</span> <span style="color: #ff0000;">".,:;`/<span style="color: #000099; font-weight: bold;">\"</span>+-_(){}[]&lt;&gt;*&amp;^%$#@!?~/|<span style="color: #000099; font-weight: bold;">\\</span>=1234567890 <span style="color: #000099; font-weight: bold;">\t</span><span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">;</span>
+<span style="color: #993333;">const</span> <span style="color: #993333;">char</span> alphabet<span style="color: #009900;">[</span><span style="color: #009900;">]</span> <span style="color: #339933;">=</span> <span style="color: #ff0000;">"abcdefghijklmnopqrstuvwxyz"</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #993333;">static</span> <span style="color: #993333;">char</span> <span style="color: #339933;">*</span>strtolower<span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">*</span>word<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        <span style="color: #993333;">char</span> <span style="color: #339933;">*</span>s<span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">for</span> <span style="color: #009900;">(</span>s <span style="color: #339933;">=</span> word<span style="color: #339933;">;</span> <span style="color: #339933;">*</span>s<span style="color: #339933;">;</span> s<span style="color: #339933;">++</span><span style="color: #009900;">)</span>
+                <span style="color: #339933;">*</span>s <span style="color: #339933;">=</span> <span style="color: #000066;">tolower</span><span style="color: #009900;">(</span><span style="color: #339933;">*</span>s<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">return</span> word<span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span>
+&nbsp;
+<span style="color: #993333;">static</span> ENTRY <span style="color: #339933;">*</span>find<span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">*</span>word<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        ENTRY e<span style="color: #339933;">;</span>
+&nbsp;
+        e.<span style="color: #202020;">key</span> <span style="color: #339933;">=</span> word<span style="color: #339933;">;</span>
+        <span style="color: #b1b100;">return</span> hsearch<span style="color: #009900;">(</span>e<span style="color: #339933;">,</span> FIND<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span>
+&nbsp;
+<span style="color: #993333;">static</span> <span style="color: #993333;">int</span> update<span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">*</span>word<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        ENTRY <span style="color: #339933;">*</span>e <span style="color: #339933;">=</span> find<span style="color: #009900;">(</span>word<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span><span style="color: #339933;">!</span>e<span style="color: #009900;">)</span>
+                <span style="color: #b1b100;">return</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span>
+&nbsp;
+        e<span style="color: #339933;">-&gt;</span>data<span style="color: #339933;">++;</span>
+&nbsp;
+        <span style="color: #b1b100;">return</span> <span style="color: #0000dd;">1</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span>
+&nbsp;
+<span style="color: #993333;">static</span> <span style="color: #993333;">int</span> read_file<span style="color: #009900;">(</span>ENTRY dict<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        <span style="color: #993333;">char</span> <span style="color: #339933;">*</span>file<span style="color: #339933;">,</span> <span style="color: #339933;">*</span>word<span style="color: #339933;">,</span> <span style="color: #339933;">*</span>w<span style="color: #339933;">;</span>
+        FILE <span style="color: #339933;">*</span>fp <span style="color: #339933;">=</span> <span style="color: #000066;">fopen</span><span style="color: #009900;">(</span>DICTIONARY<span style="color: #339933;">,</span> <span style="color: #ff0000;">"r"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        <span style="color: #993333;">struct</span> stat sb<span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span><span style="color: #339933;">!</span>fp<span style="color: #009900;">)</span>
+                <span style="color: #b1b100;">return</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span>stat<span style="color: #009900;">(</span>DICTIONARY<span style="color: #339933;">,</span> <span style="color: #339933;">&amp;</span>sb<span style="color: #009900;">)</span><span style="color: #009900;">)</span>
+                <span style="color: #b1b100;">return</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span>
+&nbsp;
+        file <span style="color: #339933;">=</span> <span style="color: #000066;">malloc</span><span style="color: #009900;">(</span>sb.<span style="color: #202020;">st_size</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span><span style="color: #339933;">!</span>file<span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+                <span style="color: #000066;">fclose</span><span style="color: #009900;">(</span>fp<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+                <span style="color: #b1b100;">return</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">}</span>
+&nbsp;
+        <span style="color: #000066;">fread</span><span style="color: #009900;">(</span>file<span style="color: #339933;">,</span> <span style="color: #993333;">sizeof</span><span style="color: #009900;">(</span><span style="color: #993333;">char</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> sb.<span style="color: #202020;">st_size</span><span style="color: #339933;">,</span> fp<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+        word <span style="color: #339933;">=</span> <span style="color: #000066;">strtok</span><span style="color: #009900;">(</span>file<span style="color: #339933;">,</span> delim<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        <span style="color: #b1b100;">while</span><span style="color: #009900;">(</span>word <span style="color: #339933;">!=</span> NULL<span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+                w <span style="color: #339933;">=</span> strtolower<span style="color: #009900;">(</span>strdup<span style="color: #009900;">(</span>word<span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+                <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span><span style="color: #339933;">!</span>update<span style="color: #009900;">(</span>w<span style="color: #009900;">)</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+                        dict.<span style="color: #202020;">key</span>  <span style="color: #339933;">=</span> w<span style="color: #339933;">;</span>
+                        dict.<span style="color: #202020;">data</span> <span style="color: #339933;">=</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span>
+                        hsearch<span style="color: #009900;">(</span>dict<span style="color: #339933;">,</span> ENTER<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+                <span style="color: #009900;">}</span>
+&nbsp;
+                word <span style="color: #339933;">=</span> <span style="color: #000066;">strtok</span><span style="color: #009900;">(</span>NULL<span style="color: #339933;">,</span> delim<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">}</span>
+&nbsp;
+        <span style="color: #000066;">free</span><span style="color: #009900;">(</span>file<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        <span style="color: #000066;">fclose</span><span style="color: #009900;">(</span>fp<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">return</span> <span style="color: #0000dd;">1</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span>
+&nbsp;
+<span style="color: #993333;">static</span> <span style="color: #993333;">char</span> <span style="color: #339933;">*</span>substr<span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">*</span>str<span style="color: #339933;">,</span> <span style="color: #993333;">int</span> offset<span style="color: #339933;">,</span> <span style="color: #993333;">int</span> limit<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        <span style="color: #993333;">char</span> <span style="color: #339933;">*</span>new_str<span style="color: #339933;">;</span>
+        <span style="color: #993333;">int</span> str_size <span style="color: #339933;">=</span> <span style="color: #000066;">strlen</span><span style="color: #009900;">(</span>str<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span><span style="color: #009900;">(</span>limit <span style="color: #339933;">&gt;</span> str_size<span style="color: #009900;">)</span> <span style="color: #339933;">||</span> <span style="color: #009900;">(</span><span style="color: #009900;">(</span>offset <span style="color: #339933;">+</span> limit<span style="color: #009900;">)</span> <span style="color: #339933;">&gt;</span> str_size<span style="color: #009900;">)</span> <span style="color: #339933;">||</span> 
+            <span style="color: #009900;">(</span>str_size <span style="color: #339933;">&lt;</span> <span style="color: #0000dd;">1</span><span style="color: #009900;">)</span> <span style="color: #339933;">||</span> <span style="color: #009900;">(</span>limit <span style="color: #339933;">==</span> <span style="color: #0000dd;">0</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span>
+                <span style="color: #b1b100;">return</span> NULL<span style="color: #339933;">;</span>
+&nbsp;
+        new_str <span style="color: #339933;">=</span> <span style="color: #000066;">malloc</span><span style="color: #009900;">(</span>limit<span style="color: #339933;">+</span><span style="color: #0000dd;">1</span> <span style="color: #339933;">*</span> <span style="color: #993333;">sizeof</span><span style="color: #009900;">(</span><span style="color: #993333;">char</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span><span style="color: #339933;">!</span>new_str<span style="color: #009900;">)</span>
+                <span style="color: #b1b100;">return</span> NULL<span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #000066;">strncpy</span><span style="color: #009900;">(</span>new_str<span style="color: #339933;">,</span> str<span style="color: #339933;">+</span>offset<span style="color: #339933;">,</span> limit<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        <span style="color: #339933;">*</span><span style="color: #009900;">(</span>new_str <span style="color: #339933;">+</span> limit<span style="color: #009900;">)</span> <span style="color: #339933;">=</span> <span style="color: #ff0000;">'<span style="color: #006699; font-weight: bold;">\0</span>'</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">return</span> new_str<span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span>
+&nbsp;
+<span style="color: #993333;">static</span> <span style="color: #993333;">char</span> <span style="color: #339933;">*</span>concat<span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">*</span>str1<span style="color: #339933;">,</span> <span style="color: #993333;">char</span> <span style="color: #339933;">*</span>str2<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span><span style="color: #339933;">!</span>str1<span style="color: #009900;">)</span> <span style="color: #009900;">{</span> 
+                str1 <span style="color: #339933;">=</span> <span style="color: #000066;">malloc</span><span style="color: #009900;">(</span><span style="color: #993333;">sizeof</span><span style="color: #009900;">(</span><span style="color: #993333;">char</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+                <span style="color: #339933;">*</span>str1 <span style="color: #339933;">=</span> <span style="color: #ff0000;">'<span style="color: #006699; font-weight: bold;">\0</span>'</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">}</span>
+&nbsp;
+        <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span><span style="color: #339933;">!</span>str2<span style="color: #009900;">)</span> <span style="color: #009900;">{</span> 
+                str2 <span style="color: #339933;">=</span> <span style="color: #000066;">malloc</span><span style="color: #009900;">(</span><span style="color: #993333;">sizeof</span><span style="color: #009900;">(</span><span style="color: #993333;">char</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+                <span style="color: #339933;">*</span>str2 <span style="color: #339933;">=</span> <span style="color: #ff0000;">'<span style="color: #006699; font-weight: bold;">\0</span>'</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">}</span>
+&nbsp;
+        str1 <span style="color: #339933;">=</span> <span style="color: #000066;">realloc</span><span style="color: #009900;">(</span>str1<span style="color: #339933;">,</span> <span style="color: #000066;">strlen</span><span style="color: #009900;">(</span>str1<span style="color: #009900;">)</span> <span style="color: #339933;">+</span> <span style="color: #000066;">strlen</span><span style="color: #009900;">(</span>str2<span style="color: #009900;">)</span> <span style="color: #339933;">+</span> <span style="color: #0000dd;">1</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        <span style="color: #b1b100;">return</span> <span style="color: #000066;">strcat</span><span style="color: #009900;">(</span>str1<span style="color: #339933;">,</span> str2<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span>
+&nbsp;
+<span style="color: #993333;">static</span> <span style="color: #993333;">int</span> deletion<span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">*</span>word<span style="color: #339933;">,</span> <span style="color: #993333;">char</span> <span style="color: #339933;">**</span>array<span style="color: #339933;">,</span> <span style="color: #993333;">int</span> start_idx<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        <span style="color: #993333;">int</span> i<span style="color: #339933;">,</span> word_len <span style="color: #339933;">=</span> <span style="color: #000066;">strlen</span><span style="color: #009900;">(</span>word<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">for</span> <span style="color: #009900;">(</span>i <span style="color: #339933;">=</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span> i <span style="color: #339933;">&lt;</span> word_len<span style="color: #339933;">;</span> i<span style="color: #339933;">++</span><span style="color: #009900;">)</span>
+                array<span style="color: #009900;">[</span>i <span style="color: #339933;">+</span> start_idx<span style="color: #009900;">]</span> <span style="color: #339933;">=</span> concat<span style="color: #009900;">(</span>substr<span style="color: #009900;">(</span>word<span style="color: #339933;">,</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">,</span> i<span style="color: #009900;">)</span><span style="color: #339933;">,</span> substr<span style="color: #009900;">(</span>word<span style="color: #339933;">,</span> i<span style="color: #339933;">+</span><span style="color: #0000dd;">1</span><span style="color: #339933;">,</span> word_len<span style="color: #339933;">-</span><span style="color: #009900;">(</span>i<span style="color: #339933;">+</span><span style="color: #0000dd;">1</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">return</span> i<span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span>
+&nbsp;
+<span style="color: #993333;">static</span> <span style="color: #993333;">int</span> transposition<span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">*</span>word<span style="color: #339933;">,</span> <span style="color: #993333;">char</span> <span style="color: #339933;">**</span>array<span style="color: #339933;">,</span> <span style="color: #993333;">int</span> start_idx<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        <span style="color: #993333;">int</span> i<span style="color: #339933;">,</span> word_len <span style="color: #339933;">=</span> <span style="color: #000066;">strlen</span><span style="color: #009900;">(</span>word<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">for</span> <span style="color: #009900;">(</span>i <span style="color: #339933;">=</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span> i <span style="color: #339933;">&lt;</span> word_len<span style="color: #339933;">-</span><span style="color: #0000dd;">1</span><span style="color: #339933;">;</span> i<span style="color: #339933;">++</span><span style="color: #009900;">)</span>
+                array<span style="color: #009900;">[</span>i <span style="color: #339933;">+</span> start_idx<span style="color: #009900;">]</span> <span style="color: #339933;">=</span> concat<span style="color: #009900;">(</span>concat<span style="color: #009900;">(</span>substr<span style="color: #009900;">(</span>word<span style="color: #339933;">,</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">,</span> i<span style="color: #009900;">)</span><span style="color: #339933;">,</span> 
+                                                     substr<span style="color: #009900;">(</span>word<span style="color: #339933;">,</span> i<span style="color: #339933;">+</span><span style="color: #0000dd;">1</span><span style="color: #339933;">,</span> <span style="color: #0000dd;">1</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> 
+                                              concat<span style="color: #009900;">(</span>substr<span style="color: #009900;">(</span>word<span style="color: #339933;">,</span> i<span style="color: #339933;">,</span> <span style="color: #0000dd;">1</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> 
+                                                     substr<span style="color: #009900;">(</span>word<span style="color: #339933;">,</span> i<span style="color: #339933;">+</span><span style="color: #0000dd;">2</span><span style="color: #339933;">,</span> word_len<span style="color: #339933;">-</span><span style="color: #009900;">(</span>i<span style="color: #339933;">+</span><span style="color: #0000dd;">2</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">return</span> i<span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span>
+&nbsp;
+<span style="color: #993333;">static</span> <span style="color: #993333;">int</span> alteration<span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">*</span>word<span style="color: #339933;">,</span> <span style="color: #993333;">char</span> <span style="color: #339933;">**</span>array<span style="color: #339933;">,</span> <span style="color: #993333;">int</span> start_idx<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        <span style="color: #993333;">int</span> i<span style="color: #339933;">,</span> j<span style="color: #339933;">,</span> k<span style="color: #339933;">,</span> word_len <span style="color: #339933;">=</span> <span style="color: #000066;">strlen</span><span style="color: #009900;">(</span>word<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        <span style="color: #993333;">char</span> c<span style="color: #009900;">[</span><span style="color: #0000dd;">2</span><span style="color: #009900;">]</span> <span style="color: #339933;">=</span> <span style="color: #009900;">{</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">,</span> <span style="color: #0000dd;">0</span> <span style="color: #009900;">}</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">for</span> <span style="color: #009900;">(</span>i <span style="color: #339933;">=</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">,</span> k <span style="color: #339933;">=</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span> i <span style="color: #339933;">&lt;</span> word_len<span style="color: #339933;">;</span> i<span style="color: #339933;">++</span><span style="color: #009900;">)</span>
+                <span style="color: #b1b100;">for</span> <span style="color: #009900;">(</span>j <span style="color: #339933;">=</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span> j <span style="color: #339933;">&lt;</span> <span style="color: #993333;">sizeof</span><span style="color: #009900;">(</span>alphabet<span style="color: #009900;">)</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++,</span> k<span style="color: #339933;">++</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+                        c<span style="color: #009900;">[</span><span style="color: #0000dd;">0</span><span style="color: #009900;">]</span> <span style="color: #339933;">=</span> alphabet<span style="color: #009900;">[</span>j<span style="color: #009900;">]</span><span style="color: #339933;">;</span>
+                        array<span style="color: #009900;">[</span>start_idx <span style="color: #339933;">+</span> k<span style="color: #009900;">]</span> <span style="color: #339933;">=</span> concat<span style="color: #009900;">(</span>concat<span style="color: #009900;">(</span>substr<span style="color: #009900;">(</span>word<span style="color: #339933;">,</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">,</span> i<span style="color: #009900;">)</span><span style="color: #339933;">,</span> <span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">*</span><span style="color: #009900;">)</span> <span style="color: #339933;">&amp;</span>c<span style="color: #009900;">)</span><span style="color: #339933;">,</span> 
+                                                      substr<span style="color: #009900;">(</span>word<span style="color: #339933;">,</span> i<span style="color: #339933;">+</span><span style="color: #0000dd;">1</span><span style="color: #339933;">,</span> word_len <span style="color: #339933;">-</span> <span style="color: #009900;">(</span>i<span style="color: #339933;">+</span><span style="color: #0000dd;">1</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+                <span style="color: #009900;">}</span>
+&nbsp;
+        <span style="color: #b1b100;">return</span> k<span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span>
+&nbsp;
+<span style="color: #993333;">static</span> <span style="color: #993333;">int</span> insertion<span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">*</span>word<span style="color: #339933;">,</span> <span style="color: #993333;">char</span> <span style="color: #339933;">**</span>array<span style="color: #339933;">,</span> <span style="color: #993333;">int</span> start_idx<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        <span style="color: #993333;">int</span> i<span style="color: #339933;">,</span> j<span style="color: #339933;">,</span> k<span style="color: #339933;">,</span> word_len <span style="color: #339933;">=</span> <span style="color: #000066;">strlen</span><span style="color: #009900;">(</span>word<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        <span style="color: #993333;">char</span> c<span style="color: #009900;">[</span><span style="color: #0000dd;">2</span><span style="color: #009900;">]</span> <span style="color: #339933;">=</span> <span style="color: #009900;">{</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">,</span> <span style="color: #0000dd;">0</span> <span style="color: #009900;">}</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">for</span> <span style="color: #009900;">(</span>i <span style="color: #339933;">=</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">,</span> k <span style="color: #339933;">=</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span> i <span style="color: #339933;">&lt;=</span> word_len<span style="color: #339933;">;</span> i<span style="color: #339933;">++</span><span style="color: #009900;">)</span>
+                <span style="color: #b1b100;">for</span> <span style="color: #009900;">(</span>j <span style="color: #339933;">=</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span> j <span style="color: #339933;">&lt;</span> <span style="color: #993333;">sizeof</span><span style="color: #009900;">(</span>alphabet<span style="color: #009900;">)</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++,</span> k<span style="color: #339933;">++</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+                        c<span style="color: #009900;">[</span><span style="color: #0000dd;">0</span><span style="color: #009900;">]</span> <span style="color: #339933;">=</span> alphabet<span style="color: #009900;">[</span>j<span style="color: #009900;">]</span><span style="color: #339933;">;</span>
+                        array<span style="color: #009900;">[</span>start_idx <span style="color: #339933;">+</span> k<span style="color: #009900;">]</span> <span style="color: #339933;">=</span> concat<span style="color: #009900;">(</span>concat<span style="color: #009900;">(</span>substr<span style="color: #009900;">(</span>word<span style="color: #339933;">,</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">,</span> i<span style="color: #009900;">)</span><span style="color: #339933;">,</span> <span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">*</span><span style="color: #009900;">)</span> <span style="color: #339933;">&amp;</span>c<span style="color: #009900;">)</span><span style="color: #339933;">,</span> 
+                                                      substr<span style="color: #009900;">(</span>word<span style="color: #339933;">,</span> i<span style="color: #339933;">,</span> word_len <span style="color: #339933;">-</span> i<span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+                <span style="color: #009900;">}</span>
+&nbsp;
+        <span style="color: #b1b100;">return</span> k<span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span>
+&nbsp;
+<span style="color: #993333;">static</span> <span style="color: #993333;">int</span> edits1_rows<span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">*</span>word<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        <span style="color: #993333;">register</span> <span style="color: #993333;">int</span> size <span style="color: #339933;">=</span> <span style="color: #000066;">strlen</span><span style="color: #009900;">(</span>word<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">return</span> <span style="color: #009900;">(</span>size<span style="color: #009900;">)</span>                          <span style="color: #339933;">+</span> <span style="color: #666666; font-style: italic;">// deletion</span>
+               <span style="color: #009900;">(</span>size <span style="color: #339933;">-</span> <span style="color: #0000dd;">1</span><span style="color: #009900;">)</span>                      <span style="color: #339933;">+</span> <span style="color: #666666; font-style: italic;">// transposition</span>
+               <span style="color: #009900;">(</span>size <span style="color: #339933;">*</span> <span style="color: #993333;">sizeof</span><span style="color: #009900;">(</span>alphabet<span style="color: #009900;">)</span><span style="color: #009900;">)</span>       <span style="color: #339933;">+</span> <span style="color: #666666; font-style: italic;">// alteration</span>
+               <span style="color: #009900;">(</span>size <span style="color: #339933;">+</span> <span style="color: #0000dd;">1</span><span style="color: #009900;">)</span> <span style="color: #339933;">*</span> <span style="color: #993333;">sizeof</span><span style="color: #009900;">(</span>alphabet<span style="color: #009900;">)</span><span style="color: #339933;">;</span>    <span style="color: #666666; font-style: italic;">// insertion</span>
+<span style="color: #009900;">}</span>
+&nbsp;
+<span style="color: #993333;">static</span> <span style="color: #993333;">char</span> <span style="color: #339933;">**</span>edits1<span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">*</span>word<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        <span style="color: #993333;">int</span> next_idx<span style="color: #339933;">;</span>
+        <span style="color: #993333;">char</span> <span style="color: #339933;">**</span>array <span style="color: #339933;">=</span> <span style="color: #000066;">malloc</span><span style="color: #009900;">(</span>edits1_rows<span style="color: #009900;">(</span>word<span style="color: #009900;">)</span> <span style="color: #339933;">*</span> <span style="color: #993333;">sizeof</span><span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">*</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span><span style="color: #339933;">!</span>array<span style="color: #009900;">)</span>
+                <span style="color: #b1b100;">return</span> NULL<span style="color: #339933;">;</span>
+&nbsp;
+        next_idx  <span style="color: #339933;">=</span> deletion<span style="color: #009900;">(</span>word<span style="color: #339933;">,</span> array<span style="color: #339933;">,</span> <span style="color: #0000dd;">0</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        next_idx <span style="color: #339933;">+=</span> transposition<span style="color: #009900;">(</span>word<span style="color: #339933;">,</span> array<span style="color: #339933;">,</span> next_idx<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        next_idx <span style="color: #339933;">+=</span> alteration<span style="color: #009900;">(</span>word<span style="color: #339933;">,</span> array<span style="color: #339933;">,</span> next_idx<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        insertion<span style="color: #009900;">(</span>word<span style="color: #339933;">,</span> array<span style="color: #339933;">,</span> next_idx<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">return</span> array<span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span>
+&nbsp;
+<span style="color: #993333;">static</span> <span style="color: #993333;">int</span> array_exist<span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">**</span>array<span style="color: #339933;">,</span> <span style="color: #993333;">int</span> rows<span style="color: #339933;">,</span> <span style="color: #993333;">char</span> <span style="color: #339933;">*</span>word<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        <span style="color: #993333;">int</span> i<span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">for</span> <span style="color: #009900;">(</span>i <span style="color: #339933;">=</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span> i <span style="color: #339933;">&lt;</span> rows<span style="color: #339933;">;</span> i<span style="color: #339933;">++</span><span style="color: #009900;">)</span>
+                <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span><span style="color: #339933;">!</span><span style="color: #000066;">strcmp</span><span style="color: #009900;">(</span>array<span style="color: #009900;">[</span>i<span style="color: #009900;">]</span><span style="color: #339933;">,</span> word<span style="color: #009900;">)</span><span style="color: #009900;">)</span>
+                        <span style="color: #b1b100;">return</span> <span style="color: #0000dd;">1</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">return</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span>
+&nbsp;
+<span style="color: #993333;">static</span> <span style="color: #993333;">char</span> <span style="color: #339933;">**</span>known_edits2<span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">**</span>array<span style="color: #339933;">,</span> <span style="color: #993333;">int</span> rows<span style="color: #339933;">,</span> <span style="color: #993333;">int</span> <span style="color: #339933;">*</span>e2_rows<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        <span style="color: #993333;">int</span> i<span style="color: #339933;">,</span> j<span style="color: #339933;">,</span> res_size<span style="color: #339933;">,</span> e1_rows<span style="color: #339933;">;</span>
+        <span style="color: #993333;">char</span> <span style="color: #339933;">**</span>res <span style="color: #339933;">=</span> NULL<span style="color: #339933;">,</span> <span style="color: #339933;">**</span>e1<span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">for</span> <span style="color: #009900;">(</span>i <span style="color: #339933;">=</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">,</span> res_size <span style="color: #339933;">=</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span> i <span style="color: #339933;">&lt;</span> rows<span style="color: #339933;">;</span> i<span style="color: #339933;">++</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+                e1      <span style="color: #339933;">=</span> edits1<span style="color: #009900;">(</span>array<span style="color: #009900;">[</span>i<span style="color: #009900;">]</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+                e1_rows <span style="color: #339933;">=</span> edits1_rows<span style="color: #009900;">(</span>array<span style="color: #009900;">[</span>i<span style="color: #009900;">]</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+                <span style="color: #b1b100;">for</span> <span style="color: #009900;">(</span>j <span style="color: #339933;">=</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span> j <span style="color: #339933;">&lt;</span> e1_rows<span style="color: #339933;">;</span> j<span style="color: #339933;">++</span><span style="color: #009900;">)</span>
+                        <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span>find<span style="color: #009900;">(</span>e1<span style="color: #009900;">[</span>j<span style="color: #009900;">]</span><span style="color: #009900;">)</span> <span style="color: #339933;">&amp;&amp;</span> <span style="color: #339933;">!</span>array_exist<span style="color: #009900;">(</span>res<span style="color: #339933;">,</span> res_size<span style="color: #339933;">,</span> e1<span style="color: #009900;">[</span>j<span style="color: #009900;">]</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+                                res             <span style="color: #339933;">=</span> <span style="color: #000066;">realloc</span><span style="color: #009900;">(</span>res<span style="color: #339933;">,</span> <span style="color: #993333;">sizeof</span><span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">*</span><span style="color: #009900;">)</span> <span style="color: #339933;">*</span> <span style="color: #009900;">(</span>res_size <span style="color: #339933;">+</span> <span style="color: #0000dd;">1</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+                                res<span style="color: #009900;">[</span>res_size<span style="color: #339933;">++</span><span style="color: #009900;">]</span> <span style="color: #339933;">=</span> e1<span style="color: #009900;">[</span>j<span style="color: #009900;">]</span><span style="color: #339933;">;</span>
+                        <span style="color: #009900;">}</span>
+        <span style="color: #009900;">}</span>
+&nbsp;
+        <span style="color: #339933;">*</span>e2_rows <span style="color: #339933;">=</span> res_size<span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">return</span> res<span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span>
+&nbsp;
+<span style="color: #993333;">static</span> <span style="color: #993333;">char</span> <span style="color: #339933;">*</span>max<span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">**</span>array<span style="color: #339933;">,</span> <span style="color: #993333;">int</span> rows<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        <span style="color: #993333;">char</span> <span style="color: #339933;">*</span>max_word <span style="color: #339933;">=</span> NULL<span style="color: #339933;">;</span>
+        <span style="color: #993333;">int</span> i<span style="color: #339933;">,</span> max_size <span style="color: #339933;">=</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span>
+        ENTRY <span style="color: #339933;">*</span>e<span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">for</span> <span style="color: #009900;">(</span>i <span style="color: #339933;">=</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span> i <span style="color: #339933;">&lt;</span> rows<span style="color: #339933;">;</span> i<span style="color: #339933;">++</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+                e <span style="color: #339933;">=</span> find<span style="color: #009900;">(</span>array<span style="color: #009900;">[</span>i<span style="color: #009900;">]</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+                <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span>e <span style="color: #339933;">&amp;&amp;</span> <span style="color: #009900;">(</span><span style="color: #009900;">(</span><span style="color: #993333;">int</span><span style="color: #009900;">)</span> e<span style="color: #339933;">-&gt;</span>data <span style="color: #339933;">&gt;</span> max_size<span style="color: #009900;">)</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+                        max_size <span style="color: #339933;">=</span> <span style="color: #009900;">(</span><span style="color: #993333;">int</span><span style="color: #009900;">)</span> e<span style="color: #339933;">-&gt;</span>data<span style="color: #339933;">;</span>
+                        max_word <span style="color: #339933;">=</span> e<span style="color: #339933;">-&gt;</span>key<span style="color: #339933;">;</span>
+                <span style="color: #009900;">}</span>
+        <span style="color: #009900;">}</span>
+&nbsp;
+        <span style="color: #b1b100;">return</span> max_word<span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span>
+&nbsp;
+<span style="color: #993333;">static</span> <span style="color: #993333;">void</span> array_cleanup<span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">**</span>array<span style="color: #339933;">,</span> <span style="color: #993333;">int</span> rows<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        <span style="color: #993333;">int</span> i<span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">for</span> <span style="color: #009900;">(</span>i <span style="color: #339933;">=</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span> i <span style="color: #339933;">&lt;</span> rows<span style="color: #339933;">;</span> i<span style="color: #339933;">++</span><span style="color: #009900;">)</span>
+                <span style="color: #000066;">free</span><span style="color: #009900;">(</span>array<span style="color: #009900;">[</span>i<span style="color: #009900;">]</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span>
+&nbsp;
+<span style="color: #993333;">static</span> <span style="color: #993333;">char</span> <span style="color: #339933;">*</span>correct<span style="color: #009900;">(</span><span style="color: #993333;">char</span> <span style="color: #339933;">*</span>word<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        <span style="color: #993333;">char</span> <span style="color: #339933;">**</span>e1<span style="color: #339933;">,</span> <span style="color: #339933;">**</span>e2<span style="color: #339933;">,</span> <span style="color: #339933;">*</span>e1_word<span style="color: #339933;">,</span> <span style="color: #339933;">*</span>e2_word<span style="color: #339933;">,</span> <span style="color: #339933;">*</span>res_word <span style="color: #339933;">=</span> word<span style="color: #339933;">;</span>
+        <span style="color: #993333;">int</span> e1_rows<span style="color: #339933;">,</span> e2_rows<span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span>find<span style="color: #009900;">(</span>word<span style="color: #009900;">)</span><span style="color: #009900;">)</span>
+                <span style="color: #b1b100;">return</span> word<span style="color: #339933;">;</span>
+&nbsp;
+        e1_rows <span style="color: #339933;">=</span> edits1_rows<span style="color: #009900;">(</span>word<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span>e1_rows<span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+                e1      <span style="color: #339933;">=</span> edits1<span style="color: #009900;">(</span>word<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+                e1_word <span style="color: #339933;">=</span> max<span style="color: #009900;">(</span>e1<span style="color: #339933;">,</span> e1_rows<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+                <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span>e1_word<span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+                        array_cleanup<span style="color: #009900;">(</span>e1<span style="color: #339933;">,</span> e1_rows<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+                        <span style="color: #000066;">free</span><span style="color: #009900;">(</span>e1<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+                        <span style="color: #b1b100;">return</span> e1_word<span style="color: #339933;">;</span>
+                <span style="color: #009900;">}</span>
+        <span style="color: #009900;">}</span>
+&nbsp;
+        e2 <span style="color: #339933;">=</span> known_edits2<span style="color: #009900;">(</span>e1<span style="color: #339933;">,</span> e1_rows<span style="color: #339933;">,</span> <span style="color: #339933;">&amp;</span>e2_rows<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span>e2_rows<span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+                e2_word <span style="color: #339933;">=</span> max<span style="color: #009900;">(</span>e2<span style="color: #339933;">,</span> e2_rows<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+                <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span>e2_word<span style="color: #009900;">)</span>
+                        res_word <span style="color: #339933;">=</span> e2_word<span style="color: #339933;">;</span>
+        <span style="color: #009900;">}</span>
+&nbsp;
+        array_cleanup<span style="color: #009900;">(</span>e1<span style="color: #339933;">,</span> e1_rows<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        array_cleanup<span style="color: #009900;">(</span>e2<span style="color: #339933;">,</span> e2_rows<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #000066;">free</span><span style="color: #009900;">(</span>e1<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        <span style="color: #000066;">free</span><span style="color: #009900;">(</span>e2<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">return</span> res_word<span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span>
+&nbsp;
+<span style="color: #993333;">int</span> main<span style="color: #009900;">(</span><span style="color: #993333;">int</span> argc<span style="color: #339933;">,</span> <span style="color: #993333;">char</span> <span style="color: #339933;">**</span>argv<span style="color: #009900;">)</span>
+<span style="color: #009900;">{</span>
+        <span style="color: #993333;">char</span> <span style="color: #339933;">*</span>corrected_word<span style="color: #339933;">;</span>
+        ENTRY dict<span style="color: #339933;">;</span>
+&nbsp;
+        hcreate<span style="color: #009900;">(</span>DICT_SZ<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span><span style="color: #339933;">!</span>read_file<span style="color: #009900;">(</span>dict<span style="color: #009900;">)</span><span style="color: #009900;">)</span>
+                <span style="color: #b1b100;">return</span> <span style="color: #339933;">-</span><span style="color: #0000dd;">1</span><span style="color: #339933;">;</span>
+&nbsp;
+        corrected_word <span style="color: #339933;">=</span> correct<span style="color: #009900;">(</span>argv<span style="color: #009900;">[</span><span style="color: #0000dd;">1</span><span style="color: #009900;">]</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span><span style="color: #000066;">strcmp</span><span style="color: #009900;">(</span>corrected_word<span style="color: #339933;">,</span> argv<span style="color: #009900;">[</span><span style="color: #0000dd;">1</span><span style="color: #009900;">]</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span>
+                <span style="color: #000066;">printf</span><span style="color: #009900;">(</span><span style="color: #ff0000;">"Did you mean <span style="color: #000099; font-weight: bold;">\"</span>%s<span style="color: #000099; font-weight: bold;">\"</span>?<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> corrected_word<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">}</span> <span style="color: #b1b100;">else</span> <span style="color: #009900;">{</span>
+                <span style="color: #000066;">printf</span><span style="color: #009900;">(</span><span style="color: #ff0000;">"<span style="color: #000099; font-weight: bold;">\"</span>%s<span style="color: #000099; font-weight: bold;">\"</span> is correct!<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> argv<span style="color: #009900;">[</span><span style="color: #0000dd;">1</span><span style="color: #009900;">]</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">}</span>
+&nbsp;
+        <span style="color: #b1b100;">return</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">}</span></pre></td></tr></tbody></table></div>
+
+<p>The code was pasted, but you can <a href="http://www.marcelotoledo.org/stuff/spell/spell.c">download it</a> here. You might be asking, where is the 184 lines of code? I used the same metric as Norvig, no blank lines, no main function and reduced as much as possible the extras, but keeping the readability and keeping the same code, <a href="http://www.marcelotoledo.org/stuff/spell/spell_small.c">see the result</a> here.</p>
+<p>“The code defines the function correct, which takes a word as input and returns a likely correction of that word. For example:”</p>
+<p>In python:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="bash" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">&gt;&gt;&gt;</span> correct<span style="color: #7a0874; font-weight: bold;">(</span><span style="color: #ff0000;">'speling'</span><span style="color: #7a0874; font-weight: bold;">)</span>
+<span style="color: #ff0000;">'spelling'</span>
+<span style="color: #000000; font-weight: bold;">&gt;&gt;&gt;</span> correct<span style="color: #7a0874; font-weight: bold;">(</span><span style="color: #ff0000;">'korrecter'</span><span style="color: #7a0874; font-weight: bold;">)</span>
+<span style="color: #ff0000;">'corrector'</span></pre></td></tr></tbody></table></div>
+
+<p>In C:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="bash" style="font-family:monospace;">$ .<span style="color: #000000; font-weight: bold;">/</span>spell boxng
+Did you mean <span style="color: #ff0000;">"boxing"</span>?
+&nbsp;
+$ .<span style="color: #000000; font-weight: bold;">/</span>spell speling
+Did you mean <span style="color: #ff0000;">"spelling"</span>?</pre></td></tr></tbody></table></div>
+
+<p>I knew how fast was Norvig’s code, when I first finished mine, I was very impressed with Python simplicity in 21 lines of code and it’s speed, very similar to C, in the beginning. I used the same 6.3MB dictionary for the initial tests:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="bash" style="font-family:monospace;">$ <span style="color: #c20cb9; font-weight: bold;">du</span> <span style="color: #660033;">-sh</span> big.txt
+<span style="color: #000000;">6</span>,3M    big.txt</pre></td></tr></tbody></table></div>
+
+<p>Python:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="bash" style="font-family:monospace;">$ <span style="color: #000000; font-weight: bold;">time</span> python spell.py
+spelling
+&nbsp;
+real    0m1.911s
+user    0m1.340s
+sys     0m0.048s</pre></td></tr></tbody></table></div>
+
+<p>C:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="bash" style="font-family:monospace;">$ <span style="color: #000000; font-weight: bold;">time</span> .<span style="color: #000000; font-weight: bold;">/</span>spell speling
+Did you mean <span style="color: #ff0000;">"spelling"</span>?
+&nbsp;
+real    0m0.892s
+user    0m0.812s
+sys     0m0.076s</pre></td></tr></tbody></table></div>
+
+<p>Result:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="text" style="font-family:monospace;">C was 1.01 seconds or 114.2% faster.</pre></td></tr></tbody></table></div>
+
+<p>I really wanted to see how bad it was going to get if I grew up the dictionary. So I did tests with 50MB, 100MB, 168MB and 149MB.</p>
+<p>The results using 50MB dictionary:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="bash" style="font-family:monospace;">$ <span style="color: #c20cb9; font-weight: bold;">du</span> <span style="color: #660033;">-sh</span> big.txt
+50M     big.txt</pre></td></tr></tbody></table></div>
+
+<p>Python:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="bash" style="font-family:monospace;">$ <span style="color: #000000; font-weight: bold;">time</span> python spell.py
+spelling
+&nbsp;
+real    0m17.892s
+user    0m11.353s
+sys     0m0.684s</pre></td></tr></tbody></table></div>
+
+<p>C:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="bash" style="font-family:monospace;">$ <span style="color: #000000; font-weight: bold;">time</span> .<span style="color: #000000; font-weight: bold;">/</span>spell speling
+Did you mean <span style="color: #ff0000;">"spelling"</span>?
+&nbsp;
+real    0m6.896s
+user    0m6.636s
+sys     0m0.244s</pre></td></tr></tbody></table></div>
+
+<p>Result:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="text" style="font-family:monospace;">C was 10.99 seconds or 159.4% faster.</pre></td></tr></tbody></table></div>
+
+<p>The results using 100MB dictionary:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="bash" style="font-family:monospace;">$ <span style="color: #c20cb9; font-weight: bold;">du</span> <span style="color: #660033;">-sh</span> big.txt
+100M    big.txt</pre></td></tr></tbody></table></div>
+
+<p>Python:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="bash" style="font-family:monospace;">$ <span style="color: #000000; font-weight: bold;">time</span> python spell.py
+spelling
+&nbsp;
+real    1m25.579s
+user    0m24.262s
+sys     0m1.704s</pre></td></tr></tbody></table></div>
+
+<p>C:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="bash" style="font-family:monospace;">$ <span style="color: #000000; font-weight: bold;">time</span> .<span style="color: #000000; font-weight: bold;">/</span>spell speling
+Did you mean <span style="color: #ff0000;">"spelling"</span>?
+&nbsp;
+real    0m14.474s
+user    0m13.425s
+sys     0m0.496s</pre></td></tr></tbody></table></div>
+
+<p>Result:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="text" style="font-family:monospace;">C was 1 minute and 11.10 seconds or 491.2% faster.</pre></td></tr></tbody></table></div>
+
+<p>The results using 168MB dictionary:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="bash" style="font-family:monospace;">$ <span style="color: #c20cb9; font-weight: bold;">du</span> <span style="color: #660033;">-sh</span> huge.txt
+168M    huge.txt</pre></td></tr></tbody></table></div>
+
+<p>Python:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="bash" style="font-family:monospace;">$ <span style="color: #000000; font-weight: bold;">time</span> python spell.py
+&nbsp;
+Killed</pre></td></tr></tbody></table></div>
+
+<p>C:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="bash" style="font-family:monospace;">$ <span style="color: #000000; font-weight: bold;">time</span> .<span style="color: #000000; font-weight: bold;">/</span>spell speling
+Did you mean <span style="color: #ff0000;">"speling"</span>?
+&nbsp;
+real    0m44.627s
+user    0m21.689s
+sys     0m1.324s</pre></td></tr></tbody></table></div>
+
+<p>Result:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="text" style="font-family:monospace;">Couldn't compare, Python process took to much time and was killed by kernel.</pre></td></tr></tbody></table></div>
+
+<p>Seeing this I tried with a smaller dictionary 149MB:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="bash" style="font-family:monospace;">$ <span style="color: #c20cb9; font-weight: bold;">du</span> <span style="color: #660033;">-sh</span> big.txt
+149M    big.txt</pre></td></tr></tbody></table></div>
+
+<p>Python:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="bash" style="font-family:monospace;">$ <span style="color: #000000; font-weight: bold;">time</span> python spell.py
+Killed</pre></td></tr></tbody></table></div>
+
+<p>C:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="bash" style="font-family:monospace;">$ <span style="color: #000000; font-weight: bold;">time</span> .<span style="color: #000000; font-weight: bold;">/</span>spell speling
+Did you mean <span style="color: #ff0000;">"spelling"</span>?
+&nbsp;
+real    0m24.974s
+user    0m19.149s
+sys     0m0.852s</pre></td></tr></tbody></table></div>
+
+<p>Result:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="code"><pre class="text" style="font-family:monospace;">Couldn't compare, Python process took to much time and was killed by kernel.</pre></td></tr></tbody></table></div>
+
+<p>“Other computer languages:</p>
+<p>After I posted this article, various people wrote versions in different programming languages. While the purpose of this article was to show the algorithms, not to highlight Python, the other examples may be interesting for those who like comparing languages:”</p>
+<table border="1">
+<tbody><tr>
+<th>Language</th>
+<th>Lines of Code</th>
+<th>Author (and link to implementation)</th>
+</tr>
+<tr>
+<td>Python</td>
+<td>21</td>
+<td><a href="http://norvig.com/spell-correct.html">Peter Norvig</a></td>
+</tr>
+<tr>
+<td>Haskell</td>
+<td>24</td>
+<td><a href="http://pithekos.net/brainwave/">Grzegorz</a></td>
+</tr>
+<tr>
+<td>F#</td>
+<td>34</td>
+<td><a href="http://cs.hubfs.net/forums/thread/3085.aspx">Sebastian G</a></td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td>38</td>
+<td><a href="http://www.ruby-forum.com/topic/104327">Brian Adkins</a></td>
+</tr>
+<tr>
+<td>Scheme</td>
+<td>45</td>
+<td><a href="http://practical-scheme.net/wiliki/wiliki.cgi?Gauche%3aSpellingCorrection&l=en">Shiro</a></td>
+</tr>
+<tr>
+<td>Perl</td>
+<td>63</td>
+<td><a href="http://www.riffraff.info/2007/5/20/a-spell-corrector-in-perl6-part-3%3Eriffraff%3C/a%3E%3C/td%3E%3C/tr%3E%3Ctr%3E%3Ctd%3EErlang%3C/td%3E%3Ctd%3E87%3C/td%3E%3Ctd%3E%3Ca%20href=" http:="" www.pixzone.com="" blog="" 223="" spell-corrector-aka-google-suggest-in-erlang-first-part="" "="">Federico Feroldi</a></td>
+</tr>
+<tr>
+<td>Scheme</td>
+<td>89</td>
+<td><a href="http://scheme.dk/blog/2007/04/writing-spelling-corrector-in-plt.html">Jens Axel</a></td>
+</tr>
+<tr>
+<td>Rebol</td>
+<td>133</td>
+<td><a href="http://www.rebol.cz/~cyphre/spell.r">Cyphre</a></td>
+</tr>
+<tr>
+<td>C</td>
+<td>184</td>
+<td>Marcelo Toledo <b>&lt;-- here we are</b></td>
+</tr>
+<tr>
+<td>Java</td>
+<td>372</td>
+<td><a href="http://developer.gauner.org/jspellcorrect/">Dominik Schulz</a></td>
+</tr>
+</tbody></table>
+<p><br></p>
+	
+			
+			<footer class="metadata">
+				<p class="share">Gostou do artigo? Compartilhe!</p>
+				<p class="socials-b">					
+					<span class="fb">
+						<script src="./How to Write a Spelling Corrector   Marcelo Toledo_files/all.js"></script>
+						<fb:like href="http://marcelotoledo.com/2007/08/10/how-to-write-a-spelling-corrector/" send="true" layout="button_count" width="150" show_faces="true" font="" fb-xfbml-state="rendered" class=" fb_edge_widget_with_comment fb_iframe_widget"><span style="height: 21px; width: 150px;"><iframe id="fba408b2" name="fc0060298" scrolling="no" title="Like this content on Facebook." class="fb_ltr" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/saved_resource.htm" style="border: none; overflow: hidden; height: 21px; width: 150px;"></iframe></span></fb:like>
+					</span>
+					<span class="twitter">
+						<iframe allowtransparency="true" frameborder="0" scrolling="no" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/tweet_button.1378258117.htm" class="twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 110px; height: 20px;"></iframe>
+						<script type="text/javascript" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/widgets.js"></script>
+					</span>
+					<span>
+					<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1378401576994" name="I0_1378401576994" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/fastbutton.htm" data-gapiattached="true" title="+1"></iframe></div>
+					</span>
+				</p>
+			</footer>
+			
+				
+	<div class="subscribe">
+		<p>Inscreva-se hoje para receber meus artigos semanais sobre Startups.</p>
+		<form class="form-b" method="post" action="http://marcelotoledo.us1.list-manage.com/subscribe/post?u=a4f4f9e0bb4ba7697f31fedf7&id=da57c17bdb">
+			<p class="fields-a">
+				<label for="f-email-b">Por email</label>
+				<input type="text" value="" id="f-email-b" name="EMAIL">
+				<button>OK</button>
+			</p>
+		</form>
+		<p class="button-a"><a href="http://marcelotoledo.com/feed/" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Click&#39;, &#39;Main&#39;, &#39;RSS Feed&#39;]);">Por RSS Feed</a></p>
+	</div>	
+	
+				
+		</div><!-- .content -->		
+	</article>
+
+
+<div id="disqus_thread"><div dir="ltr" style="overflow: hidden;"><div style="width: 54px; height: 54px; margin: 0px auto; overflow: hidden; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAABmCAMAAACA210sAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAlhQTFRFMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtWDj2BwAAAMh0Uk5TAAABAQICAwMEBAUFBgYHBwgICQkKCgsLDAwNDQ4ODw8QEBEREhITExQUFRUWFhcXGBgZGRoaGxscHB0dHh4fHyAgISEjIyQkJSUmJigoKSkqKisrLCwtLS4uLy8wMDExMjIzMzQ0NTU2Njc3ODg5OTo6Ozs8PD09Pj4/P0BAQUFCQkNDRERFRUZGR0dISElJS0tMTE1NTk5PT1BQUVFSUlNTVFRVVVZWV1dYWFlZWlpbW1xcXV1eXl9fYGBhYWJiY2NkZGVlZmaMInkiAAAFVklEQVRo3u2Yf0hbVxTHP/flmYYQxFoXghMJzkpXQmszCd0ma7eKKyKuSOlKGaV0RaRzsIHIGDK2MqSsXVvKcKWIG6V0ItI5Z1tXZBsiIkWciC0iYsMIIbisC1mWhpDG/RFjfpvr4O2vnH+Se+/J575z3z3n5n4F2Uy12aotpUY1HFp1OecXo+S00vo6q9kYXF2ZnfLG+0QWYH2jw5jcEZi6P50dW33qoBL//sl4TqbpyPHSzB97bo2GMjr1bcfUjcbcWXIwlZb24uxBenvH0sM+b0s0om2PAJPBC+hS3KxfvrUtx8IZD+z9LZDcUfL1zqTWj98DtLVP/JP2nIc74+vonplfWQ2EDcZya22deb3T1zOZtOq9saf0jMy6vSarywdU3tAvdIRTmGdOxz5Dd8cWkqeyNzXG1i16ZWijs+MEQPjaUCTh+EU9DFxNZna2AhAZvPUkPXDLqebY++3rj7/xfhXwfTyX5LX/EhA9tZxYz/bjACx0/vQ0YzEDk9O27QD2vx/Gej6oBiKdcylub24DsWN8g9ncAcDAp39mfUV/jJp3Aux//Big9CMF+Go8xcfveR14/k6cuatHB0Qvf5MrZ55NiH0Ajl/8wKEDgOezNOeVV8tAca8z9Zd3AFy4nTsLmRX7AP2Ld9bgxAvA4Ey6S9HLwNP11HrHCnBjmM2sbwTA1gJUAWQgmQKwxpiWkwAz19ncriwBtJugDMCZ4eAOAeYY84QeCPZE8zBDn0eA4qOgAvgzPQKASQEobQbo85DPlgcBjhkIA2SpNSVAQAFoMADeYfLbzSBQ8hpPACwZw2YV8CoATQCDIQmmbwTgMCsA9oxhO4BTASw1QGQMGRsBqDPNADSr6aPNADNKnD7rlWI6lwG1bioCVDSlDb5iB6ITClAL8AA5mwbY9eTXjaRPWs1ugEmvEt/AjySZjwCs9EcAQ3tK8bpUAkT7UYBKgGVJphOgAucAwI2kgfq+KoChJVRQTYA/IMl0AZTB9Vob9+cBSn1RxeJorAVg6RqoYIwngJRFQgYwQqSr19ILUH6LkCl+Iru6QglmEGkosdT0nXWsApzVo4+PLXZ5Y6NBWAdLmbrOxXcfoO6NxHk81BsmiVksjTSkRKV0bBAnvl3amDXiLwZTsV+OWQmQyA/9UF2V2Rj0OmcnvMmROPcAVXNbYLoS5W90NMNFAX4HsEnGvjt7NU5nLgA4JJn78yedEj9XasukkDXVQGQ2L9O9DKhNUswmgJlAXiZjAEdUCWRJC8Bd8jP9AOGIBPOkAfBNSjBbAW7LrOZRgIFQfubuXUBI4uwwdKuAL9/sCnAE4GeJPIrV9WuB/MziBgCJk7i9BWB+VKLKHDYAiwuo5RUW9/QmyJMAgXNRCWYrgP5qhVmBQHeus87Y1QhAjztvPDocbwNsLzcJQN+oPsy6p2wXXgLg4j0kmO9Zk9ui9tBfzrV0r/L3P9wOwPXvJHacKLudkT/O4fHkW4Jib2pYv3dclPlPhTh9Jl6nPW7vQcP698W5RddqMGQyVpbb7fHqEjg3KVUTxLA56Ha7XB63OwKV3ZuU0QfnPXLlUOxxpcTZ0laS4755dVz2yMq4Fxtbj2WppO6bd8P8Zyao9Q0OU8q9Z3p8Koq8CZF1h9lqaixlRn0w5HWtLCytsSVTc8y0rahIpxNFz3S6Ip1Y26J2ITTQLoQG2oXQQLsQGmgXQgPtQmigXQgNtAuhgXYhNNAuhAbahShoFwXtoqBdFLSLgnZR0C4K2kVBuyhoFwXtIofOIDTQLoQG2sVzGmgX72qgXfyggXaxVwPtQmigXYj/S7tQU7WLrQCBfwFnft8xK3413wAAAABJRU5ErkJggg==); background-repeat: no-repeat no-repeat;"><style type="text/css">.disqus-loader{animation:disqus-embed-spinner .7s infinite linear;-webkit-animation:disqus-embed-spinner .7s infinite linear}@keyframes disqus-embed-spinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@-webkit-keyframes disqus-embed-spinner{0%{-webkit-transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg)}}</style><div class="disqus-loader" style="width: 29px; height: 29px; margin: 11px 14px; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAABmCAMAAACA210sAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAlhQTFRFMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtMzY63+TtWDj2BwAAAMh0Uk5TAAABAQICAwMEBAUFBgYHBwgICQkKCgsLDAwNDQ4ODw8QEBEREhITExQUFRUWFhcXGBgZGRoaGxscHB0dHh4fHyAgISEjIyQkJSUmJigoKSkqKisrLCwtLS4uLy8wMDExMjIzMzQ0NTU2Njc3ODg5OTo6Ozs8PD09Pj4/P0BAQUFCQkNDRERFRUZGR0dISElJS0tMTE1NTk5PT1BQUVFSUlNTVFRVVVZWV1dYWFlZWlpbW1xcXV1eXl9fYGBhYWJiY2NkZGVlZmaMInkiAAAFVklEQVRo3u2Yf0hbVxTHP/flmYYQxFoXghMJzkpXQmszCd0ma7eKKyKuSOlKGaV0RaRzsIHIGDK2MqSsXVvKcKWIG6V0ItI5Z1tXZBsiIkWciC0iYsMIIbisC1mWhpDG/RFjfpvr4O2vnH+Se+/J575z3z3n5n4F2Uy12aotpUY1HFp1OecXo+S00vo6q9kYXF2ZnfLG+0QWYH2jw5jcEZi6P50dW33qoBL//sl4TqbpyPHSzB97bo2GMjr1bcfUjcbcWXIwlZb24uxBenvH0sM+b0s0om2PAJPBC+hS3KxfvrUtx8IZD+z9LZDcUfL1zqTWj98DtLVP/JP2nIc74+vonplfWQ2EDcZya22deb3T1zOZtOq9saf0jMy6vSarywdU3tAvdIRTmGdOxz5Dd8cWkqeyNzXG1i16ZWijs+MEQPjaUCTh+EU9DFxNZna2AhAZvPUkPXDLqebY++3rj7/xfhXwfTyX5LX/EhA9tZxYz/bjACx0/vQ0YzEDk9O27QD2vx/Gej6oBiKdcylub24DsWN8g9ncAcDAp39mfUV/jJp3Aux//Big9CMF+Go8xcfveR14/k6cuatHB0Qvf5MrZ55NiH0Ajl/8wKEDgOezNOeVV8tAca8z9Zd3AFy4nTsLmRX7AP2Ld9bgxAvA4Ey6S9HLwNP11HrHCnBjmM2sbwTA1gJUAWQgmQKwxpiWkwAz19ncriwBtJugDMCZ4eAOAeYY84QeCPZE8zBDn0eA4qOgAvgzPQKASQEobQbo85DPlgcBjhkIA2SpNSVAQAFoMADeYfLbzSBQ8hpPACwZw2YV8CoATQCDIQmmbwTgMCsA9oxhO4BTASw1QGQMGRsBqDPNADSr6aPNADNKnD7rlWI6lwG1bioCVDSlDb5iB6ITClAL8AA5mwbY9eTXjaRPWs1ugEmvEt/AjySZjwCs9EcAQ3tK8bpUAkT7UYBKgGVJphOgAucAwI2kgfq+KoChJVRQTYA/IMl0AZTB9Vob9+cBSn1RxeJorAVg6RqoYIwngJRFQgYwQqSr19ILUH6LkCl+Iru6QglmEGkosdT0nXWsApzVo4+PLXZ5Y6NBWAdLmbrOxXcfoO6NxHk81BsmiVksjTSkRKV0bBAnvl3amDXiLwZTsV+OWQmQyA/9UF2V2Rj0OmcnvMmROPcAVXNbYLoS5W90NMNFAX4HsEnGvjt7NU5nLgA4JJn78yedEj9XasukkDXVQGQ2L9O9DKhNUswmgJlAXiZjAEdUCWRJC8Bd8jP9AOGIBPOkAfBNSjBbAW7LrOZRgIFQfubuXUBI4uwwdKuAL9/sCnAE4GeJPIrV9WuB/MziBgCJk7i9BWB+VKLKHDYAiwuo5RUW9/QmyJMAgXNRCWYrgP5qhVmBQHeus87Y1QhAjztvPDocbwNsLzcJQN+oPsy6p2wXXgLg4j0kmO9Zk9ui9tBfzrV0r/L3P9wOwPXvJHacKLudkT/O4fHkW4Jib2pYv3dclPlPhTh9Jl6nPW7vQcP698W5RddqMGQyVpbb7fHqEjg3KVUTxLA56Ha7XB63OwKV3ZuU0QfnPXLlUOxxpcTZ0laS4755dVz2yMq4Fxtbj2WppO6bd8P8Zyao9Q0OU8q9Z3p8Koq8CZF1h9lqaixlRn0w5HWtLCytsSVTc8y0rahIpxNFz3S6Ip1Y26J2ITTQLoQG2oXQQLsQGmgXQgPtQmigXQgNtAuhgXYhNNAuhAbahShoFwXtoqBdFLSLgnZR0C4K2kVBuyhoFwXtIofOIDTQLoQG2sVzGmgX72qgXfyggXaxVwPtQmigXYj/S7tQU7WLrQCBfwFnft8xK3413wAAAABJRU5ErkJggg==); background-position: -54px 0px; background-repeat: no-repeat no-repeat;"></div></div><p align="center">Disqus seems to be taking longer than usual. <a href="http://marcelotoledo.com/2007/08/10/how-to-write-a-spelling-corrector/#" onclick="DISQUS.reset({reload: true}); return false;">Reload</a>?</p></div><iframe id="dsq1" data-disqus-uid="1" allowtransparency="true" frameborder="0" role="complementary" width="100%" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/saved_resource.htm" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 0px !important;" scrolling="no" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://marcelotoledo.com/2007/08/10/how-to-write-a-spelling-corrector/';
+    var disqus_identifier = '9 http://marcelotoledo.com/?p=9';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'marcelotoledo';
+    var disqus_title = "How to Write a Spelling Corrector";
+        var disqus_config = function () {
+        var config = this; // Access to the config object
+        config.language = '';
+
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                config.callbacks.onReady.push(function() {
+            // sync comments in the background so we don't block the page
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = '?cf_action=sync_comments&post_id=9';
+
+            var firstScript = document.getElementsByTagName( "script" )[0];
+            firstScript.parentNode.insertBefore(script, firstScript);
+        });
+                    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+        ],
+        'trackback_url': "http:\/\/marcelotoledo.com\/2007\/08\/10\/how-to-write-a-spelling-corrector\/trackback\/"    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.' + 'disqus.com' + '/embed.js?pname=wordpress&pver=2.74';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+	
+			
+
+		</section>
+		<aside id="aside">
+			<section class="widget widget_execphp"><h3 class="widgettitle">Receba os Artigos</h3>			
+			<div class="execphpwidget">        <p class="visitors"><span>3.083</span> leitores inscritos</p>
+	<p><img src="./How to Write a Spelling Corrector   Marcelo Toledo_files/PNS-cover-popup.png" width="135" height="175" alt="Plano de Negócios para Startups" class="alignleft"></p>
+	<p><b>Aprenda a preparar seu plano de negócios!</b><br>
+<br>
+Inscreva-se e receba grátis:<br>
+<br>
+- O Livro Plano de Negócios para Startups<br>
+- Em três versões: iPad, Kindle e PDF<br>
+- Artigos semanais do Blog<br>
+</p>
+<br><br>
+        <form class="form-a" method="post" action="http://marcelotoledo.us1.list-manage.com/subscribe/post?u=a4f4f9e0bb4ba7697f31fedf7&id=da57c17bdb">
+                <h4>Por email</h4>
+                <p>
+                        <label for="f-email-a">Digite seu email</label>
+                        <input type="text" value="" id="f-email-a" name="EMAIL">
+                        <button>OK</button>
+                </p>
+        </form>
+        <p class="button-a"><a href="http://marcelotoledo.com/feed/" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Click&#39;, &#39;SideBar&#39;, &#39;RSS Feed&#39;]);">RSS Feed</a></p></div>
+		</section><section class="widget widget_text"><h3 class="widgettitle">Sobre</h3>			<div class="textwidget">	<p><img src="./How to Write a Spelling Corrector   Marcelo Toledo_files/author-a.jpg" width="160" height="240" alt="Marcelo Toledo" class="alignleft"></p>
+	<p>Sou empreendedor, programador, colunista do IT Web e Administradores, escrevo um livro sobre startups e ocasionalmente dou palestras. Por 7 anos fui diretor da Vex e atualmente sou diretor de uma das maiores incubadoras de startups do mundo. <a href="http://marcelotoledo.com/sobre/">Leia mais...</a></p></div>
+		</section><section class="widget widget_search"><h3 class="widgettitle">Pesquisar</h3><form class="form-a" method="get" action="http://marcelotoledo.com/" role="search">
+	<p>
+		<label for="f-search-a">Pesquisar…</label>
+		<input type="text" value="" id="f-search-a" name="s">
+		<button>OK</button>
+	</p>
+</form></section><section class="widget widget_text"><h3 class="widgettitle">Social</h3>			<div class="textwidget"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/follow_button.1378258117.htm" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 192px; height: 28px;"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<iframe src="./How to Write a Spelling Corrector   Marcelo Toledo_files/follow.htm" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:350px; height:80px;" allowtransparency="true"></iframe></div>
+		</section>
+		</aside>
+	</div>
+	<footer id="footer">
+		<p>Copyright © 1998-2013 Marcelo Toledo</p>
+	</footer>
+</div>
+
+
+
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/xd_arbiter.htm" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/xd_arbiter(1).htm" style="border: none;"></iframe></div></div></div><iframe name="oauth2relay1023850482" id="oauth2relay1023850482" src="./How to Write a Spelling Corrector   Marcelo Toledo_files/postmessageRelay.htm" style="width: 1px; height: 1px; position: absolute; left: -100px;"></iframe></body></html>

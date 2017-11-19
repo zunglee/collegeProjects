@@ -1,0 +1,4 @@
+newClass1.java is apriori file that used another 2 files(config.txt,
+transa.txt).
+
+For elementory knowledge of java u can see http://www.roseindia.net/java

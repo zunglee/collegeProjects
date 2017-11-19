@@ -1,0 +1,101 @@
+#include " iostream    "
+#include<stdio   >
+using namespace std ;
+# define mayank 123
+
+struct node
+{
+   int y;
+   ///cin<<a;
+   
+};
+int mm(int x, int y)
+{
+  int p;
+  
+}
+class abc
+{
+
+	int a,b,c;
+	
+	int a(int b,int c)
+	{
+		cin>>a;
+		
+	}
+	b(y);
+		
+	
+};
+int maaaaaain(int a , int b ,int c )
+{int t;
+
+cin>>a;
+	cout<<"asad";
+	printf("%hjdhdsjdsj");
+	scanf("%kjkjdfdj");
+	
+
+
+cout<<a;
+cin>>a
+cout<<"mul"<<a<<krfkekjr;
+cout<<"shahjkaj"<<g<<"dskjdjkshdkjshdkjshkdkjs";
+cin>>as>>dsd>>dsd;
+cinsasasl;
+//cin>>"sas";
+cin>>a>>b>>"dsd";
+cout<<"dhkshdk"<<sds;
+cout<<a+b<<"c";
+cin>>a+b;
+for(((i>5)&&(j<5));(i>6);i=i+1)
+{
+}
+if((a>5)&&(b<=6))
+{
+    int y;
+	cin>>y;
+	cout<<y;
+	
+}
+cin>>a+b;
+cin>>a>>b;
+cin>>a<<b;
+
+if((a>b)<=(b>c))
+{	   a=a+b;
+    if(a>9)
+	{
+	}
+	else 
+	{
+	}
+}
+else 
+{
+ if(a>9)
+	{
+	}
+	else 
+	{
+	}
+}
+	
+fn(yu);
+
+printf("khshjkhjj",hjshdjsh);
+printf("asasdasddsf%d");
+scanf("%d%d",&a76kdf);
+scanf("%d%d",&t);
+ int t;
+	return 0;
+
+}
+
+int c()
+{
+	jfhsfhg;
+	dsjdkj;
+	
+}

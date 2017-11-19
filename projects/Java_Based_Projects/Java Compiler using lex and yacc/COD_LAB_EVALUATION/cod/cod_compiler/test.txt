@@ -1,0 +1,8 @@
+
+public int   main(int args, int b){
+int c=a+b;
+for (i=0 ; i<5 ;i=i+1);
+
+
+
+}

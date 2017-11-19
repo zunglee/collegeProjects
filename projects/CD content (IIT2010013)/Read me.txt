@@ -1,0 +1,11 @@
+1. Copy the content into the Matlab Folder
+   (C:/.../Documents/Matlab)
+2. Run the code using MATLAB R2012a (Not compatible wid Matlab 2010)
+
+3. Change the the system name(To the system you are currently working) in:
+
+   file try1.m at line 165 and 167
+
+   file try2.m at line 142 and 144
+	
+4. Run the main.m file using matlab

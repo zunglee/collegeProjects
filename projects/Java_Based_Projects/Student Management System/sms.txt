@@ -1,0 +1,47 @@
+Student Management System
+-------------------------
+
+stud_info
+{
+enroll
+Name
+year
+CGPI
+address perm
+Lib_info
+}
+
+address
+{
+city
+state
+pin
+}
+
+Lib_info
+{
+enroll
+Slot
+Book_issued info
+}
+
+Book_issued
+{
+Title
+Author
+Year
+}
+
+
+
+Use concept of structure / array and pointer for constructing functions for student management system.
+------------------------------------------------------------------------------------------------------
+
+-How many students have issued a given book?
+-Who is the highest mark holder?
+-How to check about the status of any student for issuing a book?
+-How can U fetch address of those students performed less than a given CGPI ?
+-Use the concept of binary search for searching student with specific CGPI ?
+
+
+

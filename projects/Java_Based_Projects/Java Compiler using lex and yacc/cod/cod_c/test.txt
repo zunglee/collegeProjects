@@ -1,0 +1,12 @@
+
+int main(int a,int b){
+int c ;
+
+c=a+b ;
+for ( i=0 ; i<5 ; i=i+1)
+{
+	if(i>5)
+	p;
+}
+
+}

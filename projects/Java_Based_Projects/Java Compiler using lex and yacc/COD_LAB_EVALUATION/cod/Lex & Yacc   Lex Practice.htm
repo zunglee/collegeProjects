@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://epaperpress.com/lexandyacc/prl.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Lex &amp; Yacc | Lex Practice</title>
+<meta charset="windows-1252">
+<link rel="stylesheet" href="./Lex & Yacc   Lex Practice_files/format.css" type="text/css">
+<link rel="stylesheet" href="./Lex & Yacc   Lex Practice_files/formatFF.css" type="text/css">
+<link rel="stylesheet" href="./Lex & Yacc   Lex Practice_files/menu.css" type="text/css">
+<script type="text/javascript" src="./Lex & Yacc   Lex Practice_files/menu.js"></script>
+<script type="text/javascript">
+var myMenu;
+function preLoad() {
+  myMenu = new SDMenu("yacc_menu");
+  myMenu.initCollapseAll = true;
+  myMenu.init();
+  
+  epp = new Image
+  epp.src = '../images/epp_over.gif'
+}
+</script>
+</head>
+<body onload="preLoad();">
+<div id="wrapper">
+  <div id="navbar">
+        <img src="./Lex & Yacc   Lex Practice_files/spacer.gif" width="20" height="40" alt="">
+    <div class="center">
+      <a href="http://epaperpress.com/index.html" target="_top" onmouseout="epp.src=&#39;../images/epp.gif&#39;" onmouseover="epp.src=&#39;../images/epp_over.gif&#39;">
+<img id="epp" src="./Lex & Yacc   Lex Practice_files/epp.gif" width="59" height="27" alt=""></a>
+    </div>
+    <img src="./Lex & Yacc   Lex Practice_files/spacer.gif" width="20" height="20" alt="">
+    <blockquote>
+	<center>
+      <input type="button" value="+" onclick="myMenu.expandAll();">
+      <input type="button" value="–" onclick="myMenu.collapseAll();">
+	</center>
+    <img src="./Lex & Yacc   Lex Practice_files/spacer.gif" width="20" height="5" alt="">
+    <div id="yacc_menu" class="sdmenu">
+      <div class="">
+  		<span>Menu</span>
+        <a href="http://epaperpress.com/lexandyacc/index.html">Introduction</a>
+        <a href="http://epaperpress.com/lexandyacc/intro.html">Overview</a>
+        <a href="http://epaperpress.com/lexandyacc/bib.html">Bibliography</a>
+      </div>
+      <div class="">
+        <span>Lex</span>
+        <a href="http://epaperpress.com/lexandyacc/thl.html">Theory</a>
+        <a href="./Lex & Yacc   Lex Practice_files/Lex & Yacc   Lex Practice.htm" class="current">Practice</a>
+      </div>
+      <div class="collapsed">
+        <span>Yacc</span>
+        <a href="http://epaperpress.com/lexandyacc/thy.html">Theory</a>
+        <a href="http://epaperpress.com/lexandyacc/pry1.html">Practice I</a>
+        <a href="http://epaperpress.com/lexandyacc/pry2.html">Practice II</a>
+      </div>
+      <div class="collapsed">
+        <span>Calculator</span>
+        <a href="http://epaperpress.com/lexandyacc/calc.html">Description</a>
+        <a href="http://epaperpress.com/lexandyacc/calci.html">Include File</a>
+        <a href="http://epaperpress.com/lexandyacc/calcl.html">Lex Input</a>
+        <a href="http://epaperpress.com/lexandyacc/calcy.html">Yacc Input</a>
+        <a href="http://epaperpress.com/lexandyacc/calc1.html">Interpreter</a>
+        <a href="http://epaperpress.com/lexandyacc/calc2.html">Compiler</a>
+        <a href="http://epaperpress.com/lexandyacc/calcg.html">Graph</a>
+      </div>
+       <div class="collapsed">
+        <span>More Lex</span>
+        <a href="http://epaperpress.com/lexandyacc/str.html">Strings</a>
+        <a href="http://epaperpress.com/lexandyacc/sym.html">Reserved</a>
+        <a href="http://epaperpress.com/lexandyacc/dbgl.html">Debugging</a>
+      </div>
+       <div class="collapsed">
+        <span>More Yacc</span>
+        <a href="http://epaperpress.com/lexandyacc/rec.html">Recursion</a>
+        <a href="http://epaperpress.com/lexandyacc/if.html">If-Else</a>
+        <a href="http://epaperpress.com/lexandyacc/err.html">Errors</a>
+        <a href="http://epaperpress.com/lexandyacc/attr.html">Attributes</a>
+        <a href="http://epaperpress.com/lexandyacc/emb.html">Actions</a>
+        <a href="http://epaperpress.com/lexandyacc/dbgy.html">Debugging</a>
+      </div>
+    </div>
+    </blockquote> 
+  </div>
+  <div id="content">
+<h1>Lex Practice</h1>
+<blockquote>
+<table class="outline">
+  <caption class="bottom">
+  <b>Table 1: Pattern Matching Primitives</b>
+  </caption>
+  <tbody><tr>
+    <th>Metacharacter</th>
+    <th>Matches</th>
+  </tr>
+  <tr class="left">
+    <td><code>.</code></td>
+    <td>any character except newline</td>
+  </tr>
+  <tr class="left">
+    <td><code>\n</code></td>
+    <td>newline</td>
+  </tr>
+  <tr class="left">
+    <td><code>*</code></td>
+    <td>zero or more copies of the preceding expression</td>
+  </tr>
+  <tr class="left">
+    <td><code>+</code></td>
+    <td>one or more copies of the preceding expression</td>
+  </tr>
+  <tr class="left">
+    <td><code>?</code></td>
+    <td>zero or one copy of the preceding expression</td>
+  </tr>
+  <tr class="left">
+    <td><code>^</code></td>
+    <td>beginning of line</td>
+  </tr>
+  <tr class="left">
+    <td><code>$</code></td>
+    <td>end of line</td>
+  </tr>
+  <tr class="left">
+    <td><code>a|b</code></td>
+    <td><code>a</code> or <code>b</code></td>
+  </tr>
+  <tr class="left">
+    <td><code>(ab)+</code></td>
+    <td>one or more copies of <code>ab</code> (grouping)</td>
+  </tr>
+  <tr class="left">
+    <td><code>"a+b"</code></td>
+    <td>literal "<code>a+b</code>" (C escapes still work)</td>
+  </tr>
+  <tr class="left">
+    <td><code>[]</code></td>
+    <td>character class</td>
+  </tr>
+</tbody></table>
+</blockquote>
+
+<blockquote>
+<table class="outline">
+  <caption class="bottom">
+  <b>Table 2: Pattern Matching Examples</b>
+  </caption>
+  <tbody><tr>
+    <th>Expression</th>
+    <th>Matches</th>
+  </tr>
+  <tr class="left">
+    <td><code>abc</code></td>
+    <td><code>abc</code></td>
+  </tr>
+  <tr class="left">
+    <td><code>abc*</code></td>
+    <td><code>ab abc abcc abccc ...</code></td>
+  </tr>
+  <tr class="left">
+    <td><code>abc+</code></td>
+    <td><code>abc, abcc, abccc, abcccc, ...</code></td>
+  </tr>
+  <tr class="left">
+    <td><code>a(bc)+</code></td>
+    <td><code>abc, abcbc, abcbcbc, ...</code></td>
+  </tr>
+  <tr class="left">
+    <td><code>a(bc)?</code></td>
+    <td><code>a, abc</code></td>
+  </tr>
+  <tr class="left">
+    <td><code>[abc]</code></td>
+    <td>one of: <code>a, b, c</code></td>
+  </tr>
+  <tr class="left">
+    <td><code>[a-z]</code></td>
+    <td>any letter, a through z</td>
+  </tr>
+  <tr class="left">
+    <td><code>[a\-z]</code></td>
+    <td>one of: <code>a, -, z</code></td>
+  </tr>
+  <tr class="left">
+    <td><code>[-az]</code></td>
+    <td>one of: <code>- a z</code></td>
+  </tr>
+  <tr class="left">
+    <td><code>[A-Za-z0-9]+</code></td>
+    <td>one or more alphanumeric characters</td>
+  </tr>
+  <tr class="left">
+    <td><code>[ \t\n]+</code></td>
+    <td>whitespace</td>
+  </tr>
+  <tr class="left">
+    <td><code>[^ab]</code></td>
+    <td>anything except: <code>a, b</code></td>
+  </tr>
+  <tr class="left">
+    <td><code>[a^b]</code></td>
+    <td><code>a, ^, b</code></td>
+  </tr>
+  <tr class="left">
+    <td><code>[a|b]</code></td>
+    <td><code>a, |, b</code></td>
+  </tr>
+  <tr class="left">
+    <td><code>a|b</code></td>
+    <td><code>a, b</code></td>
+  </tr>
+</tbody></table>
+</blockquote>
+<p>Regular expressions in lex are composed of metacharacters (Table 1). Pattern-matching examples
+  are shown in Table 2. Within a character class normal operators lose their meaning. Two operators
+  allowed in a character class are the hyphen ("<code>-</code>") and circumflex ("<code>^</code>").
+  When used between two characters the hyphen represents a range of characters. The circumflex, when
+  used as the first character, negates the expression. If two patterns match the same string the
+  longest match wins. In case both matches are the same length, then the first pattern listed is
+  used.</p>
+<blockquote>
+<table>
+  <tbody><tr class="left">
+    <td>... <i>definitions</i> ...<br>
+      <code>%%</code><br>
+      ... <i>rules</i> ...<br>
+      <code>%%</code><br>
+      ... <i>subroutines</i> ...</td>
+  </tr>
+</tbody></table>
+</blockquote>
+<p>Input to Lex is divided into three sections with <code>%%</code> dividing the sections. This is
+  best illustrated by example. The first example is the shortest possible lex file:</p>
+<pre class="icode">%%
+</pre>
+<p>Input is copied to output one character at a time. The first <code>%%</code> is always
+  required as there must always be a rules section. However if we don’t specify any rules
+  then the default action is to match everything and copy it to output. Defaults for input and output
+  are <code>stdin</code> and <code>stdout</code>, respectively. Here is the same example with
+  defaults explicitly coded:</p>
+<pre class="icode">%%
+    /* match everything except newline */
+.   ECHO;
+    /* match newline */
+\n  ECHO;
+
+%%
+
+int yywrap(void) {
+    return 1;
+}
+
+int main(void) {
+    yylex();
+    return 0;
+}
+</pre>
+<p>Two patterns have been specified in the rules section. Each pattern must begin in column one.
+  This is followed by <i>whitespace</i> (space, tab or newline) and an optional action associated
+  with the pattern. The action may be a single C statement, or multiple C statements, enclosed in
+  braces. Anything not starting in column one is copied verbatim to the generated C file. We may take
+  advantage of this behavior to specify comments in our lex file. In this example there are two
+  patterns, "<code>.</code>" and "<code>\n</code>", with an <code>ECHO</code> action associated for
+  each pattern. Several macros and variables are predefined by lex. <code>ECHO</code> is a macro that
+  writes code matched by the pattern. This is the default action for any unmatched strings.
+  Typically, <code>ECHO</code> is defined as:</p>
+<pre class="icode">#define ECHO fwrite(yytext, yyleng, 1, yyout)
+</pre>
+<p>Variable <code>yytext</code> is a pointer to the matched string (NULL-terminated) and <code>yyleng</code> is the length of the matched string. Variable <code>yyout</code> is the output
+  file and defaults to <code>stdout</code>. Function <code>yywrap</code> is called by lex when input
+  is exhausted. Return 1 if you are done or 0 if more processing is required. Every C program
+  requires a <code>main</code> function. In this case we simply call <code>yylex</code> that is the main
+  entry-point for lex. Some implementations of lex include copies of <code>main</code> and <code>yywrap</code> in a library thus eliminating the need to code them explicitly. This is why our
+  first example, the shortest lex program, functioned properly.</p>
+<blockquote>
+<table class="outline">
+  <caption class="bottom">
+  <b>Table 3: Lex Predefined Variables</b>
+  </caption>
+  <tbody><tr>
+    <th>Name</th>
+    <th>Function</th>
+  </tr>
+  <tr class="left">
+    <td><code>int yylex(void)</code></td>
+    <td>call to invoke lexer, returns token</td>
+  </tr>
+  <tr class="left">
+    <td><code>char *yytext</code></td>
+    <td>pointer to matched string</td>
+  </tr>
+  <tr class="left">
+    <td><code>yyleng</code></td>
+    <td>length of matched string</td>
+  </tr>
+  <tr class="left">
+    <td><code>yylval</code></td>
+    <td>value associated with token</td>
+  </tr>
+  <tr class="left">
+    <td><code>int yywrap(void)</code></td>
+    <td>wrapup, return 1 if done, 0 if not done</td>
+  </tr>
+  <tr class="left">
+    <td><code>FILE *yyout</code></td>
+    <td>output file</td>
+  </tr>
+  <tr class="left">
+    <td><code>FILE *yyin</code></td>
+    <td>input file</td>
+  </tr>
+  <tr class="left">
+    <td><code>INITIAL</code></td>
+    <td>initial start condition</td>
+  </tr>
+  <tr class="left">
+    <td><code>BEGIN condition</code></td>
+    <td>switch start condition</td>
+  </tr>
+  <tr class="left">
+    <td><code>ECHO</code></td>
+    <td>write matched string</td>
+  </tr>
+</tbody></table>
+</blockquote>
+<p>Here is a program that does nothing at all. All input is matched but no action is associated
+  with any pattern so there will be no output.</p>
+<pre class="icode">%%
+.
+\n
+</pre>
+<p>The following example prepends line numbers to each line in a file. Some implementations of lex
+  predefine and calculate <code>yylineno</code>. The input file for lex is <code>yyin</code> and
+  defaults to <code>stdin</code>.</p>
+<pre class="icode">%{
+    int yylineno;
+%}
+%%
+^(.*)\n    printf("%4d\t%s", ++yylineno, yytext);
+%%
+int main(int argc, char *argv[]) {
+    yyin = fopen(argv[1], "r");
+    yylex();
+    fclose(yyin);
+}
+</pre>
+<p>The definitions section is composed of substitutions, code, and start states. Code in the
+  definitions section is simply copied as-is to the top of the generated C file and must be
+  bracketed with "<code>%</code>{" and "<code>%</code>}" markers. Substitutions simplify
+  pattern-matching rules. For example, we may define digits and letters:</p>
+<pre class="icode">digit     [0-9]
+letter    [A-Za-z]
+%{
+    int count;
+%}
+%%
+    /* match identifier */
+{letter}({letter}|{digit})*    count++;
+%%
+int main(void) {
+    yylex();
+    printf("number of identifiers = %d\n", count);
+    return 0;
+}
+</pre>
+<p>Whitespace must separate the defining term and the associated expression. References to
+  substitutions in the rules section are surrounded by braces (<code>{letter}</code>) to distinguish
+  them from literals. When we have a match in the rules section the associated C code is executed.
+  Here is a scanner that counts the number of characters, words, and lines in a file (similar to Unix
+  wc):</p>
+<pre class="icode">%{
+    int nchar, nword, nline;
+%}
+%%
+\n         { nline++; nchar++; }
+[^ \t\n]+  { nword++, nchar += yyleng; }
+.          { nchar++; }
+%%
+int main(void) {
+    yylex();
+    printf("%d\t%d\t%d\n", nchar, nword, nline);
+    return 0;
+}
+</pre>
+  </div>
+</div>
+
+
+</body></html>

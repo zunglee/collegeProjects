@@ -1,0 +1,5 @@
+New thing to do in the OOM subject 
+
+1)generate pdf 
+2)send e-mail 
+3)good algorithm for the rating

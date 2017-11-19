@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+    <title>How to convert string to char array in C++? - Stack Overflow</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    
+    <script type="text/javascript" async="" src="./How to convert string to char array in C++  - Stack Overflow_files/ados"></script><script type="text/javascript" async="" src="./How to convert string to char array in C++  - Stack Overflow_files/ga.js"></script><script type="text/javascript" async="" src="./How to convert string to char array in C++  - Stack Overflow_files/quant.js"></script><script type="text/javascript" async="" src="./How to convert string to char array in C++  - Stack Overflow_files/ados.js"></script><script type="text/javascript" src="./How to convert string to char array in C++  - Stack Overflow_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./How to convert string to char array in C++  - Stack Overflow_files/stub.js"></script>
+    <link rel="stylesheet" type="text/css" href="./How to convert string to char array in C++  - Stack Overflow_files/all.css">
+    
+        <link rel="canonical" href="./How to convert string to char array in C++  - Stack Overflow_files/How to convert string to char array in C++  - Stack Overflow.htm">
+        <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;How to convert string to char array in C++?&#39;" href="http://stackoverflow.com/feeds/question/13294067">
+        <script type="text/javascript">
+        
+            StackExchange.ready(function () {
+                StackExchange.using("postValidation", function () {
+                StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+            });
+
+            
+            StackExchange.question.init({votesCast:[],autoShowCommentHelp:true,showAnswerHelp:true,totalCommentCount:3,shownCommentCount:3,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:13294067});
+
+            styleCode();
+
+                StackExchange.realtime.subscribeToQuestion('1', '13294067');
+            
+                    });
+        </script>
+
+
+    <script type="text/javascript">
+        StackExchange.init({"stackAuthUrl":"https://stackauth.com","serverTime":1378544524,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","enableSocialMediaInSharePopup":true},"user":{"fkey":"6da8a206c18845f81717cf956c532836","isRegistered":true,"userType":3,"userId":2635265,"accountId":3114082,"gravatar":"<div class=\"\"><img src=\"https://www.gravatar.com/avatar/8a29fadd6d9e1c7fa7d6b0f09c5f40d4?s=32&d=identicon&r=PG\" alt=\"\" width=\"32\" height=\"32\"></div>","profileUrl":"http://stackoverflow.com/users/2635265/user2635265","notificationsUnviewedCount":1,"inboxUnviewedCount":0}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.js":"6c261bebf56a","js/moderator.js":"ed7a8238b2f8","js/full-anon.js":"91e39f868c82","js/full.js":"f9e9cb812ede","js/wmd.js":"12e251f7c6c3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/mobile.js":"75f8938d6753","js/help.js":"6e6623243cf6","js/tageditor.js":"450c9e8426fc","js/tageditornew.js":"b6c68ad4c7dd","js/inline-tag-editing.js":"8e84e8a137f7","js/revisions.js":"d3e781ee5528","js/review.js":"947758ba83ea","js/tagsuggestions.js":"aa48ef6154df","js/post-validation.js":"bb996020492a","js/explore-qlist.js":"1c5bbd79b562","js/events.js":"27a33f0b2cad"});
+        
+    </script>
+    <script type="text/javascript">
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+<script async="" type="text/javascript" src="./How to convert string to char array in C++  - Stack Overflow_files/full.js"></script><script async="" type="text/javascript" src="./How to convert string to char array in C++  - Stack Overflow_files/post-validation.js"></script><script async="" type="text/javascript" src="./How to convert string to char array in C++  - Stack Overflow_files/prettify-full.js"></script><script async="" type="text/javascript" src="./How to convert string to char array in C++  - Stack Overflow_files/wmd.js"></script><link href="./How to convert string to char array in C++  - Stack Overflow_files/sidebar.min.css" type="text/css" rel="stylesheet"><script type="text/javascript" src="./How to convert string to char array in C++  - Stack Overflow_files/adFeedback.js"></script><link rel="stylesheet" href="http://static.adzerk.net/Extensions/adFeedback.css"></head>
+<body class="question-page">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+
+    <div class="container">
+        <div id="header">
+            <div id="portalLink">
+                <a class="genu" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
+                        <a class="unreadCount newNotices" title="you have unread notices">1</a>
+            </div>
+            <div id="topbar">
+                <div id="hlinks">
+                    
+<span id="hlinks-user">        <span class="profile-triangle">▼</span><a href="http://stackoverflow.com/users/2635265/user2635265" class="profile-link">user2635265</a>&nbsp;<a href="http://stackoverflow.com/users/2635265/user2635265?tab=reputation"><span class="reputation-score" title="your reputation; view reputation changes" dir="ltr">1</span></a>
+ <span class="lsep">|</span>
+
+</span>
+<span id="hlinks-nav"></span>
+<span id="hlinks-custom">            <a href="http://chat.stackoverflow.com/">chat</a>
+
+ <span class="lsep">|</span>
+                <a href="http://meta.stackoverflow.com/">meta</a>
+
+ <span class="lsep">|</span>
+            <a href="http://stackoverflow.com/about">about</a>
+
+ <span class="lsep">|</span>
+            <a href="http://stackoverflow.com/help">help</a>
+</span>
+                </div>
+                <div id="hsearch">
+                    <form id="search" action="http://stackoverflow.com/search" method="get" autocomplete="off">
+                        <div>
+                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">
+                    Stack Overflow
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs ">
+                    <ul>
+                            <li class="youarehere"><a id="nav-questions" href="http://stackoverflow.com/questions">Questions</a></li>
+                            <li><a id="nav-tags" href="http://stackoverflow.com/tags">Tags</a></li>
+                            <li><a id="nav-users" href="http://stackoverflow.com/users">Users</a></li>
+                            <li><a id="nav-badges" href="http://stackoverflow.com/help/badges">Badges</a></li>
+                            <li><a id="nav-unanswered" href="http://stackoverflow.com/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content">
+            
+
+<div itemscope="" itemtype="http://schema.org/Article">
+    <link itemprop="image" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+            <div id="question-header">
+            <h1 itemprop="name"><a href="./How to convert string to char array in C++  - Stack Overflow_files/How to convert string to char array in C++  - Stack Overflow.htm" class="question-hyperlink">How to convert string to char array in C++?</a></h1>
+        </div>
+            <div id="mainbar">
+
+            
+
+<div class="question" data-questionid="13294067" id="question">
+    
+                <script type="text/javascript">
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk1022061906",4).setZone(43) ; });                    
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1022061906"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiY20iOjg0NywiY2giOjExNzgsImNyIjo1OTI0LCJkaSI6IjEyMzExNTJiN2VmZDQzOGU5MjE5ZDAyODhjNDQ4MzAwIiwiZG0iOjEsImZjIjo4ODEwLCJmbCI6MjQ0NCwia3ciOiJjKyssc3RyaW5nLHR5cGUtY29udmVyc2lvbix4LXVzZXItcmVnaXN0ZXJlZCIsIm53IjoyMiwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLyIsInJ2IjowLCJwciI6MTU2OCwic3QiOjgyNzcsInpuIjo0MywidXIiOiJodHRwOi8vY2FyZWVycy5zdGFja292ZXJmbG93LmNvbS8ifQ&s=wziaw8v_5vzXnS2cUgYG9xynJTk" rel="nofollow" target="_blank" title=""><img src="./How to convert string to char array in C++  - Stack Overflow_files/0a96cc99c1784d6abe3cae6b8c8bf013.png" title="" alt="" border="0" width="728" height="90"></a><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li></ul><a href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" src="./How to convert string to char array in C++  - Stack Overflow_files/i.gif"></div>  
+
+
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="13294067">
+    <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+    <span class="vote-count-post ">1</span>
+    <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+    
+    <a class="star-off" href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c#" title="This is a favorite question (click again to undo)">favorite</a>
+    <div class="favoritecount"><b>1</b></div>   
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="description">
+
+        <p>I would like to convert string to char array but not char*. I know how to convert string to char* (by using malloc or the way I posted it in my code) - but thats not what I want. I simply want to convert string to char[size] array. Is it possible?</p>
+
+<pre class="lang-c prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;iostream&gt;</span><span class="pln">
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;string&gt;</span><span class="pln">
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">using</span><span class="pln"> </span><span class="kwd">namespace</span><span class="pln"> std</span><span class="pun">;</span><span class="pln">
+
+</span><span class="typ">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+</span><span class="com">// char to string</span><span class="pln">
+</span><span class="kwd">char</span><span class="pln"> tab</span><span class="pun">[</span><span class="lit">4</span><span class="pun">];</span><span class="pln">
+tab</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">'c'</span><span class="pun">;</span><span class="pln">
+tab</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">'a'</span><span class="pun">;</span><span class="pln">
+tab</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">'t'</span><span class="pun">;</span><span class="pln">
+tab</span><span class="pun">[</span><span class="lit">3</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">'\0'</span><span class="pun">;</span><span class="pln">
+string tmp</span><span class="pun">(</span><span class="pln">tab</span><span class="pun">);</span><span class="pln">
+cout </span><span class="pun">&lt;&lt;</span><span class="pln"> tmp </span><span class="pun">&lt;&lt;</span><span class="pln"> </span><span class="str">"\n"</span><span class="pun">;</span><span class="pln">
+
+</span><span class="com">// string to char* - but thats not what I want</span><span class="pln">
+
+</span><span class="kwd">char</span><span class="pln"> </span><span class="pun">*</span><span class="pln">c </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">const_cast</span><span class="pun">&lt;</span><span class="kwd">char</span><span class="pun">*&gt;(</span><span class="pln">tmp</span><span class="pun">.</span><span class="pln">c_str</span><span class="pun">());</span><span class="pln">
+cout </span><span class="pun">&lt;&lt;</span><span class="pln"> c </span><span class="pun">&lt;&lt;</span><span class="pln"> </span><span class="str">"\n"</span><span class="pun">;</span><span class="pln">
+
+</span><span class="com">//string to char</span><span class="pln">
+</span><span class="kwd">char</span><span class="pln"> tab2</span><span class="pun">[</span><span class="lit">1024</span><span class="pun">];</span><span class="pln">
+</span><span class="com">// ?</span><span class="pln">
+
+</span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span></code></pre>
+
+<p>}</p>
+
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/c%2b%2b" class="post-tag" title="show questions tagged &#39;c++&#39;" rel="tag">c++</a> <a href="http://stackoverflow.com/questions/tagged/string" class="post-tag" title="show questions tagged &#39;string&#39;" rel="tag">string</a> <a href="http://stackoverflow.com/questions/tagged/type-conversion" class="post-tag" title="show questions tagged &#39;type-conversion&#39;" rel="tag">type-conversion</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/q/13294067/2635265" title="short permalink to this question" class="short-link" id="link-post-13294067">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13294067/edit" class="suggest-edit-post" title="revise and improve this post">edit</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+
+
+    <div class="user-info user-hover">
+        <div class="user-action-time">
+            
+
+            <a href="http://stackoverflow.com/posts/13294067/revisions" title="show all edits to this post">edited <span title="2012-11-08 17:12:09Z" class="relativetime">Nov 8 '12 at 17:12</span></a>
+
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/166749/larsmans"><div class=""><img src="./How to convert string to char array in C++  - Stack Overflow_files/56e17cbc8c5ea5b37d67018db6d030b0" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/166749/larsmans">larsmans</a><br>
+            <span class="reputation-score" title="reputation score 130860" dir="ltr">131k</span><span title="9 gold badges"><span class="badge1"></span><span class="badgecount">9</span></span><span title="161 silver badges"><span class="badge2"></span><span class="badgecount">161</span></span><span title="303 bronze badges"><span class="badge3"></span><span class="badgecount">303</span></span>
+        </div>
+    </div>
+    </td>
+    <td class="post-signature owner">
+        
+
+    <div class="user-info ">
+        <div class="user-action-time">
+            
+
+                    asked <span title="2012-11-08 17:08:26Z" class="relativetime">Nov 8 '12 at 17:08</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/1376444/brian-brown"><div class=""><img src="./How to convert string to char array in C++  - Stack Overflow_files/f3b38de8a03379903698c169e7473cef" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/1376444/brian-brown">Brian Brown</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">315</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-13294067" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-18126820" class="comment" data-commentid="18126820">
+        <td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span title="number of &#39;useful comment&#39; votes received" class="warm">7</span>
+</td>
+<td>
+&nbsp;
+</td></tr>
+</tbody></table></td>
+        <td class="comment-text"><div><span class="comment-copy">This appears to be C++, not C.</span> –&nbsp;<a href="http://stackoverflow.com/users/10077/fred-larson" title="23045 reputation" class="comment-user">Fred Larson</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c#comment18126820_13294067"><span title="2012-11-08 17:09:50Z" class="relativetime-clean">Nov 8 '12 at 17:09</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-18126883" class="comment" data-commentid="18126883">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">@FredLarson: ok, edited, thanks</span> –&nbsp;<a href="http://stackoverflow.com/users/1376444/brian-brown" title="315 reputation" class="comment-user owner">Brian Brown</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c#comment18126883_13294067"><span title="2012-11-08 17:11:19Z" class="relativetime-clean">Nov 8 '12 at 17:11</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-18133371" class="comment" data-commentid="18133371">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">You would like to do this. But the question that you must ask first (and we must ask first) is <i>why</i> would you like to do this?</span> –&nbsp;<a href="http://stackoverflow.com/users/970543/nik-bougalis" title="6319 reputation" class="comment-user">Nik Bougalis</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c#comment18133371_13294067"><span title="2012-11-08 21:14:51Z" class="relativetime-clean">Nov 8 '12 at 21:14</span></a></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    <span id="comments-link-13294067" class="comments-link" data-comments-counts="0" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add comment <span>(requires <a href="http://stackoverflow.com/help/privileges/comment">50 reputation</a>)</span></span>
+</td>
+</tr>            </tbody></table>    
+</div>
+
+
+            <div id="answers">
+
+                <a name="tab-top"></a>
+                <div id="answers-header">
+                    <div class="subheader answers-subheader">
+                        <h2>
+                                4 Answers
+                        </h2>
+                        <div>
+                            <div id="tabs">
+        <a href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c?answertab=active#tab-top" title="Answers with the latest activity first">
+            active
+        </a>
+        <a href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c?answertab=oldest#tab-top" title="Answers in the order they were provided">
+            oldest
+        </a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c?answertab=votes#tab-top" title="Answers with the highest score first">
+            votes
+        </a>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+  
+<a name="13294114"></a>
+<div id="answer-13294114" class="answer accepted-answer" data-answerid="13294114">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="13294114">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span class="vote-count-post ">2</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text"><p>Simplest way I can thing of doing it is:</p>
+
+<pre class="lang-c prettyprint prettyprinted" style=""><code><span class="pln">string tmp </span><span class="pun">=</span><span class="pln"> </span><span class="str">"cat"</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">char</span><span class="pln"> tab2</span><span class="pun">[</span><span class="lit">1024</span><span class="pun">];</span><span class="pln">
+strcpy</span><span class="pun">(</span><span class="pln">tab2</span><span class="pun">,</span><span class="pln"> tmp</span><span class="pun">.</span><span class="pln">c_str</span><span class="pun">());</span></code></pre>
+
+<p>For safety, you might prefer:</p>
+
+<pre class="lang-c prettyprint prettyprinted" style=""><code><span class="pln">string tmp </span><span class="pun">=</span><span class="pln"> </span><span class="str">"cat"</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">char</span><span class="pln"> tab2</span><span class="pun">[</span><span class="lit">1024</span><span class="pun">];</span><span class="pln">
+strncpy</span><span class="pun">(</span><span class="pln">tab2</span><span class="pun">,</span><span class="pln"> tmp</span><span class="pun">.</span><span class="pln">c_str</span><span class="pun">(),</span><span class="pln"> </span><span class="kwd">sizeof</span><span class="pun">(</span><span class="pln">tab2</span><span class="pun">));</span><span class="pln">
+tab2</span><span class="pun">[</span><span class="kwd">sizeof</span><span class="pun">(</span><span class="pln">tab2</span><span class="pun">)</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span></code></pre>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/13294114/2635265" title="short permalink to this answer" class="short-link" id="link-post-13294114">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13294114/edit" class="suggest-edit-post" title="revise and improve this post">edit</a></div>                    </td>
+    <td align="right" class="post-signature">
+
+
+    <div class="user-info ">
+        <div class="user-action-time">
+            
+
+            <a href="http://stackoverflow.com/posts/13294114/revisions" title="show all edits to this post">edited <span title="2012-11-08 17:22:56Z" class="relativetime">Nov 8 '12 at 17:22</span></a>
+
+        </div>
+        <div class="user-gravatar32">
+            
+        </div>
+        <div class="user-details">
+            <br>
+            
+        </div>
+    </div>
+    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    
+
+    <div class="user-info ">
+        <div class="user-action-time">
+            
+
+                        answered <span title="2012-11-08 17:11:34Z" class="relativetime">Nov 8 '12 at 17:11</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/93884/chowlett"><div class=""><img src="./How to convert string to char array in C++  - Stack Overflow_files/f912a87ba919942acb4048838f6b2572" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/93884/chowlett">Chowlett</a><br>
+            <span class="reputation-score" title="reputation score 15522" dir="ltr">15.5k</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="28 silver badges"><span class="badge2"></span><span class="badgecount">28</span></span><span title="64 bronze badges"><span class="badge3"></span><span class="badgecount">64</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-13294114" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-18127003" class="comment" data-commentid="18127003">
+        <td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+</td>
+<td>
+&nbsp;
+</td></tr>
+</tbody></table></td>
+        <td class="comment-text"><div><span class="comment-copy">The catch with <code>strncpy</code> is that it won't null-terminate if it reaches the size before it finds a null in the source string. Gotta be careful with that too!</span> –&nbsp;<a href="http://stackoverflow.com/users/10077/fred-larson" title="23045 reputation" class="comment-user">Fred Larson</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c#comment18127003_13294114"><span title="2012-11-08 17:15:11Z" class="relativetime-clean">Nov 8 '12 at 17:15</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-18127042" class="comment" data-commentid="18127042">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">@FredLarson - Good point! Worth putting <code>tab2[sizeof(tab2) - 1] = 0;</code> after it, then?</span> –&nbsp;<a href="http://stackoverflow.com/users/93884/chowlett" title="15522 reputation" class="comment-user">Chowlett</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c#comment18127042_13294114"><span title="2012-11-08 17:16:13Z" class="relativetime-clean">Nov 8 '12 at 17:16</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-18127086" class="comment" data-commentid="18127086">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">Yes, I think that's a reasonable way to handle it.</span> –&nbsp;<a href="http://stackoverflow.com/users/10077/fred-larson" title="23045 reputation" class="comment-user">Fred Larson</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c#comment18127086_13294114"><span title="2012-11-08 17:17:29Z" class="relativetime-clean">Nov 8 '12 at 17:17</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-18127110" class="comment" data-commentid="18127110">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">@Chowlett: you mean: should I add this line just after <code>strncpy</code>?</span> –&nbsp;<a href="http://stackoverflow.com/users/1376444/brian-brown" title="315 reputation" class="comment-user owner">Brian Brown</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c#comment18127110_13294114"><span title="2012-11-08 17:18:04Z" class="relativetime-clean">Nov 8 '12 at 17:18</span></a></span><span class="edited-yes" title="this comment was edited"></span></div></td>
+    </tr>
+            
+    <tr id="comment-18127258" class="comment" data-commentid="18127258">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">@BrianBrown - exactly. See edit.</span> –&nbsp;<a href="http://stackoverflow.com/users/93884/chowlett" title="15522 reputation" class="comment-user">Chowlett</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c#comment18127258_13294114"><span title="2012-11-08 17:23:04Z" class="relativetime-clean">Nov 8 '12 at 17:23</span></a></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    <a id="comments-link-13294114" class="comments-link" data-comments-count="5" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c#">show <b>5</b> more comments</a><span id="hidden-comments-link-13294114" class="comments-link dno" data-comments-counts="0" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add comment <span>(requires <a href="http://stackoverflow.com/help/privileges/comment">50 reputation</a>)</span></span>
+</td>
+</tr>
+    </tbody></table>
+</div>
+            <script type="text/javascript">
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk761131616",4).setZone(44) ; });                    
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk761131616"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiY20iOjg0NywiY2giOjExNzgsImNyIjo1OTIzLCJkaSI6Ijg4MDI4NGNlZGI5MzQxYzY5YjAxOWMyOTdmM2QwN2M4IiwiZG0iOjEsImZjIjo4ODA5LCJmbCI6MjQ0NCwia3ciOiJjKyssc3RyaW5nLHR5cGUtY29udmVyc2lvbix4LXVzZXItcmVnaXN0ZXJlZCIsIm53IjoyMiwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLyIsInJ2IjowLCJwciI6MTU2OCwic3QiOjgyNzcsInpuIjo0NCwidXIiOiJodHRwOi8vY2FyZWVycy5zdGFja292ZXJmbG93LmNvbS8ifQ&s=pRxsVHgMHcfrNpErVbGBiaagXa0" rel="nofollow" target="_blank" title=""><img src="./How to convert string to char array in C++  - Stack Overflow_files/46a9844d6e504212a85bc72ddd7dd829.png" title="" alt="" border="0" width="728" height="90"></a><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li></ul><a href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" src="./How to convert string to char array in C++  - Stack Overflow_files/i(1).gif"></div>  
+
+
+
+  
+<a name="13294109"></a>
+<div id="answer-13294109" class="answer" data-answerid="13294109">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="13294109">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span class="vote-count-post ">7</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text"><p>Just copy the string into the array with <code>strcpy</code>.</p>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/13294109/2635265" title="short permalink to this answer" class="short-link" id="link-post-13294109">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13294109/edit" class="suggest-edit-post" title="revise and improve this post">edit</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    
+
+    <div class="user-info user-hover">
+        <div class="user-action-time">
+            
+
+                        answered <span title="2012-11-08 17:11:02Z" class="relativetime">Nov 8 '12 at 17:11</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/721269/david-schwartz"><div class=""><img src="./How to convert string to char array in C++  - Stack Overflow_files/346ca03edfbde2a468adc289867ab975" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/721269/david-schwartz">David Schwartz</a><br>
+            <span class="reputation-score" title="reputation score 53733" dir="ltr">53.7k</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="33 silver badges"><span class="badge2"></span><span class="badgecount">33</span></span><span title="75 bronze badges"><span class="badge3"></span><span class="badgecount">75</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-13294109" class="comments dno">
+        <table>
+        <tbody>
+        
+            <tr><td></td><td></td></tr>
+        
+        </tbody>
+    
+        </table>
+    </div>
+    <span id="comments-link-13294109" class="comments-link" data-comments-counts="0" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add comment <span>(requires <a href="http://stackoverflow.com/help/privileges/comment">50 reputation</a>)</span></span>
+</td>
+</tr>
+    </tbody></table>
+</div>
+
+  
+<a name="13294127"></a>
+<div id="answer-13294127" class="answer" data-answerid="13294127">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="13294127">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span class="vote-count-post ">1</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text"><p>You could use <code>strcpy()</code>, like so:</p>
+
+<pre class="lang-c prettyprint prettyprinted" style=""><code><span class="pln">strcpy</span><span class="pun">(</span><span class="pln">tab2</span><span class="pun">,</span><span class="pln"> tmp</span><span class="pun">.</span><span class="pln">c_str</span><span class="pun">());</span></code></pre>
+
+<p>Watch out for buffer overflow.</p>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/13294127/2635265" title="short permalink to this answer" class="short-link" id="link-post-13294127">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13294127/edit" class="suggest-edit-post" title="revise and improve this post">edit</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    
+
+    <div class="user-info ">
+        <div class="user-action-time">
+            
+
+                        answered <span title="2012-11-08 17:12:25Z" class="relativetime">Nov 8 '12 at 17:12</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/10077/fred-larson"><div class=""><img src="./How to convert string to char array in C++  - Stack Overflow_files/be4e820c7af6f3b79cf055d984cda7ff" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/10077/fred-larson">Fred Larson</a><br>
+            <span class="reputation-score" title="reputation score 23045" dir="ltr">23k</span><span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span><span title="52 silver badges"><span class="badge2"></span><span class="badgecount">52</span></span><span title="87 bronze badges"><span class="badge3"></span><span class="badgecount">87</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-13294127" class="comments dno">
+        <table>
+        <tbody>
+        
+            <tr><td></td><td></td></tr>
+        
+        </tbody>
+    
+        </table>
+    </div>
+    <span id="comments-link-13294127" class="comments-link" data-comments-counts="0" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add comment <span>(requires <a href="http://stackoverflow.com/help/privileges/comment">50 reputation</a>)</span></span>
+</td>
+</tr>
+    </tbody></table>
+</div>
+
+  
+<a name="13294112"></a>
+<div id="answer-13294112" class="answer" data-answerid="13294112">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="13294112">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span class="vote-count-post ">1</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text"><p>Try strcpy(), but as Fred said, this is C++, not C</p>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/13294112/2635265" title="short permalink to this answer" class="short-link" id="link-post-13294112">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13294112/edit" class="suggest-edit-post" title="revise and improve this post">edit</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    
+
+    <div class="user-info ">
+        <div class="user-action-time">
+            
+
+                        answered <span title="2012-11-08 17:11:27Z" class="relativetime">Nov 8 '12 at 17:11</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/1802455/marrow-gnower"><div class=""><img src="./How to convert string to char array in C++  - Stack Overflow_files/4c8db16f0408d6390dda4348c0a80109" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/1802455/marrow-gnower">Marrow Gnower</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">124</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-13294112" class="comments dno">
+        <table>
+        <tbody>
+        
+            <tr><td></td><td></td></tr>
+        
+        </tbody>
+    
+        </table>
+    </div>
+    <span id="comments-link-13294112" class="comments-link" data-comments-counts="0" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add comment <span>(requires <a href="http://stackoverflow.com/help/privileges/comment">50 reputation</a>)</span></span>
+</td>
+</tr>
+    </tbody></table>
+</div>
+                                    <a name="new-answer"></a>
+                    <form id="post-form" action="http://stackoverflow.com/questions/13294067/answer/submit" method="post" class="post-form">
+                        <input type="hidden" id="post-id" value="13294067">
+                        <h2 class="space">Your Answer</h2>
+
+
+
+    
+
+<script type="text/javascript">
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+         
+        prepareEditor({
+            heartbeatType: 'answer',
+            bindNavPrevention: true,
+            postfix: "",
+            onDemand: false,
+            discardSelector: ".discard-answer"
+            ,immediatelyShowMarkdownHelp:true
+        });
+        
+
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li class="wmd-button" id="wmd-bold-button" title="Strong &lt;strong&gt; Ctrl+B" style="left: 0px;"><span style="background-position: 0px 0px;"></span></li><li class="wmd-button" id="wmd-italic-button" title="Emphasis &lt;em&gt; Ctrl+I" style="left: 25px;"><span style="background-position: -20px 0px;"></span></li><li class="wmd-spacer wmd-spacer1" id="wmd-spacer1"></li><li class="wmd-button" id="wmd-link-button" title="Hyperlink &lt;a&gt; Ctrl+L" style="left: 75px;"><span style="background-position: -40px 0px;"></span></li><li class="wmd-button" id="wmd-quote-button" title="Blockquote &lt;blockquote&gt; Ctrl+Q" style="left: 100px;"><span style="background-position: -60px 0px;"></span></li><li class="wmd-button" id="wmd-code-button" title="Code Sample &lt;pre&gt;&lt;code&gt; Ctrl+K" style="left: 125px;"><span style="background-position: -80px 0px;"></span></li><li class="wmd-button" id="wmd-image-button" title="Image &lt;img&gt; Ctrl+G" style="left: 150px;"><span style="background-position: -100px 0px;"></span></li><li class="wmd-spacer wmd-spacer2" id="wmd-spacer2"></li><li class="wmd-button" id="wmd-olist-button" title="Numbered List &lt;ol&gt; Ctrl+O" style="left: 200px;"><span style="background-position: -120px 0px;"></span></li><li class="wmd-button" id="wmd-ulist-button" title="Bulleted List &lt;ul&gt; Ctrl+U" style="left: 225px;"><span style="background-position: -140px 0px;"></span></li><li class="wmd-button" id="wmd-heading-button" title="Heading &lt;h1&gt;/&lt;h2&gt; Ctrl+H" style="left: 250px;"><span style="background-position: -160px 0px;"></span></li><li class="wmd-button" id="wmd-hr-button" title="Horizontal Rule &lt;hr&gt; Ctrl+R" style="left: 275px;"><span style="background-position: -180px 0px;"></span></li><li class="wmd-spacer wmd-spacer3" id="wmd-spacer3"></li><li class="wmd-button" id="wmd-undo-button" title="Undo - Ctrl+Z" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li class="wmd-button" id="wmd-redo-button" title="Redo - Ctrl+Y" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li><li class="wmd-button wmd-help-button active-help" id="wmd-help-button" title="Markdown Editing Help" style="right: 0px;"><span style="background-position: -240px 0px;"></span></li><div id="mdhelp" class="mdhelp" style="right: -8px; width: 668px; top: 25px;">
+    <ul id="mdhelp-tabs" class="mdhelp-tabs">
+        <li data-tab="mdhelp-links" data-buttons="link">Links</li>
+        <li data-tab="mdhelp-images" data-buttons="image">Images</li>
+        <li data-tab="mdhelp-styles" data-buttons="bold,italic,heading">Styling/Headers</li>
+        <li data-tab="mdhelp-lists" data-buttons="olist,ulist">Lists</li>
+        <li data-tab="mdhelp-blockquotes" data-buttons="quote">Blockquotes</li>
+        <li data-tab="mdhelp-code" data-buttons="code">Code</li>
+        <li data-tab="mdhelp-html"> HTML </li>
+        <li style="float:right"><a href="http://stackoverflow.com/editing-help" target="_blank">advanced help »</a></li>
+    </ul>
+    
+    <div class="mdhelp-tab" id="mdhelp-links">
+            <p>
+                In most cases, a plain URL will be recognized as such and automatically linked:
+            </p>
+            <pre>Visit http://area51.stackexchange.com/ regularly!
+Use angle brackets to force linking: Have you seen &lt;http://superuser.com&gt;?
+</pre>
+            <p>
+                To create fancier links, use Markdown:
+            </p>
+                <pre>Here's [a link](http://www.example.com/)! And a reference-style link to [a panda][1].
+References don't have to be [numbers][question].
+
+ [1]: http://notfound.stackexchange.com/
+ [question]: http://english.stackexchange.com/questions/11481
+</pre>
+                <p>You can add tooltips to links:</p>
+<pre>Click [here](http://diy.stackexchange.com<span class="spaces">&nbsp;</span>"this text appears when you mouse over")!
+This works with [reference links][blog] as well.
+
+ [blog]: http://blog.stackoverflow.com/<span class="spaces">&nbsp;</span>"click here for updates"
+</pre>
+    </div>
+
+    <div class="mdhelp-tab" id="mdhelp-images">
+        <p>Images are exactly like links, but they have an exclamation point in front of them:</p>
+        <pre>![a busy cat](http://sstatic.net/stackoverflow/img/error-lolcat-problemz.jpg)
+![two muppets][1]
+
+ [1]: http://i.imgur.com/I5DFV.jpg "tooltip"
+</pre>
+        <p>
+            The word in square brackets is the alt text, which gets displayed if the browser
+            can't show the image. Be sure to include meaningful alt text for screen-reading
+            software.
+        </p>
+   
+    </div>
+    <div class="mdhelp-tab" id="mdhelp-styles">
+        <div class="col1">
+            <p>Be sure to use text styling sparingly; only where it helps readability.</p>
+                <pre>*This is italicized*, and so
+is _this_.
+
+**This is bold**, just like __this__.
+
+You can ***combine*** them
+if you ___really have to___.
+</pre>
+        
+        </div>
+        <div class="col2">
+            <p>
+                To break your text into sections, you can use headers:
+            </p>
+                <pre>A Large Header
+==============
+
+Smaller Subheader
+-----------------
+</pre>
+            <p>
+                Use hash marks if you need several levels of headers:</p>
+    <pre># Header 1 #
+## Header 2 ##
+### Header 3 ###
+</pre>
+
+            
+        </div>
+
+    </div>
+    <div class="mdhelp-tab" id="mdhelp-lists">
+        <p>Both bulleted and numbered lists are possible:</p>
+        <div class="col1">
+<pre>-<span class="spaces">&nbsp;</span>Use a minus sign for a bullet
++<span class="spaces">&nbsp;</span>Or plus sign
+*<span class="spaces">&nbsp;</span>Or an asterisk
+
+1.<span class="spaces">&nbsp;</span>Numbered lists are easy
+2.<span class="spaces">&nbsp;</span>Markdown keeps track of
+   the numbers for you
+7.<span class="spaces">&nbsp;</span>So this will be item 3.
+</pre>
+        </div>
+        <div class="col2">
+<pre>1.<span class="spaces">&nbsp;</span>Lists in a list item:
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>-<span class="spaces">&nbsp;</span>Indented four spaces.
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>*<span class="spaces">&nbsp;</span>indented eight spaces.
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>-<span class="spaces">&nbsp;</span>Four spaces again.
+2.<span class="spaces">&nbsp;&nbsp;</span>You can have multiple
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>paragraphs in a list items.
+<span class="spaces">&nbsp;</span>
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>Just be sure to indent.
+</pre>        
+        </div>
+    </div>
+
+    <div class="mdhelp-tab" id="mdhelp-blockquotes">
+        <div class="col1">
+            <pre>&gt; Create a blockquote by
+&gt; prepending “&gt;” to each line.
+&gt;
+&gt; Other formatting also works here, e.g.
+&gt;
+&gt; 1. Lists or
+&gt; 2. Headings:
+&gt;
+&gt; ## Quoted Heading ##
+            </pre>
+        </div>
+        <div class="col2">
+                <p>
+                    You can even put blockquotes in blockquotes:
+                </p>
+                <pre>&gt; A standard blockquote is indented
+&gt; &gt; A nested blockquote is indented more
+&gt; &gt; &gt; &gt; You can nest to any depth.
+</pre>
+        </div>
+    </div>
+
+    <div class="mdhelp-tab" id="mdhelp-code">
+        <p>
+            To create code blocks or other preformatted text, indent by four spaces:
+        </p>
+        <pre><span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>This will be displayed in a monospaced font. The first four spaces
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>will be stripped off, but all other whitespace will be preserved.
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>Markdown and HTML are turned off in code blocks:
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</span>&lt;i&gt;This is not italic&lt;/i&gt;, and [this is not a link](http://example.com)
+</pre>
+        <p>
+            To create not a block, but an inline code span, use backticks:
+        </p>
+        <pre>The `$` character is just a shortcut for `window.jQuery`.
+</pre>
+        <p>
+            If you want to have a preformatted block within a list, indent by eight spaces:
+        </p>
+        <pre>1. This is normal text.
+2. So is this, but now follows a code block:
+<span class="spaces">&nbsp;</span>
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Skip a line and indent eight spaces.
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>That's four spaces for the list
+<span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>and four to trigger the code block.
+</pre>
+    </div>
+
+    <div class="mdhelp-tab" id="mdhelp-html">
+        <p>
+            If you need to do something that Markdown can't handle, use HTML. Note that <a href="http://meta.stackoverflow.com/questions/1777/what-html-tags-are-allowed" target="_blank">we only support a very strict subset of HTML!</a>
+        </p>
+        <pre>Strikethrough humor is &lt;strike&gt;funny&lt;/strike&gt;.
+</pre>
+        <p>
+            Markdown is smart enough not to mangle your span-level HTML:
+        </p>
+        <pre>&lt;b&gt;Markdown works *fine* in here.&lt;/b&gt;
+</pre>
+        <p>
+            Block-level HTML elements have a few restrictions:
+        </p>
+        <ol>
+            <li>They must be separated from surrounding text by blank lines.</li>
+            <li>The begin and end tags of the outermost block element must not be indented.</li>
+            <li>Markdown can't be used within HTML blocks.</li>
+        </ol>
+        <br>
+        <pre>&lt;pre&gt;
+    You can &lt;em&gt;not&lt;/em&gt; use Markdown in here.
+&lt;/pre&gt;
+</pre>
+    </div>
+
+    <div class="cbt"></div>
+</div></ul></div>
+            <div style="clear: both; height: 24px;"></div><textarea id="wmd-input" class="wmd-input processed" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        <div class="grippie" style="margin-right: 0px;"></div></div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="6da8a206c18845f81717cf956c532836">
+        <input id="author" name="author" type="text">
+    </div>
+</div>
+                        <div style="position: relative;">
+                            
+                        </div>
+
+                                                    <div class="form-submit cbt">
+                                <input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+                                <a href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c#" class="discard-answer dno">discard</a>
+                            </div>
+                    </form>
+
+
+
+                    <h2 class="bottom-notice">
+Not the answer you're looking for?                        Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/c%2b%2b" class="post-tag" title="show questions tagged &#39;c++&#39;" rel="tag">c++</a> <a href="http://stackoverflow.com/questions/tagged/string" class="post-tag" title="show questions tagged &#39;string&#39;" rel="tag">string</a> <a href="http://stackoverflow.com/questions/tagged/type-conversion" class="post-tag" title="show questions tagged &#39;type-conversion&#39;" rel="tag">type-conversion</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.                    </h2>
+            </div>
+        </div>
+                <div id="sidebar" class="show-votes">
+
+
+
+<script type="text/javascript">
+    window.showNewUser = false;
+
+</script>
+
+<div class="module newuser newuser-greeting" id="newuser-box" style="display:none;">
+    <h4>Hello World!</h4>
+    <div>
+        <p>This is a collaboratively edited question and answer site for <b>professional and enthusiast programmers</b>. It's 100% free, no registration required.</p>
+        <p class="ar">
+                <a href="http://stackoverflow.com/about?mnu=1">about »</a>&nbsp;&nbsp;&nbsp;
+            <a href="http://stackoverflow.com/help?mnu=1">help »</a>
+        </p>
+    </div>
+</div>
+    <script type="text/javascript">
+    if (showNewUser) {
+        document.getElementById('newuser-box').style.display = '';
+    }
+    </script>                            <div class="module question-stats">
+                    <p class="label-key">tagged</p>
+                    <div class="tagged"><a href="http://stackoverflow.com/questions/tagged/c%2b%2b" class="post-tag" title="show questions tagged &#39;c++&#39;" rel="tag">c++</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">223389</span></span><br>
+<a href="http://stackoverflow.com/questions/tagged/string" class="post-tag" title="show questions tagged &#39;string&#39;" rel="tag">string</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">44134</span></span><br>
+<a href="http://stackoverflow.com/questions/tagged/type-conversion" class="post-tag" title="show questions tagged &#39;type-conversion&#39;" rel="tag">type-conversion</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">2380</span></span><br>
+</div>
+                    <table id="qinfo">
+                        <tbody><tr>
+                            <td>
+                                <p class="label-key">asked</p>
+                            </td>
+                            <td style="padding-left: 10px">
+                                <p class="label-key" title="2012-11-08 17:08:26Z"><b>10 months ago</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="label-key">viewed</p>
+                            </td>
+
+                            <td style="padding-left: 10px">
+                                <p class="label-key">
+                                    <b>8206 times</b>
+                                </p>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td>
+                                    <p class="label-key">active</p>
+                                </td>
+                                <td style="padding-left: 10px">
+                                    <p class="label-key"><b><a href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c?lastactivity" class="lastactivity-link" title="2012-11-08 17:22:56Z">10 months ago</a></b></p>
+                                </td>
+                            </tr>
+                    </tbody></table>
+                </div>
+            
+<div class="module community-bulletin" data-tracker="cb=1">
+    <h4>Community Bulletin</h4>
+    <div class="related">
+        <div class="spacer">
+            <div class="bulletin-item-type"><a href="http://blog.stackoverflow.com/?cb=1" class="event-date" target="_blank">blog</a></div>
+            <div class="bulletin-item-content">
+                <a href="http://blog.stackoverflow.com/2013/09/community-management-by-popular-demand-kevin-chang-joins-the-team/?cb=1" class="question-hyperlink" target="_blank">Community Management by Popular Demand: Kevin Chang Joins The Team</a>
+            </div>
+            <br class="cbt">
+        </div>
+    </div>
+</div>            
+                        <script type="text/javascript">
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk943178440",17).setZone(45) ; });                    
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk943178440"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MTcsImNtIjo4NDcsImNoIjoxMTc4LCJjciI6OTMzNCwiZGkiOiJkZTIxYTMxNjM5NjM0MjgyYjdjYjIyOGYzMmI0NWE4NyIsImRtIjoxLCJmYyI6MTQ4NDQsImZsIjoyNDQ0LCJrdyI6ImMrKyxzdHJpbmcsdHlwZS1jb252ZXJzaW9uLHgtdXNlci1yZWdpc3RlcmVkIiwibnciOjIyLCJyZiI6Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vIiwicnYiOjAsInByIjoxNTY4LCJzdCI6ODI3Nywiem4iOjQ1LCJ1ciI6Imh0dHA6Ly9jYXJlZXJzLnN0YWNrb3ZlcmZsb3cuY29tLyJ9&s=cT97rZ3Fir3iTeFJctxly808v1s" rel="nofollow" target="_blank" title=""><img src="./How to convert string to char array in C++  - Stack Overflow_files/db5df4870e4e4b6cbf42727fd434701a.jpg" title="" alt="" border="0" width="220" height="250"></a><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li></ul><a href="http://stackoverflow.com/questions/13294067/how-to-convert-string-to-char-array-in-c#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" src="./How to convert string to char array in C++  - Stack Overflow_files/i(2).gif"></div>  
+    <div id="hireme"> <a href="http://careers.stackoverflow.com/jobs?a=144" class="top" target="_blank"></a> <ul class="jobs"> <li> <a href="http://careers.stackoverflow.com/jobs/38325/android-os-staff-and-senior-engineers-fireeye-cyber-security-pvt?a=KK0PrpAc" target="_blank" title="Android OS – Staff and Senior Engineers at FireEye Cyber Security Pvt. Click to learn more."> Android OS – Staff and Senior Engineers<br> <span class="company">FireEye Cyber Security Pvt</span> <span class="location">Bangalore, India / relocation</span> </a> </li> <li> <a href="http://careers.stackoverflow.com/jobs/38672/software-development-engineer-video-encoding-amazon?a=Lac6hwd2" target="_blank" title="Software Development Engineer, Video Encoding - Amazon Instant Video at Amazon. Click to learn more."> Software Development Engineer, Video Encoding - Amazon…<br> <span class="company">Amazon</span> <span class="location">Seattle, WA / relocation</span> </a> </li> <li> <a href="http://careers.stackoverflow.com/jobs/28748/front-end-dev-a-profitable-saas-startup-recruiterbox?a=z3O54Ipi" target="_blank" title="Front-end Dev for a profitable SaaS startup at Recruiterbox. Click to learn more."> Front-end Dev for a profitable SaaS startup<br> <span class="company">Recruiterbox</span> <span class="location">Bangalore, India</span> </a> </li> </ul> <img alt="" class="impression" src="./How to convert string to char array in C++  - Stack Overflow_files/Lac6hwd2-KK0PrpAc-z3O54Ipi-144" style="display:none"></div>
+
+
+
+            
+
+
+                            <div class="module sidebar-related">
+                    <h4 id="h-related">Related</h4>
+                    <div class="related" data-tracker="rq=1">
+                        <div class="spacer">
+<a href="http://stackoverflow.com/q/9533105?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes answered-accepted default">0</div>
+</a>
+<a href="http://stackoverflow.com/questions/9533105/copy-a-string-to-char-array?rq=1" class="question-hyperlink">Copy a string to char array</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/10184178?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes answered-accepted default">0</div>
+</a>
+<a href="http://stackoverflow.com/questions/10184178/fastest-way-to-convert-string-to-binary?rq=1" class="question-hyperlink">Fastest way to Convert String to Binary?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/10498744?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes answered-accepted default">1</div>
+</a>
+<a href="http://stackoverflow.com/questions/10498744/how-to-convert-string-into-char-array?rq=1" class="question-hyperlink">How to convert string into char * array</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/11227809?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes answered-accepted extra-large">5562</div>
+</a>
+<a href="http://stackoverflow.com/questions/11227809/why-is-processing-a-sorted-array-faster-than-an-unsorted-array?rq=1" class="question-hyperlink">Why is processing a sorted array faster than an unsorted array?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/11315699?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes answered-accepted default">1</div>
+</a>
+<a href="http://stackoverflow.com/questions/11315699/splitting-a-stdstring-into-two-const-chars-resulting-in-the-second-const-char?rq=1" class="question-hyperlink">Splitting a std::string into two const char*s resulting in the second const char* overwriting the first</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/12361669?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes default">0</div>
+</a>
+<a href="http://stackoverflow.com/questions/12361669/converting-an-stdstring-into-a-char-array?rq=1" class="question-hyperlink">Converting an std::string into a char array</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/12978201?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes answered-accepted default">3</div>
+</a>
+<a href="http://stackoverflow.com/questions/12978201/how-can-i-convert-a-stdbasic-string-type-to-an-array-of-char-type?rq=1" class="question-hyperlink">How can I convert a std::basic_string type to an array of char type?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/13665649?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes default">1</div>
+</a>
+<a href="http://stackoverflow.com/questions/13665649/how-to-convert-string-to-char-array?rq=1" class="question-hyperlink">How to convert String^ to char array</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/15597924?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes answered-accepted default">0</div>
+</a>
+<a href="http://stackoverflow.com/questions/15597924/string-gets-chopped-when-converted-to-char-c?rq=1" class="question-hyperlink">String gets chopped when converted to char* c++</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/18168913?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes default">-4</div>
+</a>
+<a href="http://stackoverflow.com/questions/18168913/char-char-const-char-const-char-and-inter-conversion-with-string?rq=1" class="question-hyperlink">char, char *, const char , const char * and inter-conversion with string</a>
+</div>
+
+                    </div>
+                </div>
+        </div>
+    
+<div id="feed-link">
+    <div id="feed-link-text"><a href="http://stackoverflow.com/feeds/question/13294067" title="feed of this question and its answers"><span class="feed-icon"></span>question feed</a></div>
+</div>
+    <script type="text/javascript">
+StackExchange.ready(function(){$.get('/posts/13294067/ivc/be39');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/13294067/ivc/be39" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">lang-c</div></div>
+
+
+        </div>
+    </div>
+    <div id="footer" class="categories">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                        <a href="http://stackoverflow.com/about">about</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://blog.stackexchange.com/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackexchange.com/about/hiring">jobs</a>
+                    <a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MjAsImNtIjo5NTQsImNoIjoxMTc4LCJjciI6Mjc3NiwiZG0iOjQsImZjIjoyODYyLCJmbCI6Mjc1MSwibnciOjIyLCJydiI6MCwicHIiOjExNSwic3QiOjAsInVyIjoiaHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL2Fib3V0L2NvbnRhY3QiLCJyZSI6MX0&s=hRods5B22XvRBwWIwtIMekcyNF8">advertising info</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;, &quot;/questions/13294067/how-to-convert-string-to-char-array-in-c&quot;)">mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="professional system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://programmers.stackexchange.com/" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems.">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Answers</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="IT security professionals">IT Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (13)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (13)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (21)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://meta.stackoverflow.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Overflow</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="http://careers.stackoverflow.com/">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+
+            <div id="copyright">
+                site design / logo © 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="footer-flair">
+                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+            </div>
+            <div id="svnrev">
+                rev 2013.9.6.994
+            </div>
+            
+        </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+<script type="text/javascript">var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script type="text/javascript">
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    ados.run.push(function () { ados_setKeywords('c%2b%2b,string,type-conversion,x-user-registered');; ados_load(); });         
+</script>
+
+    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-1']);
+        _gaq.push(['_setCustomVar', 1, 'tags', '|c++|string|type-conversion|']); 
+        _gaq.push(['_setCustomVar', 2, 'accountid', '3114082',2]); 
+_gaq.push(['_trackPageview']);
+    var _qevents = _qevents || [];
+    (function () {
+        var ssl='https:'==document.location.protocol,
+            s=document.getElementsByTagName('script')[0],
+            ga=document.createElement('script');
+        ga.type='text/javascript';
+        ga.async=true;
+        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(ga,s);
+        var sc=document.createElement('script');
+        sc.type='text/javascript';
+        sc.async=true;
+        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+        s.parentNode.insertBefore(sc,s);
+    })();
+    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>        
+    
+
+</body></html>
